@@ -187,10 +187,10 @@ namespace Academic_Blog.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("ReviewDateTime")
+                    b.Property<DateTime?>("ReviewDateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("ReviewerId")
+                    b.Property<Guid?>("ReviewerId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Status")
@@ -199,7 +199,6 @@ namespace Academic_Blog.Domain.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Thumbnal_Url")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
@@ -441,7 +440,6 @@ namespace Academic_Blog.Domain.Migrations
                         .WithMany("ReviewBlogs")
                         .HasForeignKey("ReviewerId")
                         .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired()
                         .HasConstraintName("FK_Reviewer_Blog");
 
                     b.Navigation("Author");

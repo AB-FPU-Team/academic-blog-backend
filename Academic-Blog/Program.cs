@@ -1,4 +1,5 @@
 using Academic_Blog.Domain;
+using Academic_Blog.Domain.Models;
 using Academic_Blog.Middlewares;
 using Academic_Blog.Repository.Implement;
 using Academic_Blog.Repository.Interfaces;
@@ -6,9 +7,12 @@ using Academic_Blog.Services.Implements;
 using Academic_Blog.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Text;
@@ -60,6 +64,13 @@ builder.Services.AddControllers(opt => opt.SuppressImplicitRequiredAttributeForN
 {
     opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 });
+builder.Services.AddControllers().AddOData(options => options.Select()
+                                                             .Filter()
+                                                             .Count()
+                                                             .OrderBy()
+                                                             .Expand()
+                                                             .SetMaxTop(100)
+                                                             .AddRouteComponents("odata", GetEdmModel()));
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -84,6 +95,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IBlogService,BlogService>();
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -92,9 +104,18 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseAuthorization();
-app.UseAuthentication();
-app.MapControllers();
 app.UseCors("MyDefaultPolicy");
 app.UseMiddleware<ExceptionHandlingMiddleware>();
+app.UseHttpsRedirection();
+app.UseODataBatching();
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapControllers();
 app.Run();
+IEdmModel GetEdmModel()
+{
+    var builder = new ODataConventionModelBuilder();
+    builder.EntitySet<Blog>("Blogs");
+    return builder.GetEdmModel();
+}

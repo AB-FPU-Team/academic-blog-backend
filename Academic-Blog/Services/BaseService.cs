@@ -1,6 +1,8 @@
 ﻿using Academic_Blog.Domain;
+using Academic_Blog.Domain.Models;
 using Academic_Blog.Repository.Interfaces;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace Academic_Blog.Services
@@ -28,9 +30,15 @@ namespace Academic_Blog.Services
             string role = _httpContextAccessor?.HttpContext?.User.FindFirstValue(ClaimTypes.Role);
             return role;
         }
-        protected string GetUserIdFromJwt()
+        protected Guid GetUserIdFromJwt()
         {
-            return _httpContextAccessor?.HttpContext?.User?.FindFirstValue("userId");
+            return Guid.Parse(_httpContextAccessor?.HttpContext?.User?.FindFirstValue("userId"));
+        }
+        protected async Task<Account> GetUserFromJwt()
+        {
+            Guid id =  Guid.Parse(_httpContextAccessor?.HttpContext?.User?.FindFirstValue("userId"));
+            Account account = await _unitOfWork.GetRepository<Account>().SingleOrDefaultAsync(predicate : x => x.Id == id , include : x => x.Include(x => x.AccountFieldMapping));
+            return account;
         }
     }
 }

@@ -34,6 +34,6 @@ namespace Academic_Blog.Utils
             var expires = DateTime.Now.AddHours(3);
             var token = new JwtSecurityToken(issuer, null,claims, notBefore : DateTime.Now, expires, credentials);
             return jwtHandler.WriteToken(token);
-        }
+        }   
     }
 }
