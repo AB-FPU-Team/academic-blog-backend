@@ -40,6 +40,12 @@ namespace Academic_Blog.Services.Implements
             blog.ReviewerId = GetUserIdFromJwt();
             blog.ReviewDateTime = DateTime.Now;
             blog.UpdatedTime = DateTime.Now;
+            if(request.Status == Enums.BlogStatus.APPROVED.ToString())
+            {
+                var acc = await _unitOfWork.GetRepository<Account>().SingleOrDefaultAsync(predicate: x => x.Id == blog.AuthorId);
+                account.NumberOfBlogs = account.NumberOfBlogs + 1;
+                _unitOfWork.GetRepository<Account>().UpdateAsync(account);
+            }
             _unitOfWork.GetRepository<Blog>().UpdateAsync(blog);
             bool isSuccessful = await _unitOfWork.CommitAsync() > 0;
             return isSuccessful;
@@ -84,11 +90,17 @@ namespace Academic_Blog.Services.Implements
                 }
 
             }
-            if (role.Equals(RoleEnum.Student.GetDescriptionFromEnum<RoleEnum>()))
+            if (role.Equals(RoleEnum.Lecturer.GetDescriptionFromEnum<RoleEnum>()))
             {
                 if (blog == null)
                 {
                     return false;
+                }
+                if (blog.Status.Equals(BlogStatus.APPROVED.GetDescriptionFromEnum<BlogStatus>()))
+                {
+                    var account = await _unitOfWork.GetRepository<Account>().SingleOrDefaultAsync(predicate: x => x.Id == blog.AuthorId);
+                    account.NumberOfBlogs = account.NumberOfBlogs - 1;
+                    _unitOfWork.GetRepository<Account>().UpdateAsync(account);
                 }
             }
             blog.Status = BlogStatus.DELETED.GetDescriptionFromEnum<BlogStatus>();
