@@ -81,13 +81,25 @@ namespace Academic_Blog.Controllers
         }
         // POST: api/Blogs
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [EnableQuery]
+           [EnableQuery]
            [HttpPost]
            [CustomAuthorize(Enums.RoleEnum.Student)]      
            public async Task<IActionResult> Create(CreateNewBlogRequest blog)
            {
             var blogResponse = await _blogService.CreateNewBlogs(blog);
              return CreatedAtAction("GetBlogs", new { id = blogResponse.Id }, blogResponse);
+           }
+           [EnableQuery]
+           [HttpPut("{id}/delete")]
+           [CustomAuthorize(Enums.RoleEnum.Lecturer,Enums.RoleEnum.Student)]
+           public async Task<IActionResult> Delete(Guid id)
+           {
+            var isSuccessful = await _blogService.DeleteSoftBlog(id);
+            if (!isSuccessful)
+            {
+                return BadRequest("Request Fail");
+            }
+            return Ok("Successfully");
            }
          /*
            // DELETE: api/Blogs/5

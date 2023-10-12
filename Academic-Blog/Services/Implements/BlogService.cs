@@ -8,6 +8,7 @@ using Academic_Blog.Services.Interfaces;
 using Academic_Blog.Utils;
 using AutoMapper;
 using OfficeOpenXml.ConditionalFormatting.Contracts;
+using System.Reflection.Metadata;
 
 namespace Academic_Blog.Services.Implements
 {
@@ -61,6 +62,39 @@ namespace Academic_Blog.Services.Implements
                response = _mapper.Map<BlogResponse>(blog);
             }
             return response;
+        }
+
+        public async Task<bool> DeleteSoftBlog(Guid id)
+        {
+            var role = GetRoleFromJwt();
+            var blog = await _unitOfWork.GetRepository<Blog>().SingleOrDefaultAsync(predicate: x => x.Id == id);
+            if (role.Equals(RoleEnum.Student.GetDescriptionFromEnum<RoleEnum>()))
+            {
+                if(GetUserIdFromJwt() != blog.AuthorId)
+                {
+                    return false;
+                }
+                if(blog == null)
+                {
+                    return false;
+                }
+                if (!blog.Status.Equals(BlogStatus.PENDING.GetDescriptionFromEnum<BlogStatus>()))
+                {
+                    return false;
+                }
+
+            }
+            if (role.Equals(RoleEnum.Student.GetDescriptionFromEnum<RoleEnum>()))
+            {
+                if (blog == null)
+                {
+                    return false;
+                }
+            }
+            blog.Status = BlogStatus.DELETED.GetDescriptionFromEnum<BlogStatus>();
+            _unitOfWork.GetRepository<Blog>().UpdateAsync(blog);
+            var isSuccessful = await _unitOfWork.CommitAsync() > 0;
+            return isSuccessful;
         }
 
         public async Task<bool> EditBlogByStudent(Guid id, UpdateBlogRequest request)

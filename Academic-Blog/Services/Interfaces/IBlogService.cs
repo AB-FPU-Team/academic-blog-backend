@@ -12,5 +12,6 @@ namespace Academic_Blog.Services.Interfaces
         Task<bool> EditBlogByStudent(Guid id,UpdateBlogRequest request);
         Task<bool> CensorBlog(Guid id, CensorBlogRequest request);
         Task<BlogResponse> ReadBlog(Guid id);
+        Task<bool> DeleteSoftBlog(Guid id);
     }
 }
