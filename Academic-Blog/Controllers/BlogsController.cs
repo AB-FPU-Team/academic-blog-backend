@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.OData.Query;
 using Academic_Blog.Services.Interfaces;
 using Academic_Blog.Validatiors;
 using Academic_Blog.PayLoad.Request.Blog;
+using Academic_Blog.PayLoad.Response;
 
 namespace Academic_Blog.Controllers
 {
@@ -52,11 +53,19 @@ namespace Academic_Blog.Controllers
                 return NotFound();
               }
             return Ok(response);
-           } 
+           }
+         [EnableQuery(PageSize = 10)]
+         [HttpGet("currentUser")]
+        [CustomAuthorize(Enums.RoleEnum.Student)]
+        public async Task<IActionResult> GetBlogsOfCurrentUser(string ? status)
+        {
+            var blogs = await _blogService.GetBlogOfCurrentUser(status);
+            return Ok(blogs);
+        }
 
-           // PUT: api/Blogs/5
-           // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-           [EnableQuery]
+        // PUT: api/Blogs/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [EnableQuery]
            [HttpPut("student/{id}/edit")]
            [CustomAuthorize(Enums.RoleEnum.Student)]
            public async Task<IActionResult> UpdateBlogByStudent([FromRoute] Guid id,[FromBody] UpdateBlogRequest updateBlogRequest)
@@ -87,6 +96,15 @@ namespace Academic_Blog.Controllers
            public async Task<IActionResult> Create(CreateNewBlogRequest blog)
            {
             var blogResponse = await _blogService.CreateNewBlogs(blog);
+             if(blogResponse == null)
+            {
+                return Unauthorized(new ErrorResponse
+                {
+                    StatusCode = StatusCodes.Status401Unauthorized,
+                    Error = "You in banned in 48 hours",
+                    TimeStamp = DateTime.Now,
+                });
+            }
              return CreatedAtAction("GetBlogs", new { id = blogResponse.Id }, blogResponse);
            }
            [EnableQuery]

@@ -33,7 +33,7 @@ namespace Academic_Blog.Controllers
                     TimeStamp = DateTime.Now,
                 });
             }
-            if(loginResponse.AccountStatus.Equals(AccountStatusEnum.INACTIVE.ToString()) || loginResponse.AccountStatus.Equals(AccountStatusEnum.BANNED.ToString()))
+            if(loginResponse.AccountStatus.Equals(AccountStatusEnum.INACTIVE.ToString()))
             {
                 return Unauthorized(new ErrorResponse()
                 {

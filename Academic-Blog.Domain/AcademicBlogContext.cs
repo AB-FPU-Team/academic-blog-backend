@@ -115,7 +115,7 @@ namespace Academic_Blog.Domain
             });
             modelBuilder.Entity<BannedInfor>(entity =>
             {
-                entity.HasOne(a => a.Account).WithOne(d => d.BannedInfor).HasForeignKey<Account>(x => x.BannedInforId);
+                entity.HasOne(a => a.Account).WithMany(d => d.BannedInfors).HasConstraintName("Fk_Account_BannedInfor");
             });
             modelBuilder.Entity<AccountFieldMapping>(entity =>
             {

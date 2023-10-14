@@ -18,10 +18,11 @@ namespace Academic_Blog.Domain.Models
         public int? NumberOfBlogs { get; set; }
         public Guid RoleId { get; set; }
         public Guid? AccountFieldMappingId { get; set; }
-        public Guid? BannedInforId { get; set; }
+        //public Guid? BannedInforId { get; set; }
         public virtual Role Role { get; set; } = null!;
-        public virtual BannedInfor? BannedInfor { get; set; }
-        public virtual AccountFieldMapping? AccountFieldMapping { get; set; }
+       // public virtual BannedInfor? BannedInfor { get; set; }
+        public ICollection<BannedInfor>  BannedInfors { get; set; } = new List<BannedInfor>();
+        public virtual AccountFieldMapping? AccountFieldMapping { get; set; } 
         public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
         public virtual ICollection<AccountAwardMapping> StudentAwardMappings { get; set; } = new List<AccountAwardMapping>();
         public virtual ICollection<AccountAwardMapping> LecturerAwardMappings { get; set; } = new List<AccountAwardMapping>();

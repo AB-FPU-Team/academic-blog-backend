@@ -17,7 +17,7 @@ namespace Academic_Blog.Domain.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.11")
+                .HasAnnotation("ProductVersion", "7.0.12")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -29,9 +29,6 @@ namespace Academic_Blog.Domain.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid?>("AccountFieldMappingId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("BannedInforId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Gmail")
@@ -68,10 +65,6 @@ namespace Academic_Blog.Domain.Migrations
                     b.HasIndex("AccountFieldMappingId")
                         .IsUnique()
                         .HasFilter("[AccountFieldMappingId] IS NOT NULL");
-
-                    b.HasIndex("BannedInforId")
-                        .IsUnique()
-                        .HasFilter("[BannedInforId] IS NOT NULL");
 
                     b.HasIndex("RoleId");
 
@@ -157,11 +150,16 @@ namespace Academic_Blog.Domain.Migrations
                     b.Property<Guid>("AccountId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<DateTime>("DateBanned")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Reason")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
 
                     b.ToTable("BannedInfors");
                 });
@@ -189,6 +187,9 @@ namespace Academic_Blog.Domain.Migrations
 
                     b.Property<DateTime?>("ReviewDateTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("ReviewFromReviewer")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid?>("ReviewerId")
                         .HasColumnType("uniqueidentifier");
@@ -256,9 +257,6 @@ namespace Academic_Blog.Domain.Migrations
                     b.Property<Guid>("BlogId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("CommentRepliedId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("CommentorId")
                         .HasColumnType("uniqueidentifier");
 
@@ -278,9 +276,9 @@ namespace Academic_Blog.Domain.Migrations
 
                     b.HasIndex("BlogId");
 
-                    b.HasIndex("CommentRepliedId");
-
                     b.HasIndex("CommentorId");
+
+                    b.HasIndex("ReplyToId");
 
                     b.ToTable("Comment", (string)null);
                 });
@@ -363,10 +361,6 @@ namespace Academic_Blog.Domain.Migrations
                         .WithOne("Account")
                         .HasForeignKey("Academic_Blog.Domain.Models.Account", "AccountFieldMappingId");
 
-                    b.HasOne("Academic_Blog.Domain.Models.BannedInfor", "BannedInfor")
-                        .WithOne("Account")
-                        .HasForeignKey("Academic_Blog.Domain.Models.Account", "BannedInforId");
-
                     b.HasOne("Academic_Blog.Domain.Models.Role", "Role")
                         .WithMany("Accounts")
                         .HasForeignKey("RoleId")
@@ -375,8 +369,6 @@ namespace Academic_Blog.Domain.Migrations
                         .HasConstraintName("FK_ACCOUNT_ROLE");
 
                     b.Navigation("AccountFieldMapping");
-
-                    b.Navigation("BannedInfor");
 
                     b.Navigation("Role");
                 });
@@ -419,6 +411,18 @@ namespace Academic_Blog.Domain.Migrations
                         .IsRequired();
 
                     b.Navigation("Field");
+                });
+
+            modelBuilder.Entity("Academic_Blog.Domain.Models.BannedInfor", b =>
+                {
+                    b.HasOne("Academic_Blog.Domain.Models.Account", "Account")
+                        .WithMany("BannedInfors")
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("Fk_Account_BannedInfor");
+
+                    b.Navigation("Account");
                 });
 
             modelBuilder.Entity("Academic_Blog.Domain.Models.Blog", b =>
@@ -468,21 +472,21 @@ namespace Academic_Blog.Domain.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Academic_Blog.Domain.Models.Comment", "CommentReplied")
-                        .WithMany()
-                        .HasForeignKey("CommentRepliedId");
-
                     b.HasOne("Academic_Blog.Domain.Models.Account", "Commentor")
                         .WithMany("Comments")
                         .HasForeignKey("CommentorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Academic_Blog.Domain.Models.Comment", "ReplyTo")
+                        .WithMany()
+                        .HasForeignKey("ReplyToId");
+
                     b.Navigation("Blog");
 
-                    b.Navigation("CommentReplied");
-
                     b.Navigation("Commentor");
+
+                    b.Navigation("ReplyTo");
                 });
 
             modelBuilder.Entity("Academic_Blog.Domain.Models.Notification", b =>
@@ -508,6 +512,8 @@ namespace Academic_Blog.Domain.Migrations
                 {
                     b.Navigation("AuthorBlogs");
 
+                    b.Navigation("BannedInfors");
+
                     b.Navigation("Comments");
 
                     b.Navigation("LecturerAwardMappings");
@@ -530,12 +536,6 @@ namespace Academic_Blog.Domain.Migrations
             modelBuilder.Entity("Academic_Blog.Domain.Models.Award", b =>
                 {
                     b.Navigation("AccountAwardMappings");
-                });
-
-            modelBuilder.Entity("Academic_Blog.Domain.Models.BannedInfor", b =>
-                {
-                    b.Navigation("Account")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Academic_Blog.Domain.Models.Blog", b =>

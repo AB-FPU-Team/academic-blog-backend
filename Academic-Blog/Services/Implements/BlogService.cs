@@ -40,6 +40,7 @@ namespace Academic_Blog.Services.Implements
             blog.ReviewerId = GetUserIdFromJwt();
             blog.ReviewDateTime = DateTime.Now;
             blog.UpdatedTime = DateTime.Now;
+            blog.ReviewFromReviewer = request.ReviewFromReviewer;
             if(request.Status == Enums.BlogStatus.APPROVED.ToString())
             {
                 var acc = await _unitOfWork.GetRepository<Account>().SingleOrDefaultAsync(predicate: x => x.Id == blog.AuthorId);
@@ -54,6 +55,11 @@ namespace Academic_Blog.Services.Implements
         public async Task<BlogResponse> CreateNewBlogs(CreateNewBlogRequest request)
         {
             Blog blog = _mapper.Map<Blog>(request);
+            var account = await GetUserFromJwt();
+            if (account.Status.Equals(AccountStatusEnum.BANNED.GetDescriptionFromEnum<AccountStatusEnum>()))
+            {
+                throw new BadHttpRequestException("You in banned time", StatusCodes.Status400BadRequest);
+            }
             blog.Status = (Enums.BlogStatus.PENDING.GetDescriptionFromEnum());
             blog.UpdatedTime = DateTime.Now;
             blog.CreatedTime = DateTime.Now;
@@ -131,6 +137,22 @@ namespace Academic_Blog.Services.Implements
             _unitOfWork.GetRepository<Blog>().UpdateAsync(blog);
             bool isSuccessful = await _unitOfWork.CommitAsync() > 0;
             return isSuccessful;
+        }
+
+        public async Task<List<Blog>> GetBlogOfCurrentUser(string? status)
+        {
+            var guid = GetUserIdFromJwt();
+            List<Blog> blog = null;
+            if (status != null)
+            {
+              var blg  = await _unitOfWork.GetRepository<Blog>().GetListAsync(predicate: x => x.AuthorId == guid && x.Status.Equals(status));
+              blog = blg.ToList() ?? new List<Blog>();
+            }else
+            {
+                var blg = await _unitOfWork.GetRepository<Blog>().GetListAsync(predicate: x => x.AuthorId == guid);
+                blog = blg.ToList() ?? new List<Blog>();
+            }
+            return blog;
         }
 
         public async Task<List<Blog>> GetBlogs()
