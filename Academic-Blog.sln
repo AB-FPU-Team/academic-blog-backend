@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academic-Blog", "Academic-B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academic-Blog.Repository", "Academic-Blog.Repository\Academic-Blog.Repository.csproj", "{C97CFB8B-6DCA-4A5A-B966-89D1D65A30AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academic-Blog-App", "Academic-Blog-App\Academic-Blog-App.csproj", "{BCCB0D1A-2597-484B-AC00-8FE12F2EA143}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academic-Blog-App", "Academic-Blog-App\Academic-Blog-App.csproj", "{BCCB0D1A-2597-484B-AC00-8FE12F2EA143}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

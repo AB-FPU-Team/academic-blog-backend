@@ -32,3 +32,20 @@ E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Repository\o
 E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.pdb
 E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.genruntimeconfig.cache
 E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\ref\Academic-Blog.Repository.dll
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.deps.json
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.runtimeconfig.json
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.dll
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.pdb
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Domain.dll
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Domain.pdb
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.csproj.AssemblyReference.cache
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.AssemblyInfoInputs.cache
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.AssemblyInfo.cs
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.csproj.CoreCompileInputs.cache
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.csproj.CopyComplete
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.dll
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\refint\Academic-Blog.Repository.dll
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.pdb
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.genruntimeconfig.cache
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\ref\Academic-Blog.Repository.dll
