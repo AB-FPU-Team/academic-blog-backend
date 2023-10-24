@@ -13,6 +13,7 @@ using Academic_Blog.Services.Interfaces;
 using Academic_Blog.Validatiors;
 using Academic_Blog.PayLoad.Request.Blog;
 using Academic_Blog.PayLoad.Response;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Academic_Blog.Controllers
 {
@@ -30,7 +31,7 @@ namespace Academic_Blog.Controllers
         }
 
         // GET: api/Blogs
-        [EnableQuery(PageSize =10)]
+        [EnableQuery(PageSize =10)]       
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Blog>>> GetBlogs()
         {

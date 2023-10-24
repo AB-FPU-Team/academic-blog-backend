@@ -122,7 +122,7 @@ namespace Academic_Blog.Domain
                 entity.HasOne(a => a.Account).WithOne(d => d.AccountFieldMapping).HasForeignKey<Account>(x => x.AccountFieldMappingId);
             });
 
-
+            modelBuilder.Entity<TrackingViewBlog>(entity => entity.ToTable("TrackingViewBlog"));
         }
     }
 }

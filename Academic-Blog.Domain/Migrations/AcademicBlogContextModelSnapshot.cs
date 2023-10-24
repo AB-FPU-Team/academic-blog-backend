@@ -17,7 +17,7 @@ namespace Academic_Blog.Domain.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.12")
+                .HasAnnotation("ProductVersion", "7.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -30,6 +30,10 @@ namespace Academic_Blog.Domain.Migrations
 
                     b.Property<Guid?>("AccountFieldMappingId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Avatar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gmail")
                         .IsRequired()
@@ -194,6 +198,9 @@ namespace Academic_Blog.Domain.Migrations
                     b.Property<Guid?>("ReviewerId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("ShortDescription")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasMaxLength(20)
@@ -353,6 +360,26 @@ namespace Academic_Blog.Domain.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Role", (string)null);
+                });
+
+            modelBuilder.Entity("Academic_Blog.Domain.Models.TrackingViewBlog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<Guid>("BlogId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("TrackingId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TrackingViewBlog", (string)null);
                 });
 
             modelBuilder.Entity("Academic_Blog.Domain.Models.Account", b =>

@@ -3,27 +3,52 @@
 @{
 }
 
+<style>
+    .blog-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .image-blog {
+        flex: 0 0 35%;
+        margin-right: 40px;
+    }
+
+    .body-blog {
+        flex: 1; 
+        height: 160px;
+        padding-left: 50px;
+        border: 1px solid black;
+        text-align: center;
+        justify-content: center;
+    }
+
+</style>
+
 <div class="body_bg layout_padding">
-    <section class="service_section ">
+    <section class="service_section">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <img class="img-box" src="~/images/client.jpg" alt="" style="height: 100%; display: block; margin: auto"/>
-                </div>
                 <div class="col-md-8">
-                <div class="box">
-                    <a class="nav-link" href="/BlogPage/ViewBlogDetail" style="color: #e9a21a; padding: 0; border: 0">
-                        <h4>
-                            Written with Love
-                        </h4>
-                    </a>
-                    <p>
-                        It is a long established fact that a reader will be distracted by the readable content of a page when
-                        looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                        of
-                        letters, as opposed to using 'Content here, content t,
-                    </p>
-                </div>
+                    @foreach (var item in Model.Blogs)
+                    {
+                        <div class="blog-item">
+                            <div class="image-blog">
+                                <img class="img-box" src="~/@item.Thumbnal_Url" alt="" style="height: 100%; display: block; margin: auto" />
+                            </div>
+                            <div class="body-blog box">
+                                <a class="nav-link" href="/BlogPage/ViewBlogDetail?blogId={@item.Id}&authorId={@item.AuthorId}" style="color: #e9a21a; padding: 0; border: 0">
+                                    <h4>
+                                        @item.Title
+                                    </h4>
+                                </a>
+                                <p>
+                                    @item.ShortDescription
+                                </p>
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
         </div>

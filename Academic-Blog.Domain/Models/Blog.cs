@@ -19,6 +19,7 @@ namespace Academic_Blog.Domain.Models
         public DateTime? UpdatedTime { get; set; }
         public int View { get; set; } = 0;
         public string? ReviewFromReviewer { get; set; }
+        public string? ShortDescription { get; set; }
         public Guid CategoryId { get; set; }
         public Guid? ReviewerId { get; set; }
         public Guid AuthorId { get; set; }
