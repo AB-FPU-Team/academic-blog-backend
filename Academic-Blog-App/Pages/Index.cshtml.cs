@@ -12,9 +12,9 @@ namespace Academic_Blog_App.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public ActionResult OnGet()
         {
-
+            return Page();
         }
     }
 }
