@@ -1150,3 +1150,5 @@ D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog-App\obj\D
 D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog-App\obj\Debug\net7.0\Academic-Blog-App.pdb
 D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog-App\obj\Debug\net7.0\Academic-Blog-App.genruntimeconfig.cache
 D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog-App\obj\Debug\net7.0\ref\Academic-Blog-App.dll
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog-App\bin\Debug\net7.0\Microsoft.Extensions.PlatformAbstractions.dll
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog-App\bin\Debug\net7.0\Nancy.dll

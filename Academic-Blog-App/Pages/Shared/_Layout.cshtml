@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Academic_Blog.PayLoad.Response;
+@using Academic_Blog_App.Services;
+@using Microsoft.AspNetCore.Http;
+@{
+    var loginAccount = SessionHelper.GetObjectFromJson<LoginResponse>(ViewContext.HttpContext.Session, "Account");
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>@ViewData["Title"] - Academic Blog App</title>
@@ -31,6 +38,14 @@
     <link href="~/css/responsive.css" rel="stylesheet" asp-append-version="true" />
     <!-- login style -->
     <link href="~/css/login.css" rel="stylesheet" asp-append-version="true" />
+    <!-- tinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea',
+            statusbar: false
+        });
+    </script>
 </head>
 
 <body class="sub_page" style="margin-top: 75px;">
@@ -57,27 +72,51 @@
                                 <li class="nav-item">
                                     <a class="nav-link" asp-page="/BlogPage/ViewAllBlog">Post</a>
                                 </li>
-                                <!-- if authenticated 
-                                    <li class="nav-item">
-                                    <a class="nav-link" asp-page="">Create Post</a>
-                                </li>
-                                -->
                                 <li class="nav-item">
                                     <a class="nav-link" asp-page="/Privacy">Privacy</a>
                                 </li>
                             </ul>
                         </div>
-
-                        <!-- If Authenticated
-                            Đổi Login thành tên user
-                        -->
-                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/HomePage/Login">Login</a>
-                                </li>
-                            </ul>
-                        </div>
+                        @if(loginAccount != null) {
+                            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        @if (loginAccount.Role.Equals("Student"))
+                                        {
+                                            
+                                            <a href="#" class="nav-link dropdown-toggle text-decoration-none text-dark" data-toggle="dropdown">
+                                                Welcome, @loginAccount.Name
+                                            </a>
+                                            <div class="dropdown-menu bg-dark rounded-0 border-0 m-0">
+                                                <a asp-page="/UserPage/StudentProfile" class="dropdown-item text-light">Profile</a>
+                                                <a asp-page="/BlogPage/CreateNewBlog" class="dropdown-item text-light">Create Post</a>
+                                                <a asp-page="/HomePage/Logout" class="dropdown-item text-light">Logout</a>
+                                            </div>
+                                            
+                                        }
+                                        else {
+                                            <a href="#" class="nav-link dropdown-toggle text-decoration-none text-dark" data-toggle="dropdown">
+                                                Welcome, @loginAccount.Name
+                                            </a>
+                                            <div class="dropdown-menu bg-dark rounded-0 border-0 m-0">
+                                                <a asp-page="/UserPage/LectureProfile" class="dropdown-item text-light">Profile</a>
+                                                <a asp-page="/BlogPage/CreateNewBlog" class="dropdown-item text-light">View Post</a>
+                                                <a asp-page="/HomePage/Logout" class="dropdown-item text-light">Logout</a>
+                                            </div>
+                                        }
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                        else {
+                            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/HomePage/Login">Login</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
                     </div>
                 </nav>
             </div>

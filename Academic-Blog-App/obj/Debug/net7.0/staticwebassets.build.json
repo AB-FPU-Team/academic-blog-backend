@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gxCFMpFZsuH53DwzqkTQwOnhln6oHXiP19yQbhBJxVY=",
+  "Hash": "tHP+tDt7IYkeTr+G1ltu4yQ6diw/rOeHcgwVAmObru8=",
   "Source": "Academic-Blog-App",
   "BasePath": "_content/Academic-Blog-App",
   "Mode": "Default",
@@ -78,6 +78,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
+    },
+    {
+      "Identity": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\login.css",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\responsive.css",

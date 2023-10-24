@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
     {
+      "Id": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\responsive.css",
       "PackagePath": "staticwebassets\\css\\responsive.css"
     },
