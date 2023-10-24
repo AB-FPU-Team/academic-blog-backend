@@ -49,3 +49,20 @@ D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repositor
 D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.pdb
 D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.genruntimeconfig.cache
 D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\ref\Academic-Blog.Repository.dll
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.deps.json
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.runtimeconfig.json
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.dll
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.pdb
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Domain.dll
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Domain.pdb
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.csproj.AssemblyReference.cache
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.AssemblyInfoInputs.cache
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.AssemblyInfo.cs
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.csproj.CoreCompileInputs.cache
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.csproj.CopyComplete
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.dll
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\refint\Academic-Blog.Repository.dll
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.pdb
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.genruntimeconfig.cache
+D:\AB_FPTU_2410\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\ref\Academic-Blog.Repository.dll
