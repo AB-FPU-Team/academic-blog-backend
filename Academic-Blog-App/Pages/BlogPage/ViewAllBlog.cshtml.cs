@@ -2,7 +2,6 @@ using Academic_Blog.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Net.Http.Headers;
-using System.Security.Policy;
 using System.Text.Json;
 
 namespace Academic_Blog_App.Pages.BlogPage
@@ -18,13 +17,17 @@ namespace Academic_Blog_App.Pages.BlogPage
             _httpClient = new HttpClient();
             var contentType = new MediaTypeWithQualityHeaderValue("application/json");
             _httpClient.DefaultRequestHeaders.Accept.Add(contentType);
-            blogUrl = "https://localhost:5047/api/Blogs";
+            blogUrl = "http://localhost:5047/api/Blogs";
         }
+
 
         [BindProperty]
         public List<Blog> Blogs { get; set; } = default!;
         public async Task<IActionResult> OnGetAsync()
         {
+            //String token = "sdafafasgegergeregeeqegerq3hehwgwegwer";
+
+            //_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             HttpResponseMessage response = await _httpClient.GetAsync(blogUrl);
 
             if (response.IsSuccessStatusCode)
@@ -38,7 +41,7 @@ namespace Academic_Blog_App.Pages.BlogPage
             }
             else
             {
-                ViewData["Error"]  = response.ToString();
+                ViewData["Error"] = response.ToString();
             }
             return Page();
         }

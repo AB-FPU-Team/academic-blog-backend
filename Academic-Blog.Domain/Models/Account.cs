@@ -18,6 +18,7 @@ namespace Academic_Blog.Domain.Models
         public int? NumberOfBlogs { get; set; }
         public Guid RoleId { get; set; }
         public Guid? AccountFieldMappingId { get; set; }
+        public String Avatar { get; set; }  
         //public Guid? BannedInforId { get; set; }
         public virtual Role Role { get; set; } = null!;
        // public virtual BannedInfor? BannedInfor { get; set; }

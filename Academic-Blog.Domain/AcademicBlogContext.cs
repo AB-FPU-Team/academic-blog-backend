@@ -35,7 +35,7 @@ namespace Academic_Blog.Domain
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("server = (local); database = AcademicBlogDB; uid = sa; pwd = 12345; trustServerCertificate = true");
+                optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=12345;database=AcademicBlogDB;TrustServerCertificate=True");
             }
         }
         private string GetConnectionString()
@@ -122,7 +122,7 @@ namespace Academic_Blog.Domain
                 entity.HasOne(a => a.Account).WithOne(d => d.AccountFieldMapping).HasForeignKey<Account>(x => x.AccountFieldMappingId);
             });
 
-
+            modelBuilder.Entity<TrackingViewBlog>(entity => entity.ToTable("TrackingViewBlog"));
         }
     }
 }
