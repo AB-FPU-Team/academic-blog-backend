@@ -35,7 +35,7 @@ namespace Academic_Blog.Domain
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("server = (local); database = AcademicBlogDB; uid = sa; pwd = 12345; trustServerCertificate = true");
+                optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=myPassw0rd;database=AcademicBlogDB;TrustServerCertificate=True");
             }
         }
         private string GetConnectionString()

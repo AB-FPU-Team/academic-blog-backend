@@ -1,8 +1,14 @@
 ﻿@page
 @model Academic_Blog_App.Pages.HomePage.LoginModel
 @{
-
+    var errorLoginMessage = ViewData["ErrorLoginMessage"]?.ToString();
 }
+
+<style>
+    .gradient-custom-2 {
+        background: linear-gradient(to right, #281ed0, #ff6900, #0db500) !important
+    }
+</style>
 
 <section style="background-color: #eee;">
     <div class="container py-5">
@@ -19,22 +25,27 @@
                                     <h4 class="mt-1 mb-5 pb-1">FPT Academic Blog</h4>
                                 </div>
 
-                                <form action="/HomePage/">
+                                <form method="post">
                                     <p>Please login to your account</p>
-
+                                    @if (!string.IsNullOrWhiteSpace(errorLoginMessage)) {
+                                        <div class="alert alert-warning" role="alert">
+                                            @errorLoginMessage
+                                        </div>
+                                    }
                                     <div class="form-outline mb-4">
-                                        <input type="email" id="form2Example11" class="form-control"
-                                               placeholder="Phone number or email address" />
+                                        <input type="text" id="form2Example11" class="form-control"
+                                               placeholder="Username" name="UserName" required/>
                                         <label class="form-label" for="form2Example11">Username</label>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <input type="password" id="form2Example22" class="form-control" />
+                                        <input type="password" id="form2Example22" class="form-control"
+                                        placeholder="Password" name="Password" required/>
                                         <label class="form-label" for="form2Example22">Password</label>
                                     </div>
 
                                     <div class="text-center pt-1 mb-5 pb-1">
-                                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">
+                                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">
                                             Log in
                                         </button>
                                         <a class="text-muted" href="#!">Forgot password?</a>

@@ -2,6 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+
 }
 
 <body>
@@ -30,11 +31,13 @@
                                         <p>
                                             This is a website to share your knowledge
                                         </p>
+                                        @if(Model.LoginResponse == null) {
                                         <div class="btn-box">
                                             <a href="/BlogPage/ViewAllBlog" class="btn-1">
                                                 Login
                                             </a>
                                         </div>
+                                        }
                                     </div>
                                 </div>
                             </div>
