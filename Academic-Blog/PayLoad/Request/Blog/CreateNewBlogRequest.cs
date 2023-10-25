@@ -9,6 +9,7 @@ namespace Academic_Blog.PayLoad.Request.Blog
         [Required(ErrorMessage ="Title is not missing")]
         public string Title { get; set; }
         [Required(ErrorMessage = "Description is not missing")]
+        [MinLength(200,ErrorMessage = "Description is least 100 words")]
         public string Description { get; set; }
         [Required(ErrorMessage = "Category is not missing")]
 

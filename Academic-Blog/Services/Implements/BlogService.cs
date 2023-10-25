@@ -66,6 +66,8 @@ namespace Academic_Blog.Services.Implements
             blog.AuthorId = GetUserIdFromJwt();
             blog.View = 0;
             blog.Id = Guid.NewGuid();
+            blog.Description = request.Description;
+            blog.ShortDescription = blog.Description.Substring(0,200) + "...";
             await _unitOfWork.GetRepository<Blog>().InsertAsync(blog);
             bool isSuccessful = await _unitOfWork.CommitAsync() > 0;
             BlogResponse response = null;
