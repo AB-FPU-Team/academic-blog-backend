@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "5RDgJ30kO9ESj+b/fLln5UgNCAUEgrTOMjnx94ZfrYM=",
+  "Hash": "91om1wBctZZGvmsRkpGrNF6tQDBvYrvCCol9uF8kYjI=",
   "Source": "Academic-Blog-App",
   "BasePath": "_content/Academic-Blog-App",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
       "Version": 2,
       "Source": "Academic-Blog",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -22,17 +22,17 @@
     {
       "Name": "Academic-Blog-App\\wwwroot",
       "Source": "Academic-Blog-App",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Academic-Blog-App.styles.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Academic-Blog-App.styles.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "Academic-Blog-App.styles.css",
       "AssetKind": "All",
@@ -43,13 +43,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Academic-Blog-App.styles.css"
+      "OriginalItemSpec": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Academic-Blog-App.styles.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Academic-Blog-App.bundle.scp.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Academic-Blog-App.bundle.scp.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "Academic-Blog-App.bundle.scp.css",
       "AssetKind": "All",
@@ -60,13 +60,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Academic-Blog-App.bundle.scp.css"
+      "OriginalItemSpec": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Academic-Blog-App.bundle.scp.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\bootstrap.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\bootstrap.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "css/bootstrap.css",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\login.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\login.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "css/login.css",
       "AssetKind": "All",
@@ -97,10 +97,10 @@
       "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\responsive.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\responsive.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "css/responsive.css",
       "AssetKind": "All",
@@ -114,10 +114,10 @@
       "OriginalItemSpec": "wwwroot\\css\\responsive.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\site.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\site.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\style.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\style.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -148,10 +148,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\style.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\style.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "css/style.css.map",
       "AssetKind": "All",
@@ -165,10 +165,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\style.scss",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\style.scss",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "css/style.scss",
       "AssetKind": "All",
@@ -182,10 +182,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.scss"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\favicon.ico",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\favicon.ico",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -199,10 +199,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\about-img.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\about-img.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/about-img.png",
       "AssetKind": "All",
@@ -216,10 +216,10 @@
       "OriginalItemSpec": "wwwroot\\images\\about-img.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\alexImage.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\alexImage.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/alexImage.png",
       "AssetKind": "All",
@@ -233,10 +233,10 @@
       "OriginalItemSpec": "wwwroot\\images\\alexImage.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\benjaminImage.jpg",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\benjaminImage.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/benjaminImage.jpg",
       "AssetKind": "All",
@@ -250,10 +250,10 @@
       "OriginalItemSpec": "wwwroot\\images\\benjaminImage.jpg"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\body_bg.jpg",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\body_bg.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/body_bg.jpg",
       "AssetKind": "All",
@@ -267,10 +267,10 @@
       "OriginalItemSpec": "wwwroot\\images\\body_bg.jpg"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\call.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\call.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/call.png",
       "AssetKind": "All",
@@ -284,10 +284,10 @@
       "OriginalItemSpec": "wwwroot\\images\\call.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\call-o.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\call-o.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/call-o.png",
       "AssetKind": "All",
@@ -301,10 +301,10 @@
       "OriginalItemSpec": "wwwroot\\images\\call-o.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\challoterImage.webp",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\challoterImage.webp",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/challoterImage.webp",
       "AssetKind": "All",
@@ -318,10 +318,10 @@
       "OriginalItemSpec": "wwwroot\\images\\challoterImage.webp"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\client.jpg",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\client.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/client.jpg",
       "AssetKind": "All",
@@ -335,10 +335,10 @@
       "OriginalItemSpec": "wwwroot\\images\\client.jpg"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\contact-img.jpg",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\contact-img.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/contact-img.jpg",
       "AssetKind": "All",
@@ -352,10 +352,10 @@
       "OriginalItemSpec": "wwwroot\\images\\contact-img.jpg"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\doctorStrangeImage.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\doctorStrangeImage.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/doctorStrangeImage.png",
       "AssetKind": "All",
@@ -369,10 +369,27 @@
       "OriginalItemSpec": "wwwroot\\images\\doctorStrangeImage.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\emilyImage.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\eager.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/eager.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\eager.png"
+    },
+    {
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\emilyImage.png",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/emilyImage.png",
       "AssetKind": "All",
@@ -386,10 +403,10 @@
       "OriginalItemSpec": "wwwroot\\images\\emilyImage.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\envelope.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\envelope.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/envelope.png",
       "AssetKind": "All",
@@ -403,10 +420,10 @@
       "OriginalItemSpec": "wwwroot\\images\\envelope.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\envelope-o.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\envelope-o.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/envelope-o.png",
       "AssetKind": "All",
@@ -420,10 +437,27 @@
       "OriginalItemSpec": "wwwroot\\images\\envelope-o.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\harlyImage.webp",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\github.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/github.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\github.png"
+    },
+    {
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\harlyImage.webp",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/harlyImage.webp",
       "AssetKind": "All",
@@ -437,10 +471,10 @@
       "OriginalItemSpec": "wwwroot\\images\\harlyImage.webp"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\hero-bg.jpg",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\hero-bg.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/hero-bg.jpg",
       "AssetKind": "All",
@@ -454,10 +488,10 @@
       "OriginalItemSpec": "wwwroot\\images\\hero-bg.jpg"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\johnWickImage.webp",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\johnWickImage.webp",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/johnWickImage.webp",
       "AssetKind": "All",
@@ -471,10 +505,10 @@
       "OriginalItemSpec": "wwwroot\\images\\johnWickImage.webp"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\location.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\location.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/location.png",
       "AssetKind": "All",
@@ -488,10 +522,10 @@
       "OriginalItemSpec": "wwwroot\\images\\location.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\location-o.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\location-o.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/location-o.png",
       "AssetKind": "All",
@@ -505,10 +539,10 @@
       "OriginalItemSpec": "wwwroot\\images\\location-o.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\logo.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\logo.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/logo.png",
       "AssetKind": "All",
@@ -522,10 +556,10 @@
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\manhattanImage.jpg",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\manhattanImage.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/manhattanImage.jpg",
       "AssetKind": "All",
@@ -539,10 +573,27 @@
       "OriginalItemSpec": "wwwroot\\images\\manhattanImage.jpg"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\menu.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\marketing.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/marketing.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\marketing.png"
+    },
+    {
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\menu.png",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/menu.png",
       "AssetKind": "All",
@@ -556,10 +607,10 @@
       "OriginalItemSpec": "wwwroot\\images\\menu.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\next.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\next.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/next.png",
       "AssetKind": "All",
@@ -573,10 +624,10 @@
       "OriginalItemSpec": "wwwroot\\images\\next.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\next-white.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\next-white.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/next-white.png",
       "AssetKind": "All",
@@ -590,10 +641,10 @@
       "OriginalItemSpec": "wwwroot\\images\\next-white.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\offer-img.jpg",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\offer-img.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/offer-img.jpg",
       "AssetKind": "All",
@@ -607,10 +658,10 @@
       "OriginalItemSpec": "wwwroot\\images\\offer-img.jpg"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\peterMarvelImage.jpg",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\peterMarvelImage.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/peterMarvelImage.jpg",
       "AssetKind": "All",
@@ -624,10 +675,10 @@
       "OriginalItemSpec": "wwwroot\\images\\peterMarvelImage.jpg"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\petterImage.jpg",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\petterImage.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/petterImage.jpg",
       "AssetKind": "All",
@@ -641,10 +692,10 @@
       "OriginalItemSpec": "wwwroot\\images\\petterImage.jpg"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\prev.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\prev.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/prev.png",
       "AssetKind": "All",
@@ -658,10 +709,10 @@
       "OriginalItemSpec": "wwwroot\\images\\prev.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\prev-white.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\prev-white.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/prev-white.png",
       "AssetKind": "All",
@@ -675,10 +726,27 @@
       "OriginalItemSpec": "wwwroot\\images\\prev-white.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\quote.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\pronounciation.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/pronounciation.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\pronounciation.jpg"
+    },
+    {
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\quote.png",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/quote.png",
       "AssetKind": "All",
@@ -692,10 +760,27 @@
       "OriginalItemSpec": "wwwroot\\images\\quote.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\robinImage.jpg",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\react.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/react.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\react.png"
+    },
+    {
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\robinImage.jpg",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/robinImage.jpg",
       "AssetKind": "All",
@@ -709,10 +794,10 @@
       "OriginalItemSpec": "wwwroot\\images\\robinImage.jpg"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-1.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-1.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/s-1.png",
       "AssetKind": "All",
@@ -726,10 +811,10 @@
       "OriginalItemSpec": "wwwroot\\images\\s-1.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-2.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-2.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/s-2.png",
       "AssetKind": "All",
@@ -743,10 +828,10 @@
       "OriginalItemSpec": "wwwroot\\images\\s-2.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-3.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-3.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/s-3.png",
       "AssetKind": "All",
@@ -760,10 +845,10 @@
       "OriginalItemSpec": "wwwroot\\images\\s-3.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-4.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-4.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/s-4.png",
       "AssetKind": "All",
@@ -777,10 +862,10 @@
       "OriginalItemSpec": "wwwroot\\images\\s-4.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\search-icon.png",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\search-icon.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/search-icon.png",
       "AssetKind": "All",
@@ -794,10 +879,10 @@
       "OriginalItemSpec": "wwwroot\\images\\search-icon.png"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\sophiaImage.jpg",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\sophiaImage.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/sophiaImage.jpg",
       "AssetKind": "All",
@@ -811,10 +896,10 @@
       "OriginalItemSpec": "wwwroot\\images\\sophiaImage.jpg"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\tonyStarkImage.jpg",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\tonyStarkImage.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "images/tonyStarkImage.jpg",
       "AssetKind": "All",
@@ -828,10 +913,10 @@
       "OriginalItemSpec": "wwwroot\\images\\tonyStarkImage.jpg"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\js\\bootstrap.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\js\\bootstrap.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "js/bootstrap.js",
       "AssetKind": "All",
@@ -845,10 +930,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\js\\jquery-3.4.1.min.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\js\\jquery-3.4.1.min.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "js/jquery-3.4.1.min.js",
       "AssetKind": "All",
@@ -862,10 +947,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-3.4.1.min.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\js\\site.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\js\\site.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -879,10 +964,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -896,10 +981,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -913,10 +998,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -930,10 +1015,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -947,10 +1032,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -964,10 +1049,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -981,10 +1066,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -998,10 +1083,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1015,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1032,10 +1117,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1049,10 +1134,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1066,10 +1151,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1083,10 +1168,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1100,10 +1185,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1117,10 +1202,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1134,10 +1219,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1151,10 +1236,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1168,10 +1253,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1185,10 +1270,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1202,10 +1287,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1219,10 +1304,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1236,10 +1321,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1253,10 +1338,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1270,10 +1355,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1287,10 +1372,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1304,10 +1389,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1321,10 +1406,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1338,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1355,10 +1440,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1372,10 +1457,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1389,10 +1474,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1406,10 +1491,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1423,10 +1508,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1440,10 +1525,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1457,10 +1542,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1474,10 +1559,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1491,10 +1576,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1508,10 +1593,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1525,10 +1610,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1542,10 +1627,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1559,10 +1644,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1576,10 +1661,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1593,10 +1678,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1610,10 +1695,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1627,10 +1712,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1644,10 +1729,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1661,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1678,10 +1763,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1695,10 +1780,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1712,10 +1797,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1729,10 +1814,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1746,10 +1831,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1763,10 +1848,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1780,10 +1865,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1797,10 +1882,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1814,10 +1899,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1831,10 +1916,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
       "BasePath": "_content/Academic-Blog-App",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1846,6 +1931,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\microsoft\\signalr\\dist\\browser\\signalr.js",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "microsoft/signalr/dist/browser/signalr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\microsoft\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Identity": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\EXE_2710\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "microsoft/signalr/dist/browser/signalr.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
     }
   ]
 }

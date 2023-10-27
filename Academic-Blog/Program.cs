@@ -99,6 +99,7 @@ builder.Services.AddScoped<IBlogService,BlogService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICommentSerivce, CommentService>();
 builder.Services.AddScoped<ICategoryService,CategoryService>();
+builder.Services.AddScoped<ITrackingViewService, TrackingViewBlogService>();
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -130,5 +131,6 @@ IEdmModel GetEdmModel()
     builder.EntitySet<Account>("Accounts");
     builder.EntitySet<Comment>("Comments");
     builder.EntitySet<Category>("Categories");
+    builder.EntitySet<TrackingViewBlog>("TrackingViewBlogs");
     return builder.GetEdmModel();
 }
