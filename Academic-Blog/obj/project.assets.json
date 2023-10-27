@@ -12500,23 +12500,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Thuong\\.nuget\\packages\\": {},
+    "C:\\Users\\Truong\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
+      "projectUniqueName": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
       "projectName": "Academic-Blog",
-      "projectPath": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
-      "packagesPath": "C:\\Users\\Thuong\\.nuget\\packages\\",
-      "outputPath": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog\\obj\\",
+      "projectPath": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
+      "packagesPath": "C:\\Users\\Truong\\.nuget\\packages\\",
+      "outputPath": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Thuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Truong\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -12525,18 +12525,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.309\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
-              "projectPath": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
+            "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+              "projectPath": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
             },
-            "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
-              "projectPath": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj"
+            "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
+              "projectPath": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj"
             }
           }
         }
@@ -12619,7 +12618,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.309\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

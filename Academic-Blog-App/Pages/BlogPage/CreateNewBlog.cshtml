@@ -4,24 +4,42 @@
 
 }
 
-
+<style>
+    label {
+        margin: 20px 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+</style>
 
 <div class="body_bg layout_padding" style="padding: 40px;">
     <section class="service_section">
-        <div class="container">
-            <div class="box" style="width: 100% !important">
-                <h2 style="margin: 20px 0; font-weight: bold;">Tiêu đề</h2>
-                <textarea class="mb-2" style="width: 100%" pattern=".*[^ ].*" required
-                          placeholder="Tiêu đề"></textarea>
-                <h3 style="margin: 20px 0; font-weight: bold;">Categories</h3>
-                <textarea class="mb-2" style="width: 100%" pattern=".*[^ ].*" required
-                          placeholder="Categories"></textarea>
-                <h3 style="margin: 20px 0; font-weight: bold;">Mô tả</h3>
-                <form method="post" style="width: 100%">
+        <form class="container" method="post">
+            <div class="box">
+                <div class="d-flex flex-column w-100 form-group">
+                    <label style="font-size:38px !important">Tiêu đề</label>
+                    <textarea class="mw-100" pattern=".*[^ ].*" required
+                              placeholder="Tiêu đề"></textarea>
+                </div>
+                <div class="d-flex flex-column w-100 form-group">
+                    <label @*asp-for="Category"*@ class="control-label">Categories</label>
+                    <select class="form-control cusSelect" name="statusSelect" pattern=".*[^ ].*" required>
+                        <option>0</option>
+                        <option>1</option>
+                    </select>
+                </div>
+                <div class="d-flex flex-column w-100 form-group">
+                    <label for="thumbnail">Thumbnails</label>
+                    <input type="file" id="thumbnail" accept="image/png, image/jpeg"/>
+                </div>
+                <div class="d-flex flex-column w-100 form-group">
+                    <label>Mô tả</label>
                     <textarea id="mytextarea" pattern=".*[^ ].*" required>Nhập nội dung bài đăng tại đây.</textarea>
-                </form>
+                </div>
+                <div class="d-flex flex-column w-100 align-items-end">
+                    <input class="py-2 px-5 btn btn-outline-primary" type="submit" name="Submit" value="Create"/>
+                </div>
             </div>
-            <div class=""></div>
-        </div>
+        </form>
     </section>
 </div>
