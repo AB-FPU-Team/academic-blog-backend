@@ -107,6 +107,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("MyDefaultPolicy");
+app.UseCors(builder =>
+{
+    builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader();
+});
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseHttpsRedirection();
 app.UseODataBatching();

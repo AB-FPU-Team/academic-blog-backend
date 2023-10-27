@@ -1,6 +1,7 @@
-﻿@using Academic_Blog.PayLoad.Response;
-@using Academic_Blog_App.Services;
-@using Microsoft.AspNetCore.Http;
+﻿@    using Academic_Blog.PayLoad.Response;
+@    using Academic_Blog_App.Services;
+@    using Microsoft.AspNetCore.Http;
+    using Academic_Blog_App.Services.Helper;
 @{
     var loginAccount = SessionHelper.GetObjectFromJson<LoginResponse>(ViewContext.HttpContext.Session, "Account");
 }
@@ -165,7 +166,13 @@
 
     <script type="text/javascript" src="~/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="~/js/bootstrap.js"></script>
-
+    <script src="~/js/site.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.10/signalr.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

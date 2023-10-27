@@ -1,55 +1,52 @@
 using Academic_Blog.Domain.Models;
+using Academic_Blog_App.Services.Helper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Net.Http.Headers;
+using Academic_Blog_App.Services.ClientEnum;
 using System.Text.Json;
+using Academic_Blog_App.Services.ClientAjax;
 
 namespace Academic_Blog_App.Pages.BlogPage
 {
     public class ViewBlogDetailModel : PageModel
     {
-        private readonly HttpClient _httpClient;
-        private string blogUrl, accountUrl;
-
-        public ViewBlogDetailModel()
+        private readonly ApiHelper _apiHelper;
+        private readonly CenterHub _centerHub;
+        public ViewBlogDetailModel(ApiHelper apiHelper, CenterHub centerHub)
         {
-            _httpClient = new HttpClient();
-            var contentType = new MediaTypeWithQualityHeaderValue("application/json");
-            _httpClient.DefaultRequestHeaders.Accept.Add(contentType);
-            blogUrl = "http://localhost:5047/api/Blogs";
-            accountUrl = "http://localhost:5047/odata/Account";
+            _apiHelper = apiHelper;
+            _centerHub = centerHub;
         }
 
         [BindProperty]
         public Blog Blog { get; set; } = default!;
-        public Account Account { get; set; }
+        public Account Account { get; set; } = default!;
         public async Task<IActionResult> OnGetAsync(string? blogId, string? authorId)
         {
-            if(blogId == null || authorId == null)
+            if (blogId == null || authorId == null)
             {
                 return RedirectToPage("/Index");
             }
+            await FetchAll(blogId, authorId);
+            await _centerHub.TrackPost(blogId);
+            return Page();
+        }
 
-            //String token = "sdafafasgegergeregeeqegerq3hehwgwegwer";
+        private async Task<IActionResult> FetchAll(string? blogId, string? authorId)
+        {
+            var blogResult = await _apiHelper.FetchApiAsync<Blog>(EndPointEnum.Blogs, $"/{Guid.Parse(blogId!)}", MethodEnum.GET, null);
+            var accountResult = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, $"?$filter=id eq {authorId}", MethodEnum.GET, null);
 
-            //_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-            HttpResponseMessage response = await _httpClient.GetAsync(blogUrl + $"/{Guid.Parse(blogId)}");
-            HttpResponseMessage accountResponse = await _httpClient.GetAsync(accountUrl + $"?$filter=id eq {authorId}");
-
-            if (response.IsSuccessStatusCode)
+            if(blogResult.IsSuccess && accountResult.IsSuccess)
             {
-                string content = await response.Content.ReadAsStringAsync();
-                string accountContent = await accountResponse.Content.ReadAsStringAsync() ;
-                var options = new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                };
-                Blog = JsonSerializer.Deserialize<Blog>(content, options)!;
-                Account = JsonSerializer.Deserialize<Account>(accountContent, options)!;
+                Blog = blogResult.Data;
+                Account = accountResult.Data;
             }
             else
             {
-                ViewData["Error"] = response.ToString();
+                TempData["Error"] = blogResult.ErrorMessage + "/n" + accountResult.ErrorMessage;
+                TempData["PageName"] = "ViewBlogDetails";
+                return RedirectToPage("/Error");
             }
             return Page();
         }
