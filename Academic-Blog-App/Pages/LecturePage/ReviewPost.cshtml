@@ -5,39 +5,111 @@
 }
 
 <style>
-    label {
-        margin: 20px 0;
-        font-size: 24px;
-        font-weight: bold;
+    .pl-table {
+        .row {
+            margin: 5px 0;
+            padding: 0 20px;
+            align-items: center;
+        }
+
+        .col {
+            padding: 0 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+        .pl-thead {
+            color: #979797;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 16px;
+            margin: 15px 0;
+            &.tall {
+                background-color: #263338;
+                margin: 0;
+                padding: 5px 0;
+                color: rgba(255, 255, 255, 0.7);
+                text-transform: initial;
+                .col {
+                    border-right: 1px solid rgba(255, 255, 255, 0.2);
+                    text-align: center;
+                    align-self: stretch;
+                    &:last-child {
+                        border: none;
+                    }
+
+                    .large {
+                        font-size: 21px;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+
+        .pl-tbody {
+            .row {
+                background-color: #ffffff;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                font-size: 14px;
+            }
+
+            &.scroll {
+                max-height: 100%;
+                overflow-x: scroll;
+            }
+        }
+    }
+
+    span {
+        color: lightblue;
+    }
+
+    p {
+        margin: 0px !important;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 </style>
 
 <div class="body_bg layout_padding" style="padding: 40px;">
     <section class="service_section">
-        <div class="container">
-            <div class="box">
-                <div class="d-flex flex-column w-100 form-group">
-                    <label style="font-size:38px !important">Tiêu đề</label>
-                    <textarea class="mw-100" pattern=".*[^ ].*" required
-                              placeholder="Tiêu đề"></textarea>
+        <div class="pl-table">
+            <div class="pl-thead tall">
+                <div class="row">
+                    <div class="col">Title</div>
+                    <div class="col">Description</div>
+                    <div class="col">Status</div>
+                    <div class="col">View Detail</div>
                 </div>
-                <div class="d-flex flex-column w-100 form-group">
-                    <label @*asp-for="Category"*@ class="control-label">Categories</label>
-                    <select class="form-control cusSelect" name="statusSelect" required>
-                        <option>0</option>
-                        <option>1</option>
-                    </select>
-                </div>
-                <div class="d-flex flex-column w-100 form-group">
-                    <label for="thumbnail">Thumbnails</label>
-                    <input type="file" id="thumbnail" accept="image/png, image/jpeg" />
-                </div>
-                <div class="d-flex flex-column w-100 form-group">
-                    <label>Mô tả</label>
-                    <textarea id="mytextarea" pattern=".*[^ ].*" required>Nhập nội dung bài đăng tại đây.</textarea>
-                </div>
-                <div class="d-flex flex-column w-100 align-items-end">
-                    <input class="py-2 px-5 btn btn-outline-primary" type="submit" name="Submit" value="Create" />
+            </div>
+            <div class="pl-tbody scroll">
+                <div class="row">
+                    <div class="col">
+                        <p style="-webkit-line-clamp: 1 !important">
+                            Ném data vào đây
+                        </p>
+                        <span>Tên người dùng</span>
+                    </div>
+                    <div class="col">
+                        <p>
+                            Ném data vào đây
+                        </p>
+                    </div>
+                    <!-- Đổi màu theo status
+                            - Đỏ: Rejected: <class="bg-danger"/>
+                            - Vàng: Pending: <class="bg-warning"/>
+                            - Xanh: Approved: <class="bg-success"/>
+                    -->
+                    <div class="col text-center bg-warning">Pending</div>
+                    <div class="col text-center">
+                        <a class="btn btn-light" href="/LecturePage/ReviewPostDetail">
+                            <i class="fa fa-eye" style="font-size: 48px"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
