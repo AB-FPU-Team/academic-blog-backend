@@ -17,6 +17,7 @@ namespace Academic_Blog.Domain.Models
         public virtual Comment? ReplyTo { get; set; }
         public virtual Account Commentor { get; set; } = null!;
         public virtual Blog Blog { get; set; } = null!;
+        public ICollection<Report> Reports { get; set; } = new List<Report>();
 
     }
 }

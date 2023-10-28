@@ -83,3 +83,20 @@ D:\Project PRN231\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.
 D:\Project PRN231\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.pdb
 D:\Project PRN231\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.genruntimeconfig.cache
 D:\Project PRN231\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\ref\Academic-Blog.Repository.dll
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.deps.json
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.runtimeconfig.json
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.dll
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.pdb
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Domain.dll
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Domain.pdb
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.csproj.AssemblyReference.cache
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.AssemblyInfoInputs.cache
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.AssemblyInfo.cs
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.csproj.CoreCompileInputs.cache
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.csproj.CopyComplete
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.dll
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\refint\Academic-Blog.Repository.dll
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.pdb
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.genruntimeconfig.cache
+D:\Huy\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\ref\Academic-Blog.Repository.dll

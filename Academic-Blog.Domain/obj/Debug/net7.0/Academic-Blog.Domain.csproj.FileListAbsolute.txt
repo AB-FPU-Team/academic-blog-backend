@@ -68,3 +68,17 @@ D:\Project PRN231\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\re
 D:\Project PRN231\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.pdb
 D:\Project PRN231\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.genruntimeconfig.cache
 D:\Project PRN231\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\ref\Academic-Blog.Domain.dll
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.deps.json
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.runtimeconfig.json
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.dll
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.pdb
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.csproj.AssemblyReference.cache
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.AssemblyInfoInputs.cache
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.AssemblyInfo.cs
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.csproj.CoreCompileInputs.cache
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.dll
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\refint\Academic-Blog.Domain.dll
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.pdb
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.genruntimeconfig.cache
+D:\Huy\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\ref\Academic-Blog.Domain.dll
