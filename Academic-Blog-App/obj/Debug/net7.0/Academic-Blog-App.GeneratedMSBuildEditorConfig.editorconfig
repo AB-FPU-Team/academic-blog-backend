@@ -9,89 +9,89 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Academic_Blog_App
 build_property.RootNamespace = Academic_Blog_App
-build_property.ProjectDir = D:\Project PRN231\academic-blog-backend\Academic-Blog-App\
+build_property.ProjectDir = D:\ProjectPRN231\academic-blog-backend\Academic-Blog-App\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = D:\Project PRN231\academic-blog-backend\Academic-Blog-App
+build_property.MSBuildProjectDirectory = D:\ProjectPRN231\academic-blog-backend\Academic-Blog-App
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/About.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/DashBoard.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/DashBoard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXERhc2hCb2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/Shared/_AdminLayout.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXFNoYXJlZFxfQWRtaW5MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/_ViewImports.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/_ViewStart.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/BlogPage/CreateNewBlog.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/BlogPage/CreateNewBlog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmxvZ1BhZ2VcQ3JlYXRlTmV3QmxvZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/BlogPage/ViewAllBlog.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/BlogPage/ViewAllBlog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmxvZ1BhZ2VcVmlld0FsbEJsb2cuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/BlogPage/ViewBlogDetail.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/BlogPage/ViewBlogDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmxvZ1BhZ2VcVmlld0Jsb2dEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/Error.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/HomePage/Login.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/HomePage/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVBhZ2VcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/HomePage/Logout.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/HomePage/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVBhZ2VcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/HomePage/Register.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/HomePage/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVBhZ2VcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/Index.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/Privacy.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/UserPage/LectureProfile.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/UserPage/LectureProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclBhZ2VcTGVjdHVyZVByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/UserPage/StudentProfile.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/UserPage/StudentProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclBhZ2VcU3R1ZGVudFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/_ViewImports.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/_ViewStart.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project PRN231/academic-blog-backend/Academic-Blog-App/Pages/Shared/_Layout.cshtml]
+[D:/ProjectPRN231/academic-blog-backend/Academic-Blog-App/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-htg78130wh

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9NSiCWpY5DEfBxf/JHAz6LhlJ8GlDW8OMo60jYmSrMS4kypjy0Mbmy/t+QIxF0HB9Zj/wbLE7F6fS0rreWBqoQ==",
+  "dgSpecHash": "OAOSAi6blS3HOcrOQBMWvY1syfkCp43wx4+ogCzQ9S+na4FfNgJ0T3sx6WkEJ+IIylpHMI33E+V9k6jTSsjqLw==",
   "success": true,
-  "projectFilePath": "D:\\Project PRN231\\academic-blog-backend\\Academic-Blog-App\\Academic-Blog-App.csproj",
+  "projectFilePath": "D:\\ProjectPRN231\\academic-blog-backend\\Academic-Blog-App\\Academic-Blog-App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\giahu\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\giahu\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

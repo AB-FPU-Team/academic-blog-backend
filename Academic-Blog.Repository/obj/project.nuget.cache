@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WMbvUA8XJxQwAF78zfxqHS7d2BIxfoqRA9SgdNsFrNQbGj5tkXx64izaE+u1xtP4c80zh+8zvGl4Nysc6o6UCg==",
+  "dgSpecHash": "cse8M9oPw/PQlGvZDV8TBrA7bs16qCZHLZ807bBhC6+oeNwEoUpDQTz7L2fHuYtTseS+cZ/plM+GF8w4wLX6PQ==",
   "success": true,
-  "projectFilePath": "D:\\Project PRN231\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
+  "projectFilePath": "D:\\ProjectPRN231\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\giahu\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\giahu\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

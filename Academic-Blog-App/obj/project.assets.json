@@ -13231,11 +13231,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project PRN231\\academic-blog-backend\\Academic-Blog-App\\Academic-Blog-App.csproj",
+      "projectUniqueName": "D:\\ProjectPRN231\\academic-blog-backend\\Academic-Blog-App\\Academic-Blog-App.csproj",
       "projectName": "Academic-Blog-App",
-      "projectPath": "D:\\Project PRN231\\academic-blog-backend\\Academic-Blog-App\\Academic-Blog-App.csproj",
+      "projectPath": "D:\\ProjectPRN231\\academic-blog-backend\\Academic-Blog-App\\Academic-Blog-App.csproj",
       "packagesPath": "C:\\Users\\giahu\\.nuget\\packages\\",
-      "outputPath": "D:\\Project PRN231\\academic-blog-backend\\Academic-Blog-App\\obj\\",
+      "outputPath": "D:\\ProjectPRN231\\academic-blog-backend\\Academic-Blog-App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -13256,14 +13256,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Project PRN231\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
-              "projectPath": "D:\\Project PRN231\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
+            "D:\\ProjectPRN231\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+              "projectPath": "D:\\ProjectPRN231\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
             },
-            "D:\\Project PRN231\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
-              "projectPath": "D:\\Project PRN231\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj"
+            "D:\\ProjectPRN231\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
+              "projectPath": "D:\\ProjectPRN231\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj"
             },
-            "D:\\Project PRN231\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj": {
-              "projectPath": "D:\\Project PRN231\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj"
+            "D:\\ProjectPRN231\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj": {
+              "projectPath": "D:\\ProjectPRN231\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj"
             }
           }
         }
