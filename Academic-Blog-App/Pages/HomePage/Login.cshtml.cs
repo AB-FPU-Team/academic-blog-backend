@@ -74,6 +74,10 @@ namespace Academic_Blog_App.Pages.HomePage
                             ViewData["ErrorLoginMessage"] = "Incorrect user name or password";
                             return Page();
                         }
+                        if (account.Role.Equals("Admin"))
+                        {
+                            return RedirectToPage("/AdminPage/DashBoard");
+                        }
                         else {
                             SessionHelper.SetObjectAsJson(HttpContext.Session, "Account", account);
                             return RedirectToPage("/Index");
@@ -85,7 +89,7 @@ namespace Academic_Blog_App.Pages.HomePage
                 return RedirectToPage("/Error");
             }
 
-            return RedirectToPage("/AdminPage/DashBoard");
+            return Page();
         }
 
         private bool getAdminAccount(string? UserName, string? Password) {
