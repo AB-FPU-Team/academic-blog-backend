@@ -1,3 +1,4 @@
+using Academic_Blog.Domain.Models;
 using Academic_Blog.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -18,6 +19,9 @@ namespace Academic_Blog_App.Pages.BlogPage
             _httpClient.DefaultRequestHeaders.Accept.Add(contentType);
             blogUrl = "https://localhost:5047/api/Blogs";
         }
+
+        [BindProperty]
+        public Category Category { get; set; } = default!;
 
         public void OnGet()
         {
