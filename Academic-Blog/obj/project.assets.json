@@ -12506,11 +12506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Huy\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
+      "projectUniqueName": "D:\\Huy_branch\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
       "projectName": "Academic-Blog",
-      "projectPath": "D:\\Huy\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
+      "projectPath": "D:\\Huy_branch\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
       "packagesPath": "C:\\Users\\Thuong\\.nuget\\packages\\",
-      "outputPath": "D:\\Huy\\academic-blog-backend\\Academic-Blog\\obj\\",
+      "outputPath": "D:\\Huy_branch\\academic-blog-backend\\Academic-Blog\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -12532,11 +12532,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Huy\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
-              "projectPath": "D:\\Huy\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
+            "D:\\Huy_branch\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+              "projectPath": "D:\\Huy_branch\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
             },
-            "D:\\Huy\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
-              "projectPath": "D:\\Huy\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj"
+            "D:\\Huy_branch\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
+              "projectPath": "D:\\Huy_branch\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj"
             }
           }
         }
