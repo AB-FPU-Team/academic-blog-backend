@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Huy\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {}
+    "D:\\Project PRN231\\academic-blog-backend1\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Huy\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+    "D:\\Project PRN231\\academic-blog-backend1\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Huy\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
+        "projectUniqueName": "D:\\Project PRN231\\academic-blog-backend1\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
         "projectName": "Academic-Blog.Domain",
-        "projectPath": "D:\\Huy\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
-        "packagesPath": "C:\\Users\\Thuong\\.nuget\\packages\\",
-        "outputPath": "D:\\Huy\\academic-blog-backend\\Academic-Blog.Domain\\obj\\",
+        "projectPath": "D:\\Project PRN231\\academic-blog-backend1\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
+        "packagesPath": "C:\\Users\\giahu\\.nuget\\packages\\",
+        "outputPath": "D:\\Project PRN231\\academic-blog-backend1\\Academic-Blog.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Thuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\giahu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -71,6 +71,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
@@ -89,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.310\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

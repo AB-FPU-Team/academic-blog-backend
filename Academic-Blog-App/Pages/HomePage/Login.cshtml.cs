@@ -76,6 +76,7 @@ namespace Academic_Blog_App.Pages.HomePage
                         }
                         if (account.Role.Equals("Admin"))
                         {
+                            SessionHelper.SetObjectAsJson(HttpContext.Session, "Account", account);
                             return RedirectToPage("/AdminPage/DashBoard");
                         }
                         else {

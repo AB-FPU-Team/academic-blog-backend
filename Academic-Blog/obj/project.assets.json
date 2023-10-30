@@ -4290,7 +4290,8 @@
           "Microsoft.EntityFrameworkCore": "7.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11",
           "Microsoft.Extensions.Configuration": "7.0.0",
-          "Microsoft.Extensions.Configuration.Json": "7.0.0"
+          "Microsoft.Extensions.Configuration.Json": "7.0.0",
+          "Newtonsoft.Json": "13.0.1"
         },
         "compile": {
           "bin/placeholder/Academic-Blog.Domain.dll": {}
@@ -12500,23 +12501,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Thuong\\.nuget\\packages\\": {},
+    "C:\\Users\\giahu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Huy\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
+      "projectUniqueName": "D:\\Project PRN231\\academic-blog-backend1\\Academic-Blog\\Academic-Blog.csproj",
       "projectName": "Academic-Blog",
-      "projectPath": "D:\\Huy\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
-      "packagesPath": "C:\\Users\\Thuong\\.nuget\\packages\\",
-      "outputPath": "D:\\Huy\\academic-blog-backend\\Academic-Blog\\obj\\",
+      "projectPath": "D:\\Project PRN231\\academic-blog-backend1\\Academic-Blog\\Academic-Blog.csproj",
+      "packagesPath": "C:\\Users\\giahu\\.nuget\\packages\\",
+      "outputPath": "D:\\Project PRN231\\academic-blog-backend1\\Academic-Blog\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Thuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\giahu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -12525,18 +12526,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.310\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Huy\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
-              "projectPath": "D:\\Huy\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
+            "D:\\Project PRN231\\academic-blog-backend1\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+              "projectPath": "D:\\Project PRN231\\academic-blog-backend1\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
             },
-            "D:\\Huy\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
-              "projectPath": "D:\\Huy\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj"
+            "D:\\Project PRN231\\academic-blog-backend1\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
+              "projectPath": "D:\\Project PRN231\\academic-blog-backend1\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj"
             }
           }
         }
@@ -12619,7 +12619,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.310\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

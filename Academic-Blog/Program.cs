@@ -120,7 +120,7 @@ app.Run();
 IEdmModel GetEdmModel()
 {
     var builder = new ODataConventionModelBuilder();
-    builder.EntitySet<Blog>("Blogs");
+    builder.EntitySet<Blog>("Blog");
     builder.EntitySet<Account>("Accounts");
     builder.EntitySet<Comment>("Comments");
     builder.EntitySet<Category>("Categories");

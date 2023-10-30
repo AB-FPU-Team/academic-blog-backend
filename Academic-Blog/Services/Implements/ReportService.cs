@@ -3,6 +3,7 @@ using Academic_Blog.Domain.Models;
 using Academic_Blog.Repository.Interfaces;
 using Academic_Blog.Services.Interfaces;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace Academic_Blog.Services.Implements
 {
@@ -15,7 +16,7 @@ namespace Academic_Blog.Services.Implements
 
         public async Task<List<Report>> GetReports()
         {
-            ICollection<Report> reports = await _unitOfWork.GetRepository<Report>().GetListAsync(predicate: x => x.Id == x.Id);
+            ICollection<Report> reports = await _unitOfWork.GetRepository<Report>().GetListAsync(predicate: x => x.Id == x.Id,include: x => x.Include(x => x.Comment));
             List<Report> result = reports.ToList();
             return result;
         }
