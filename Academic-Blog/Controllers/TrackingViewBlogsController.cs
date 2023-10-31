@@ -22,11 +22,12 @@ namespace Academic_Blog.Controllers
 
         private readonly ILogger<TrackingViewBlogsController> _logger;
         private readonly ITrackingViewService _trackingService;
-
-        public TrackingViewBlogsController(ITrackingViewService trackingService, ILogger<TrackingViewBlogsController> logger)
+        private readonly IBlogService _blogService; 
+        public TrackingViewBlogsController(ITrackingViewService trackingService, ILogger<TrackingViewBlogsController> logger, IBlogService blogService)
         {
             _logger = logger;
             _trackingService = trackingService;
+            _blogService = blogService;
         }
 
 
@@ -54,6 +55,7 @@ namespace Academic_Blog.Controllers
                     TimeStamp = DateTime.Now
                 });
             }
+            await _blogService.IncreaseView(trackingViewBlog.BlogId);
             return Ok("successfully");
         }
         /*

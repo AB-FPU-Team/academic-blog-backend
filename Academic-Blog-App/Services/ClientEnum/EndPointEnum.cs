@@ -5,6 +5,7 @@
         Accounts,
         Authentication,
         Blogs,
-        Comments
+        Comments,
+        TrackingViewBlogs
     }
 }

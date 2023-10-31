@@ -4,92 +4,56 @@ using Microsoft.AspNetCore.SignalR;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text;
+using Academic_Blog.PayLoad.Response;
+using Academic_Blog_App.Services.Helper.Odata;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Academic_Blog_App.Services.Helper
 {
     public class ApiHelper
     {
         private readonly HttpClient _httpClient;
-        private readonly IHubContext<CenterHub> _hubContext;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly string Scheme = SchemeEnum.HTTPS.ToString();
+        private readonly string Scheme = SchemeEnum.HTTP.ToString();
         private readonly string Host = "localhost";
         private readonly string Port = "5047";
-        private string RootUrl;
-        private string Token;
-        private string CallUrl, JsonContent, ResponseCotent;
-        private HttpResponseMessage Response;
+        private string RootUrl = "";
+        private string CallUrl = "", JsonContent = "", ResponseContent = "";
+        private HttpResponseMessage Response = default!;
 
-        public ApiHelper(HttpClient httpClient, IHttpContextAccessor httpContextAccessor, IHubContext<CenterHub> hubContext)
+        public ApiHelper(HttpClient httpClient, IHttpContextAccessor httpContextAccessor)
         {
             var contentType = new MediaTypeWithQualityHeaderValue("application/json");
             _httpClient = httpClient;
             _httpClient.DefaultRequestHeaders.Accept.Add(contentType);
-            _httpContextAccessor = httpContextAccessor;
-            _hubContext = hubContext;
-            Token = SessionHelper.GetObjectFromJson<String>(_httpContextAccessor.HttpContext.Session, "Token");
-
+            _httpContextAccessor = httpContextAccessor; ;
         }
 
         public async Task<ResultHelper<T>> FetchApiAsync<T>(EndPointEnum endPoint, string postFixUrl, MethodEnum method, object data)
         {
+
             RootUrl = Scheme + "://" + Host + ":" + Port + "/" + PatchEnum.api.ToString() + "/";
             CallUrl = RootUrl + endPoint.ToString() + postFixUrl;
 
-            var options = new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            };
-
-            if (Token != "" || Token != null)
-            {
-                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
-            }
-
+            JsonSerializerOptions options = SetHeader();
             JsonContent = data != null ? JsonSerializer.Serialize(data) : "";
-
-            if (method.Equals(MethodEnum.GET))
-            {
-                Response = await _httpClient.GetAsync(CallUrl);
-            }
-            if (method.Equals(MethodEnum.DELETE))
-            {
-                Response = await _httpClient.DeleteAsync(CallUrl);
-            }
-
-            if (method.Equals(MethodEnum.POST))
-            {
-                Response = await _httpClient.PostAsync(CallUrl, new StringContent(JsonContent, Encoding.UTF8, "application/json"));
-            }
-
-            if (method.Equals(MethodEnum.PUT))
-            {
-                if (JsonContent != "" || JsonContent != null)
-                {
-                    Response = await _httpClient.PutAsync(CallUrl, new StringContent(JsonContent, Encoding.UTF8, "application/json"));
-                }
-                else
-                {
-                    Response = await _httpClient.PutAsync(CallUrl, null);
-                }
-            }
+            await DoApi(method);
 
             if (Response!.IsSuccessStatusCode)
             {
-                ResponseCotent = await Response.Content.ReadAsStringAsync();
+                ResponseContent = await Response.Content.ReadAsStringAsync();
             }
             else
             {
-                string errorMessage = $"Error: {Response.StatusCode}";
-                return ResultHelper<T>.Fail(errorMessage);
+                return ResultHelper<T>.Fail($"Error: {Response.StatusCode}");
             }
 
-            if (string.IsNullOrEmpty(ResponseCotent))
+            if (string.IsNullOrEmpty(ResponseContent))
             {
                 return ResultHelper<T>.Success();
             }
 
-            T result = JsonSerializer.Deserialize<T>(ResponseCotent, options)!;
+            T result = JsonSerializer.Deserialize<T>(ResponseContent, options)!;
             return ResultHelper<T>.Success(result);
         }
 
@@ -98,44 +62,74 @@ namespace Academic_Blog_App.Services.Helper
             RootUrl = Scheme + "://" + Host + ":" + Port + "/" + PatchEnum.odata.ToString() + "/";
             CallUrl = RootUrl + endPoint.ToString() + postFixUrl;
 
-            var options = new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            };
-
-            if (Token != "" || Token != null)
-            {
-                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
-            }
+            JsonSerializerOptions options = SetHeader();
 
             Response = await _httpClient.GetAsync(CallUrl);
 
             if (Response!.IsSuccessStatusCode)
             {
-                ResponseCotent = await Response.Content.ReadAsStringAsync();
+                ResponseContent = await Response.Content.ReadAsStringAsync();
             }
             else
             {
-                string errorMessage = $"Error: {Response.StatusCode}";
-                return ResultHelper<T>.Fail(errorMessage);
+                return ResultHelper<T>.Fail($"Error: {Response.StatusCode}");
             }
 
-            T result = JsonSerializer.Deserialize<T>(ResponseCotent, options)!;
-            return ResultHelper<T>.Success(result);
+            if (string.IsNullOrEmpty(ResponseContent))
+            {
+                return ResultHelper<T>.Success();
+            }
+            try
+            {
+                ODataResponse<T> odataResponse = JsonSerializer.Deserialize<ODataResponse<T>>(ResponseContent, options)!;
+                T result = odataResponse.Value!;
+                return ResultHelper<T>.Success(result);
+            }
+            catch(Exception e)
+            {
+                return ResultHelper<T>.Fail($"Error: {e.Message}");
+            }
         }
-        public async void DoAjaxConnectionAsync(string ajaxConnection, string subData)
+
+        private async Task DoApi(MethodEnum method)
         {
-            _httpContextAccessor.HttpContext!.Response.Headers["Cache-Control"] = "no-cache, no-store, must-revalidate";
-            _httpContextAccessor.HttpContext!.Response.Headers["Pragma"] = "no-cache";
-            _httpContextAccessor.HttpContext!.Response.Headers["Expires"] = "0";
-            if (subData != "")
+            switch (method)
             {
-                await _hubContext.Clients.All.SendAsync(ajaxConnection, subData);
-            }
-            else
-            {
-                await _hubContext.Clients.All.SendAsync(ajaxConnection);
+                case MethodEnum.GET:
+                    Response = await _httpClient.GetAsync(CallUrl);
+                    break;
+                case MethodEnum.POST:
+                    Response = await _httpClient.PostAsync(CallUrl, new StringContent(JsonContent, Encoding.UTF8, "application/json"));
+                    break;
+                case MethodEnum.PUT:
+                    if (JsonContent != "" || JsonContent != null)
+                    {
+                        Response = await _httpClient.PutAsync(CallUrl, new StringContent(JsonContent, Encoding.UTF8, "application/json"));
+                        break;
+                    }
+                    Response = await _httpClient.PutAsync(CallUrl, null);
+                    break;
+                case MethodEnum.DELETE:
+                    Response = await _httpClient.DeleteAsync(CallUrl);
+                    break;
             }
         }
+
+        private JsonSerializerOptions SetHeader()
+        {
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+            var LoginResponse = SessionHelper.GetObjectFromJson<LoginResponse>(_httpContextAccessor.HttpContext!.Session, "Account");
+
+            if (LoginResponse != null)
+            {
+                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", LoginResponse.AccessToken);
+            }
+
+            return options;
+        }
+
     }
 }
