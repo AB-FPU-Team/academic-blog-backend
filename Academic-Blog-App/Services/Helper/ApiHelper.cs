@@ -7,8 +7,6 @@ using System.Text;
 using Academic_Blog.PayLoad.Response;
 using Academic_Blog_App.Services.Helper.Odata;
 using Microsoft.AspNetCore.Mvc;
-using Academic_Blog.Domain.Models;
-using Academic_Blog.PayLoad.Request.Blog;
 
 namespace Academic_Blog_App.Services.Helper
 {
@@ -33,6 +31,7 @@ namespace Academic_Blog_App.Services.Helper
 
         public async Task<ResultHelper<T>> FetchApiAsync<T>(EndPointEnum endPoint, string postFixUrl, MethodEnum method, object data)
         {
+
             RootUrl = Scheme + "://" + Host + ":" + Port + "/" + PatchEnum.api.ToString() + "/";
             CallUrl = RootUrl + endPoint.ToString() + postFixUrl;
 
