@@ -99,7 +99,7 @@ builder.Services.AddScoped<IBlogService,BlogService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICommentSerivce, CommentService>();
 builder.Services.AddScoped<ICategoryService,CategoryService>();
-builder.Services.AddScoped<ITrackingViewService, TrackingViewBlogService>();
+builder.Services.AddScoped<IReportService, ReportService>();
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -109,13 +109,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("MyDefaultPolicy");
-app.UseCors(builder =>
-{
-    builder
-    .AllowAnyOrigin()
-    .AllowAnyMethod()
-    .AllowAnyHeader();
-});
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseHttpsRedirection();
 app.UseODataBatching();
@@ -127,10 +120,10 @@ app.Run();
 IEdmModel GetEdmModel()
 {
     var builder = new ODataConventionModelBuilder();
-    builder.EntitySet<Blog>("Blogs");
+    builder.EntitySet<Blog>("Blog");
     builder.EntitySet<Account>("Accounts");
     builder.EntitySet<Comment>("Comments");
     builder.EntitySet<Category>("Categories");
-    builder.EntitySet<TrackingViewBlog>("TrackingViewBlogs");
+    builder.EntitySet<Report>("Reports");
     return builder.GetEdmModel();
 }

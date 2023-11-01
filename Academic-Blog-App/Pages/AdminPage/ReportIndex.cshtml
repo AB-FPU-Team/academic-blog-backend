@@ -1,0 +1,39 @@
+﻿@page
+@model Academic_Blog_App.Pages.AdminPage.ReportIndexModel
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Reports[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reports[0].Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reports[0].Comment)
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Reports)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Comment.Content)
+                </td>
+                <td>
+                    <a asp-page="./CommentDetail" asp-route-id="@item.CommentId">Comment Details</a> 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

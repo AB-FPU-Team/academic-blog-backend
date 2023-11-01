@@ -32,6 +32,7 @@ namespace Academic_Blog.Domain
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<TrackingViewBlog> TrackingViewBlogs { get; set; }
+        public DbSet<Report> Reports { get; set; }  
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -124,6 +125,13 @@ namespace Academic_Blog.Domain
             });
 
             modelBuilder.Entity<TrackingViewBlog>(entity => entity.ToTable("TrackingViewBlog"));
+            modelBuilder.Entity<Report>(entity =>
+            {
+                entity.ToTable("Report");
+                entity.HasKey(entity => entity.Id);
+                entity.HasOne(a => a.Comment).WithMany(d => d.Reports).HasForeignKey(x => x.CommentId);
+            }
+            );
         }
     }
 }
