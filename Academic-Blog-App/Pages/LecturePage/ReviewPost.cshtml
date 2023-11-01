@@ -86,32 +86,36 @@
                     <div class="col">View Detail</div>
                 </div>
             </div>
-            <div class="pl-tbody scroll">
-                <div class="row">
-                    <div class="col">
-                        <p style="-webkit-line-clamp: 1 !important">
-                            Ném data vào đây
-                        </p>
-                        <span>Tên người dùng</span>
-                    </div>
-                    <div class="col">
-                        <p>
-                            Ném data vào đây
-                        </p>
-                    </div>
-                    <!-- Đổi màu theo status
-                            - Đỏ: Rejected: <class="bg-danger"/>
-                            - Vàng: Pending: <class="bg-warning"/>
-                            - Xanh: Approved: <class="bg-success"/>
-                    -->
-                    <div class="col text-center bg-warning">Pending</div>
-                    <div class="col text-center">
-                        <a class="btn btn-light" href="/LecturePage/ReviewPostDetail">
-                            <i class="fa fa-eye" style="font-size: 48px"></i>
-                        </a>
+            @foreach(var blog in Model.Blogs)
+            {
+                <div class="pl-tbody scroll">
+                    <div class="row">
+                        <div class="col">
+                            <p style="-webkit-line-clamp: 1 !important">
+                                @blog.Title
+                            </p>
+                            <span>@blog.Author.Name</span>
+                        </div>
+                        <div class="col">
+                            <p>
+                                @blog.ShortDescription
+                            </p>
+                        </div>
+                        <!-- Đổi màu theo status
+                                - Đỏ: Rejected: <class="bg-danger"/>
+                                - Vàng: Pending: <class="bg-warning"/>
+                                - Xanh: Approved: <class="bg-success"/>
+                        -->
+                        <div class="col text-center bg-warning">@blog.Status</div>
+                        <div class="col text-center">
+                            <a class="btn btn-light" href="/LecturePage/ReviewPostDetail?blogId=@blog.Id">
+                                <i class="fa fa-eye" style="font-size: 48px"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+                
+            }
         </div>
     </section>
 </div>
