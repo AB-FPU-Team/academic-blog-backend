@@ -120,31 +120,37 @@ namespace Academic_Blog.Controllers
             }
             return Ok("Successfully");
            }
-         /*
-           // DELETE: api/Blogs/5
-           [HttpDelete("{id}")]
-            [EnableQuery]
-           public async Task<IActionResult> DeleteBlog(Guid id)
-           {
-               if (_context.Blogs == null)
-               {
-                   return NotFound();
-               }
-               var blog = await _context.Blogs.FindAsync(id);
-               if (blog == null)
-               {
-                   return NotFound();
-               }
+         [HttpGet("mappingField/{id}")]
+        public async Task<IActionResult> GetBlogFromFieldMapping([FromRoute] Guid id)
+        {
+            var blogList = await _blogService.GetBlogByAccountMappingField(id);
+            return Ok(blogList);
+        }
+        /*
+          // DELETE: api/Blogs/5
+          [HttpDelete("{id}")]
+           [EnableQuery]
+          public async Task<IActionResult> DeleteBlog(Guid id)
+          {
+              if (_context.Blogs == null)
+              {
+                  return NotFound();
+              }
+              var blog = await _context.Blogs.FindAsync(id);
+              if (blog == null)
+              {
+                  return NotFound();
+              }
 
-               _context.Blogs.Remove(blog);
-               await _context.SaveChangesAsync();
+              _context.Blogs.Remove(blog);
+              await _context.SaveChangesAsync();
 
-               return NoContent();
-           }
+              return NoContent();
+          }
 
-           private bool BlogExists(Guid id)
-           {
-               return (_context.Blogs?.Any(e => e.Id == id)).GetValueOrDefault();
-           }*/
+          private bool BlogExists(Guid id)
+          {
+              return (_context.Blogs?.Any(e => e.Id == id)).GetValueOrDefault();
+          }*/
     }
 }

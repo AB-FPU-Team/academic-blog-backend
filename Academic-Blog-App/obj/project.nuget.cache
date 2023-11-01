@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KQVT2BEgk4n+EbZ17V3GwSpXEgs0YInhETCvuIhIHyHxURxW4adxKwLHGHOK2k3zPORcy/NGVlcYOoxDFN1q+g==",
+  "dgSpecHash": "9WS+nhy0W7cpOn23NduXl/3U+EOZx+4GJx51diedZbM9HZBn8Z+x+/95TXEoT9qnOAr5LWPV4NhjqyVk37g5WA==",
   "success": true,
-  "projectFilePath": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\Academic-Blog-App.csproj",
+  "projectFilePath": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\Academic-Blog-App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thuong\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Thuong\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -263,12 +263,5 @@
     "C:\\Users\\Thuong\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Thuong\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog-App\\obj\\project.nuget.cache : After parsing a value an unexpected character was encountered: \". Path 'logs', line 274, position 2."
-    }
-  ]
+  "logs": []
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8k0IollXb+5dMKyFhBK8LaleDQOFKZBIb8OWuJIzzYa0GGR8OoDCpYrBYkLbpPABJk0UhYks2U+HKKB9cjvbCg==",
+  "dgSpecHash": "UKguFo/c4gkbVkXHLQAk6RCCXd0eoEw9M0kktEzEUY4abFkWnOq182jNcB6EBi54OCFsMISkSmt/kSyNDSwRAw==",
   "success": true,
-  "projectFilePath": "D:\\AB_FPTU_2410\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
+  "projectFilePath": "D:\\Truong\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thuong\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Thuong\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

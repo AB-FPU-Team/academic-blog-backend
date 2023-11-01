@@ -1,5 +1,6 @@
 ﻿@using Academic_Blog.PayLoad.Response;
 @using Academic_Blog_App.Services;
+@using Academic_Blog_App.Services.Helper;
 @using Microsoft.AspNetCore.Http;
 @{
     var loginAccount = SessionHelper.GetObjectFromJson<LoginResponse>(ViewContext.HttpContext.Session, "Account");
@@ -39,13 +40,15 @@
     <!-- login style -->
     <link href="~/css/login.css" rel="stylesheet" asp-append-version="true" />
     <!-- tinyMCE -->
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/cadghzci30irfcdl8tw7vzcgs3gcf1cn8grmpycvq8qpflrr/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({
             selector: '#mytextarea',
             statusbar: false
         });
     </script>
+    <!-- Bootstrap 4 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="sub_page" style="margin-top: 75px;">
@@ -100,7 +103,7 @@
                                             </a>
                                             <div class="dropdown-menu bg-dark rounded-0 border-0 m-0">
                                                 <a asp-page="/UserPage/LectureProfile" class="dropdown-item text-light">Profile</a>
-                                                <a asp-page="/BlogPage/CreateNewBlog" class="dropdown-item text-light">View Post</a>
+                                                <a asp-page="/LecturePage/ReviewPost" class="dropdown-item text-light">Review Post</a>
                                                 <a asp-page="/HomePage/Logout" class="dropdown-item text-light">Logout</a>
                                             </div>
                                         }

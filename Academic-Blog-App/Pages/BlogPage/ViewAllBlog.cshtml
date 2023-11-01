@@ -2,55 +2,55 @@
 @model Academic_Blog_App.Pages.BlogPage.ViewAllBlogModel
 @{
 }
-
+@*
 <style>
-    .blog-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 50px;
+    p {
+        margin: 0px !important;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
-    .image-blog {
-        flex: 0 0 35%;
-        margin-right: 40px;
+    h4 {
+        margin: 0px !important;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
-    .body-blog {
-        flex: 1; 
-        height: 160px;
-        padding-left: 50px;
-        border: 1px solid black;
-        text-align: center;
-        justify-content: center;
+    .textCrop {
+        padding: 0 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-
 </style>
 
 <div class="body_bg layout_padding">
-    <section class="service_section">
+    @*foreach (var item in Model.Blogs)
+    {
+    <section class="service_section mb-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    @foreach (var item in Model.Blogs)
-                    {
-                        <div class="blog-item">
-                            <div class="image-blog">
-                                <img class="img-box" src="~/@item.Thumbnal_Url" alt="" style="height: 100%; display: block; margin: auto" />
-                            </div>
-                            <div class="body-blog box">
-                                <a class="nav-link" href="/BlogPage/ViewBlogDetail?blogId={@item.Id}&authorId={@item.AuthorId}" style="color: #e9a21a; padding: 0; border: 0">
-                                    <h4>
-                                        @item.Title
-                                    </h4>
-                                </a>
-                                <p>
-                                    @item.ShortDescription
-                                </p>
-                            </div>
-                        </div>
-                    }
+            <div class="row border border-dark">
+                <div class="col-md-3 py-3">
+                    <img class="img-thumbnail image-blog" src="~/images/.png" alt="Responsive Image" /> // Thay doi data
+                </div>
+                <div class="col-md-8 py-3 align-self-center">
+                    <div class="textCrop">
+                            <a class="nav-link" href="/BlogPage/ViewBlogDetail?" style="color: #e9a21a; padding: 0; border: 0"> // Query
+                                <h4>
+                                    Ném data vào đây.
+                                </h4>
+                            </a>
+                            <p>
+                                Ném data vào đây
+                            </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    }*@
 </div>
+*@
