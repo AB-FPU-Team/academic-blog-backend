@@ -30,7 +30,7 @@ namespace Academic_Blog.Controllers
 
         // GET: api/Comments
         [HttpGet]
-        [EnableQuery(PageSize = 10)]
+        [EnableQuery]
         public async Task<IActionResult> GetComments()
         {
            var response = await _commentService.GetComments();

@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 using System.Text.Json;
 
-namespace Academic_Blog_App.Services
+namespace Academic_Blog_App.Services.Helper
 {
     public static class SessionHelper
     {
