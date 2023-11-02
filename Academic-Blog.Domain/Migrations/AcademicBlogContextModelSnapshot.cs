@@ -346,6 +346,26 @@ namespace Academic_Blog.Domain.Migrations
                     b.ToTable("Notification", (string)null);
                 });
 
+            modelBuilder.Entity("Academic_Blog.Domain.Models.Report", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CommentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CommentId");
+
+                    b.ToTable("Report", (string)null);
+                });
+
             modelBuilder.Entity("Academic_Blog.Domain.Models.Role", b =>
                 {
                     b.Property<Guid>("Id")
@@ -535,6 +555,17 @@ namespace Academic_Blog.Domain.Migrations
                     b.Navigation("FromUser");
                 });
 
+            modelBuilder.Entity("Academic_Blog.Domain.Models.Report", b =>
+                {
+                    b.HasOne("Academic_Blog.Domain.Models.Comment", "Comment")
+                        .WithMany("Reports")
+                        .HasForeignKey("CommentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Comment");
+                });
+
             modelBuilder.Entity("Academic_Blog.Domain.Models.Account", b =>
                 {
                     b.Navigation("AuthorBlogs");
@@ -568,6 +599,11 @@ namespace Academic_Blog.Domain.Migrations
             modelBuilder.Entity("Academic_Blog.Domain.Models.Blog", b =>
                 {
                     b.Navigation("Comments");
+                });
+
+            modelBuilder.Entity("Academic_Blog.Domain.Models.Comment", b =>
+                {
+                    b.Navigation("Reports");
                 });
 
             modelBuilder.Entity("Academic_Blog.Domain.Models.Field", b =>
