@@ -1,456 +1,520 @@
 {
   "Files": [
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Academic-Blog-App.bundle.scp.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Academic-Blog-App.bundle.scp.css",
       "PackagePath": "staticwebassets\\Academic-Blog-App.bundle.scp.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\bootstrap.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\login.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\responsive.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\responsive.css",
       "PackagePath": "staticwebassets\\css\\responsive.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\site.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\style.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\style.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\style.css.map",
       "PackagePath": "staticwebassets\\css\\style.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\style.scss",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\css\\style.scss",
       "PackagePath": "staticwebassets\\css\\style.scss"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\favicon.ico",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\about-img.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\07c373c4-93d9-4637-980f-7ace46fdd003.png",
+      "PackagePath": "staticwebassets\\images\\07c373c4-93d9-4637-980f-7ace46fdd003.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\115d50d9-2b34-4f5a-8a77-fef8217c6e36.png",
+      "PackagePath": "staticwebassets\\images\\115d50d9-2b34-4f5a-8a77-fef8217c6e36.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\151d3193-d444-431a-b0e3-56302950eabc.png",
+      "PackagePath": "staticwebassets\\images\\151d3193-d444-431a-b0e3-56302950eabc.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\1ed969f2-67e9-48ac-932e-71735b88ce3c.png",
+      "PackagePath": "staticwebassets\\images\\1ed969f2-67e9-48ac-932e-71735b88ce3c.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\29e78ba9-df70-4b55-8372-c016fcbd3509.png",
+      "PackagePath": "staticwebassets\\images\\29e78ba9-df70-4b55-8372-c016fcbd3509.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\2c81eb0c-27a8-4fc7-874a-ad92550b2be2.png",
+      "PackagePath": "staticwebassets\\images\\2c81eb0c-27a8-4fc7-874a-ad92550b2be2.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\2e2f140b-d6c5-46ae-b61b-9471fef02ff3.png",
+      "PackagePath": "staticwebassets\\images\\2e2f140b-d6c5-46ae-b61b-9471fef02ff3.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\5e389590-a722-4ffa-86b9-9fb742c47d96.jpg",
+      "PackagePath": "staticwebassets\\images\\5e389590-a722-4ffa-86b9-9fb742c47d96.jpg"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\67585486-3692-4636-b1cf-feab06763112.png",
+      "PackagePath": "staticwebassets\\images\\67585486-3692-4636-b1cf-feab06763112.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\6966202a-f856-4637-a4ff-01faeb10e71b.jpg",
+      "PackagePath": "staticwebassets\\images\\6966202a-f856-4637-a4ff-01faeb10e71b.jpg"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\7357a651-0cd8-47cc-9287-6f82c2f5f45b.jpg",
+      "PackagePath": "staticwebassets\\images\\7357a651-0cd8-47cc-9287-6f82c2f5f45b.jpg"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\77ca561a-1da7-4fbc-bb3c-58b30bc84a7d.png",
+      "PackagePath": "staticwebassets\\images\\77ca561a-1da7-4fbc-bb3c-58b30bc84a7d.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\8e62696c-f912-4194-9508-c16e1867f1c4.png",
+      "PackagePath": "staticwebassets\\images\\8e62696c-f912-4194-9508-c16e1867f1c4.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\93d4af28-ad81-427f-be2c-a38026227e8a.png",
+      "PackagePath": "staticwebassets\\images\\93d4af28-ad81-427f-be2c-a38026227e8a.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\9f44e273-53d4-4664-a51f-ff96aa4bf302.png",
+      "PackagePath": "staticwebassets\\images\\9f44e273-53d4-4664-a51f-ff96aa4bf302.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\about-img.png",
       "PackagePath": "staticwebassets\\images\\about-img.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\alexImage.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\alexImage.png",
       "PackagePath": "staticwebassets\\images\\alexImage.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\benjaminImage.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\benjaminImage.jpg",
       "PackagePath": "staticwebassets\\images\\benjaminImage.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\body_bg.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\body_bg.jpg",
       "PackagePath": "staticwebassets\\images\\body_bg.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\call-o.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\c4ae8e70-8e94-43bf-9da8-5e29dcda62ed.png",
+      "PackagePath": "staticwebassets\\images\\c4ae8e70-8e94-43bf-9da8-5e29dcda62ed.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\call-o.png",
       "PackagePath": "staticwebassets\\images\\call-o.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\call.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\call.png",
       "PackagePath": "staticwebassets\\images\\call.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\challoterImage.webp",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\challoterImage.webp",
       "PackagePath": "staticwebassets\\images\\challoterImage.webp"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\client.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\client.jpg",
       "PackagePath": "staticwebassets\\images\\client.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\contact-img.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\contact-img.jpg",
       "PackagePath": "staticwebassets\\images\\contact-img.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\doctorStrangeImage.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\d80fc50f-d68e-4491-b251-bb56f604d30a.jpg",
+      "PackagePath": "staticwebassets\\images\\d80fc50f-d68e-4491-b251-bb56f604d30a.jpg"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\doctorStrangeImage.png",
       "PackagePath": "staticwebassets\\images\\doctorStrangeImage.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\eager.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\e488402b-8b3b-4721-95f4-2d94252b035a.png",
+      "PackagePath": "staticwebassets\\images\\e488402b-8b3b-4721-95f4-2d94252b035a.png"
+    },
+    {
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\eager.png",
       "PackagePath": "staticwebassets\\images\\eager.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\emilyImage.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\emilyImage.png",
       "PackagePath": "staticwebassets\\images\\emilyImage.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\envelope-o.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\envelope-o.png",
       "PackagePath": "staticwebassets\\images\\envelope-o.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\envelope.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\envelope.png",
       "PackagePath": "staticwebassets\\images\\envelope.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\github.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\github.png",
       "PackagePath": "staticwebassets\\images\\github.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\harlyImage.webp",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\harlyImage.webp",
       "PackagePath": "staticwebassets\\images\\harlyImage.webp"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\hero-bg.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\hero-bg.jpg",
       "PackagePath": "staticwebassets\\images\\hero-bg.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\johnWickImage.webp",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\johnWickImage.webp",
       "PackagePath": "staticwebassets\\images\\johnWickImage.webp"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\location-o.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\location-o.png",
       "PackagePath": "staticwebassets\\images\\location-o.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\location.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\location.png",
       "PackagePath": "staticwebassets\\images\\location.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\logo.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\manhattanImage.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\manhattanImage.jpg",
       "PackagePath": "staticwebassets\\images\\manhattanImage.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\marketing.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\marketing.png",
       "PackagePath": "staticwebassets\\images\\marketing.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\menu.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\menu.png",
       "PackagePath": "staticwebassets\\images\\menu.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\next-white.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\next-white.png",
       "PackagePath": "staticwebassets\\images\\next-white.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\next.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\next.png",
       "PackagePath": "staticwebassets\\images\\next.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\offer-img.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\offer-img.jpg",
       "PackagePath": "staticwebassets\\images\\offer-img.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\peterMarvelImage.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\peterMarvelImage.jpg",
       "PackagePath": "staticwebassets\\images\\peterMarvelImage.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\petterImage.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\petterImage.jpg",
       "PackagePath": "staticwebassets\\images\\petterImage.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\prev-white.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\prev-white.png",
       "PackagePath": "staticwebassets\\images\\prev-white.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\prev.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\prev.png",
       "PackagePath": "staticwebassets\\images\\prev.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\pronounciation.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\pronounciation.jpg",
       "PackagePath": "staticwebassets\\images\\pronounciation.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\quote.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\quote.png",
       "PackagePath": "staticwebassets\\images\\quote.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\react.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\react.png",
       "PackagePath": "staticwebassets\\images\\react.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\robinImage.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\robinImage.jpg",
       "PackagePath": "staticwebassets\\images\\robinImage.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-1.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-1.png",
       "PackagePath": "staticwebassets\\images\\s-1.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-2.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-2.png",
       "PackagePath": "staticwebassets\\images\\s-2.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-3.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-3.png",
       "PackagePath": "staticwebassets\\images\\s-3.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-4.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\s-4.png",
       "PackagePath": "staticwebassets\\images\\s-4.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\search-icon.png",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\search-icon.png",
       "PackagePath": "staticwebassets\\images\\search-icon.png"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\sophiaImage.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\sophiaImage.jpg",
       "PackagePath": "staticwebassets\\images\\sophiaImage.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\tonyStarkImage.jpg",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\tonyStarkImage.jpg",
       "PackagePath": "staticwebassets\\images\\tonyStarkImage.jpg"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\js\\bootstrap.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\js\\jquery-3.4.1.min.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\js\\jquery-3.4.1.min.js",
       "PackagePath": "staticwebassets\\js\\jquery-3.4.1.min.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\js\\site.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\microsoft\\signalr\\dist\\browser\\signalr.js",
-      "PackagePath": "staticwebassets\\microsoft\\signalr\\dist\\browser\\signalr.js"
-    },
-    {
-      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
-      "PackagePath": "staticwebassets\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Academic-Blog-App.Microsoft.AspNetCore.StaticWebAssets.props",
