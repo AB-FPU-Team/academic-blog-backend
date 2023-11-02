@@ -91,17 +91,12 @@ namespace Academic_Blog.Domain.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("getutcdate()");
 
-                    b.Property<Guid>("LecturerId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("StudentId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AwardId");
-
-                    b.HasIndex("LecturerId");
 
                     b.HasIndex("StudentId");
 
@@ -428,13 +423,6 @@ namespace Academic_Blog.Domain.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Academic_Blog.Domain.Models.Account", "Lecturer")
-                        .WithMany("LecturerAwardMappings")
-                        .HasForeignKey("LecturerId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired()
-                        .HasConstraintName("FK_Lecturer_Award");
-
                     b.HasOne("Academic_Blog.Domain.Models.Account", "Student")
                         .WithMany("StudentAwardMappings")
                         .HasForeignKey("StudentId")
@@ -443,8 +431,6 @@ namespace Academic_Blog.Domain.Migrations
                         .HasConstraintName("FK_Student_Award");
 
                     b.Navigation("Award");
-
-                    b.Navigation("Lecturer");
 
                     b.Navigation("Student");
                 });
@@ -573,8 +559,6 @@ namespace Academic_Blog.Domain.Migrations
                     b.Navigation("BannedInfors");
 
                     b.Navigation("Comments");
-
-                    b.Navigation("LecturerAwardMappings");
 
                     b.Navigation("MyImpactsNotifications");
 

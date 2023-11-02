@@ -26,7 +26,6 @@ namespace Academic_Blog.Domain.Models
         public virtual AccountFieldMapping? AccountFieldMapping { get; set; } 
         public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
         public virtual ICollection<AccountAwardMapping> StudentAwardMappings { get; set; } = new List<AccountAwardMapping>();
-        public virtual ICollection<AccountAwardMapping> LecturerAwardMappings { get; set; } = new List<AccountAwardMapping>();
         public virtual ICollection<Notification> MyNotifications { get; set; } = new List<Notification>();
         public virtual ICollection<Notification> MyImpactsNotifications { get; set; } = new List<Notification>();
         public virtual ICollection<Blog> AuthorBlogs { get; set; } = new List<Blog>();

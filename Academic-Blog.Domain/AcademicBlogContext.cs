@@ -67,7 +67,6 @@ namespace Academic_Blog.Domain
                 entity.ToTable("AccountAwardMapping");
                 entity.HasKey(entity => entity.Id);
                 entity.Property(entity => entity.DateTime).HasDefaultValueSql("getutcdate()");
-                entity.HasOne(d => d.Lecturer).WithMany(p => p.LecturerAwardMappings).HasConstraintName("FK_Lecturer_Award").HasForeignKey(x => x.LecturerId).OnDelete(DeleteBehavior.Restrict);
                 entity.HasOne(d => d.Student).WithMany(p => p.StudentAwardMappings).HasConstraintName("FK_Student_Award").HasForeignKey(x => x.StudentId).OnDelete(DeleteBehavior.Restrict);
                 
             });
