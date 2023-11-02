@@ -33,7 +33,6 @@ namespace Academic_Blog.Domain
         public DbSet<Role> Roles { get; set; }
         public DbSet<TrackingViewBlog> TrackingViewBlogs { get; set; }
         public DbSet<Report> Reports { get; set; }
-        public DbSet<TrackingViewBlog> TrackingViewBlogs { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

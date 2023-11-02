@@ -1,12 +1,12 @@
 using Academic_Blog.Domain.Models;
 using Academic_Blog.PayLoad.Request;
 using Academic_Blog.PayLoad.Response;
-using Academic_Blog_App.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Nancy.Session;
 using System.Net.Http.Headers;
 using System.Text.Json;
+using Academic_Blog_App.Services.Helper;
+using Academic_Blog.Domain;
 
 namespace Academic_Blog_App.Pages.AdminPage
 {
@@ -58,6 +58,6 @@ namespace Academic_Blog_App.Pages.AdminPage
             }
             return Page();
         }
-        
+
     }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Truong\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj": {}
+    "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj": {}
   },
   "projects": {
-    "D:\\Truong\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+    "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Truong\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
+        "projectUniqueName": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
         "projectName": "Academic-Blog.Domain",
-        "projectPath": "D:\\Truong\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
-        "packagesPath": "C:\\Users\\Thuong\\.nuget\\packages\\",
-        "outputPath": "D:\\Truong\\academic-blog-backend\\Academic-Blog.Domain\\obj\\",
+        "projectPath": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Thuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,6 +72,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
@@ -89,24 +94,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.310\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Truong\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
+    "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Truong\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
+        "projectUniqueName": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
         "projectName": "Academic-Blog.Repository",
-        "projectPath": "D:\\Truong\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
-        "packagesPath": "C:\\Users\\Thuong\\.nuget\\packages\\",
-        "outputPath": "D:\\Truong\\academic-blog-backend\\Academic-Blog.Repository\\obj\\",
+        "projectPath": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Thuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -115,14 +120,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Truong\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
-                "projectPath": "D:\\Truong\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
+              "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+                "projectPath": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
               }
             }
           }
@@ -170,24 +176,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.310\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Truong\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj": {
+    "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Truong\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
+        "projectUniqueName": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
         "projectName": "Academic-Blog",
-        "projectPath": "D:\\Truong\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
-        "packagesPath": "C:\\Users\\Thuong\\.nuget\\packages\\",
-        "outputPath": "D:\\Truong\\academic-blog-backend\\Academic-Blog\\obj\\",
+        "projectPath": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Thuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -196,18 +202,19 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.310\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Truong\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
-                "projectPath": "D:\\Truong\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
+              "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+                "projectPath": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
               },
-              "D:\\Truong\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
-                "projectPath": "D:\\Truong\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj"
+              "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
+                "projectPath": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj"
               }
             }
           }
@@ -290,7 +297,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.310\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
