@@ -180,6 +180,19 @@ namespace Academic_Blog.Services.Implements
             return result;
         }
 
+        public async Task<bool> IncreaseView(Guid id)
+        {
+            var blog = await _unitOfWork.GetRepository<Blog>().SingleOrDefaultAsync(predicate: x => x.Id == id && x.Status == BlogStatus.APPROVED.GetDescriptionFromEnum<BlogStatus>());
+            if (blog == null)
+            {
+                return false;
+            }
+            blog.View += 1;
+            _unitOfWork.GetRepository<Blog>().UpdateAsync(blog);
+            var isSuccessfull = await _unitOfWork.CommitAsync() > 0;
+            return isSuccessfull;
+        }
+
         public async Task<BlogResponse> ReadBlog(Guid id)
         {
             var blog = await _unitOfWork.GetRepository<Blog>().SingleOrDefaultAsync(predicate : x => x.Id == id && x.Status == BlogStatus.APPROVED.GetDescriptionFromEnum<BlogStatus>());

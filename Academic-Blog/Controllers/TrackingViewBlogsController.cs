@@ -43,7 +43,7 @@ namespace Academic_Blog.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [EnableQuery]
-        public async Task<IActionResult> CreaateTrackingViewBlog(TrackingViewBlogRequest trackingViewBlog)
+        public async Task<IActionResult> CreateTrackingViewBlog(TrackingViewBlogRequest trackingViewBlog)
         {
            var isSuccessfully = await _trackingService.CreateTrackingViewBlog(trackingViewBlog);
             if (!isSuccessfully)

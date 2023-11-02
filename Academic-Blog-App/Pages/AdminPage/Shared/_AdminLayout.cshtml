@@ -1,6 +1,7 @@
 ﻿@using Academic_Blog.PayLoad.Response;
 @using Academic_Blog_App.Services;
 @using Microsoft.AspNetCore.Http;
+@using Academic_Blog_App.Services.Helper
 @{
     var loginAccount = SessionHelper.GetObjectFromJson<LoginResponse>(ViewContext.HttpContext.Session, "Account");
 }

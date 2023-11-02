@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9WS+nhy0W7cpOn23NduXl/3U+EOZx+4GJx51diedZbM9HZBn8Z+x+/95TXEoT9qnOAr5LWPV4NhjqyVk37g5WA==",
+  "dgSpecHash": "os3eS78SP4KobOBVVZnwN5F6PvkGYT7n8MhHrlm2wGUMKSqVjb5+0dmjDDcvn/LuLNSaYDyaZUwEzCZrYbyexg==",
   "success": true,
-  "projectFilePath": "D:\\Truong\\academic-blog-backend\\Academic-Blog-App\\Academic-Blog-App.csproj",
+  "projectFilePath": "D:\\dev_branch\\academic-blog-backend\\Academic-Blog-App\\Academic-Blog-App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thuong\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Thuong\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

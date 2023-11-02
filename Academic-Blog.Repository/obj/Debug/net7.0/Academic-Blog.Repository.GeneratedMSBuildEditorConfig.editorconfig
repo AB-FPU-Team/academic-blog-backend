@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Academic_Blog.Repository
-build_property.ProjectDir = D:\Truong\academic-blog-backend\Academic-Blog.Repository\
+build_property.ProjectDir = D:\dev_branch\academic-blog-backend\Academic-Blog.Repository\
