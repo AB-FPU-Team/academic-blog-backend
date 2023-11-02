@@ -31,6 +31,7 @@ namespace Academic_Blog.Domain
         public DbSet<Field> Fields { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<TrackingViewBlog> TrackingViewBlogs { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

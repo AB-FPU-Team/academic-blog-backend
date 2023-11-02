@@ -24,13 +24,13 @@ namespace Academic_Blog.Services.Implements
             {
                 throw new BadHttpRequestException("You in banned time", StatusCodes.Status400BadRequest);
             }
-            var blog = await _unitOfWork.GetRepository<Blog>().SingleOrDefaultAsync(predicate : x => x.Id == request.BlogId);
+            var blog = await _unitOfWork.GetRepository<Blog>().SingleOrDefaultAsync(predicate: x => x.Id == request.BlogId);
             if (!blog.Status.Equals(BlogStatus.APPROVED.GetDescriptionFromEnum<BlogStatus>()))
             {
                 throw new BadHttpRequestException("blog is not active", StatusCodes.Status400BadRequest);
             }
             comment.ReplyToId = request.ReplyToId;
-            comment.CommentorId = GetUserIdFromJwt();
+            comment.CommentorId = new Guid();
             comment.CreateTime = DateTime.Now;
             comment.BlogId = request.BlogId;
             comment.Id = Guid.NewGuid();

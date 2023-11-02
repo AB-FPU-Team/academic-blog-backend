@@ -35,7 +35,7 @@ namespace Academic_Blog.Controllers
 
         // GET: api/Accounts
         [HttpGet]
-        [EnableQuery(PageSize = 10)]
+        [EnableQuery]
         public async Task<IActionResult> GetAccounts()
         {
           var accounts =  await _accountService.GetAccounts();

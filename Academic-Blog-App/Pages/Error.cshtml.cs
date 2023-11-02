@@ -21,6 +21,11 @@ namespace Academic_Blog_App.Pages
 
         public void OnGet()
         {
+            if (TempData.ContainsKey("Error") && TempData.ContainsKey("PageName"))
+            {
+                ViewData["Error"] = TempData["Error"]!.ToString();
+                ViewData["PageName"] = TempData["PageName"]!.ToString();
+            }
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         }
     }
