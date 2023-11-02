@@ -22,7 +22,6 @@ namespace Academic_Blog_App.Pages.AjaxPage
           public async Task<IActionResult> OnGetCreateNewComment(string commentData)
         {
             var currentBlog = SessionHelper.GetObjectFromJson<Blog>(HttpContext.Session, "CurrentBlog");
-            Boolean check = true;
             CreateCommentRequest newComment = new CreateCommentRequest
             {
                 Content = commentData,
@@ -34,8 +33,7 @@ namespace Academic_Blog_App.Pages.AjaxPage
 
                 if (result.IsSuccess)
                 {
-                    // var currentAccountResult = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, "currentUser", MethodEnum.GET, null);
-                    var currentAccountResult = "CA31764C-AB67-4C97-9583-05A0AB9FC9E6";
+                    var currentAccountResult = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, "currentUser", MethodEnum.GET, null);
 
                     var acc = SessionHelper.GetObjectFromJson<LoginResponse>(HttpContext.Session, "Account");
                     Boolean Login = false;
@@ -61,7 +59,6 @@ namespace Academic_Blog_App.Pages.AjaxPage
         public async Task<IActionResult> OnGetCreateReply(string commentId, string replyComment, string spaddingInt)
         {
             var currentBlog = SessionHelper.GetObjectFromJson<Blog>(HttpContext.Session, "CurrentBlog");
-            Boolean check = true;
             CreateCommentRequest newComment = new CreateCommentRequest
             {
                 Content = replyComment,
@@ -75,8 +72,8 @@ namespace Academic_Blog_App.Pages.AjaxPage
 
                 if (result.IsSuccess)
                 {
-                    // var currentAccountResult = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, "currentUser", MethodEnum.GET, null);
-                    var currentAccountResult = "CA31764C-AB67-4C97-9583-05A0AB9FC9E6";                  
+                    var currentAccountResult = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, "currentUser", MethodEnum.GET, null);
+
                     int distance = CountDistance(int.Parse(spaddingInt));
 
                     var acc = SessionHelper.GetObjectFromJson<LoginResponse>(HttpContext.Session, "Account");
