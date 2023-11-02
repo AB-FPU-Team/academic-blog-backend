@@ -20,8 +20,36 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/AccountDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXEFjY291bnREZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/Banned.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXEJhbm5lZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/CommentDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXENvbW1lbnREZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/DashBoard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXERhc2hCb2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/ReportIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXFJlcG9ydEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXFNoYXJlZFxfQWRtaW5MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AjaxPage/AjaxHandel.cshtml]
