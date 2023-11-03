@@ -18,22 +18,6 @@
             text-align: center !important;
         }
 
-    .blog-interact-view {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-        .blog-interact-view i {
-            margin-left: 10px;
-        }
-
-        .blog-interact-view .comment {
-            margin-right: 10px;
-        }
-
     .blog-interact {
         height: 50px;
         border-top: 1px solid black;
@@ -46,6 +30,7 @@
     }
 
         .blog-interact i {
+            cursor: pointer;
             margin-left: 12px;
         }
 
@@ -87,10 +72,8 @@
     <section class="service_section">
         <div class="container">
             <div class="row" style="margin: 40px 0;">
-                @foreach (var acc in Model.Accounts)
-                {
-                    if (acc.Id == Model.Blog.AuthorId)
-                    {
+                @foreach (var acc in Model.Accounts) {
+                    if (acc.Id == Model.Blog.AuthorId) {
                         <div class="col-md-2">
                             <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="" style="width: 150px; height: 150px ;" />
                         </div>
@@ -103,52 +86,50 @@
                     }
                 }
             </div>
-            <div class="box" style="width: 100% !important; ">
-                <h2>@Model.Blog.Title</h2>
-                <p style="margin: 12px 0; font-size: 20px; padding: 10px 0;">
-                    @Model.Blog.Description
-                </p>
-            </div>
-            <div class="blog-interact-view">
-                <div id="blogView">
-                    <i class="fa fa-eye"  style="font-size:30px;color:black">@Model.Blog.View</i>
-                </div>          
-                <div class="comment" id="blogComment">
-                    @Model.Comments.Count Comments
+            <div class="box w-100">
+                <div class="p-3">
+                    <h2 class="font-weight-bold mx-auto my-2" style="font-size: 38px;">@Model.Blog.Title</h2>
+                    <span class="d-block" style="color: red;">@Model.Blog.CreatedTime</span>
+                    <span class="d-block" style="color: red;">@Model.Blog.UpdatedTime</span>
+                    <p style="margin: 12px 0; font-size: 20px; padding: 10px 0;">
+                        @Model.Blog.Description
+                    </p>
                 </div>
             </div>
-            <div class="blog-interact">
-                @if (!string.IsNullOrEmpty(Login))
-                {
-                    <i class="fa fa-commenting-o" style="font-size:35px" onclick="openComment()"> Comment </i>
-                }
-                else
-                {
-                    <i class="fa fa-commenting-o" style="font-size:35px"> Comment </i>
+            <div class="w-100">
+                <div class="d-flex justify-content-xl-between align-self-stretch">
+                    <div id="blogView" class="ml-1">
+                        <i class="fa fa-eye" style="font-size:30px;color:black">@Model.Blog.View</i>
+                    </div>
+                    <div class="mr-1" id="blogComment">
+                        @Model.Comments.Count Comments
+                    </div>
+                </div>
+                <div class="blog-interact">
+                    @if (!string.IsNullOrEmpty(Login)) {
+                        <i class="fa fa-commenting-o btn-outline-info" style="font-size:35px" onclick="openComment()"> Comment </i>
+                    }
+                    else {
+                        <i class="fa fa-commenting-o" style="font-size:35px"> Comment </i>
 
-                }
+                    }
+                </div>
             </div>
         </div>
     </section>
-    <section class="comments_section">
 
-        @foreach (var comment in Model.Comments)
-        {
-            @if (comment.ReplyToId == null)
-            {
+    <section class="comments_section">
+        @foreach (var comment in Model.Comments) {
+            @if (comment.ReplyToId == null) {
                 var feedBack = 0;
-                @foreach (var feed in Model.Comments)
-                {
-                    @if (feed.ReplyToId == comment.Id)
-                    {
+                @foreach (var feed in Model.Comments) {
+                    @if (feed.ReplyToId == comment.Id) {
                         feedBack += 1;
                     }
                 }
-                @foreach (var acc in Model.Accounts)
-                {
-                    @if (comment.CommentorId == acc.Id)
-                    {
-                        <div class="comment-blog-container" id="commentBlog" style="height: auto; width: 590px; margin-left: 205px; position: relative; margin-top: 15px; display: none;">                  
+                @foreach (var acc in Model.Accounts) {
+                    @if (comment.CommentorId == acc.Id) {
+                        <div class="comment-blog-container" id="commentBlog" style="height: auto; width: 590px; margin-left: 205px; position: relative; margin-top: 15px; display: none;">
                             <form method="get" id="formInputNewComment">
                                 <span class="avatar">
                                     <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="" style="width: 50px; height: 50px; float: left; margin-right: 30px; margin-top: 5px;" />
@@ -176,10 +157,9 @@
                                 </div>
                             </div>
                             <div class="commentor-interact row" style="margin-left: 210px; clear: both; color: black; opacity: 80%;">
-                                @if (!string.IsNullOrEmpty(Login))
-                                {
+                                @if (!string.IsNullOrEmpty(Login)) {
                                     <button type="button" style="display: inline-block; margin-right: 10px; color: yellow; margin-bottom: 10px; font-size: 18px" id="report-@comment.Id" onclick="openReport('@comment.Id')">Report</button>
-                                }                     
+                                }
                                 <div id="formReply-@comment.Id" class="form-reply" style="display: inline-block; margin-right: 10px;">
                                     <form method="get">
                                         <div>
@@ -187,10 +167,9 @@
                                         </div>
                                     </form>
                                 </div>
-                                @if (!string.IsNullOrEmpty(Login))
-                                {
+                                @if (!string.IsNullOrEmpty(Login)) {
                                     <button class="reply-btn" type="button" style="display: inline-block; color: black; margin-bottom: 10px; font-size: 17px;" id="reply-@comment.Id" onclick="openReply('@comment.Id')">Reply</button>
-                                }                     
+                                }
                             </div>
                         </div>
                         <div class="comment-container" id="@comment.Id" style="">
@@ -208,6 +187,7 @@
             }
         }
     </section>
+
     <section class="report-model">
         <div id="modal" class="modal">
             <div class="model-content">
@@ -249,8 +229,8 @@
         </div>
     </section>
 </div>
-<script>
 
+<script>
     function openReport(commentId) {
         console.log("Report run in with id report: " + commentId);
         var commentIdInput = document.querySelector(".report-model-comment-id");
@@ -288,10 +268,7 @@
             return;
         }
     }
-
 </script>
-
-
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="~/js/jquery-3.4.1.min.js"></script>

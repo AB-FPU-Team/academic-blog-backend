@@ -3234,23 +3234,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sagem\\.nuget\\packages\\": {},
+    "C:\\Users\\Truong\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
+      "projectUniqueName": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
       "projectName": "Academic-Blog.Repository",
-      "projectPath": "E:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
-      "packagesPath": "C:\\Users\\sagem\\.nuget\\packages\\",
-      "outputPath": "E:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Repository\\obj\\",
+      "projectPath": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
+      "packagesPath": "C:\\Users\\Truong\\.nuget\\packages\\",
+      "outputPath": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\sagem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Truong\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3265,8 +3265,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
-              "projectPath": "E:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
+            "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+              "projectPath": "D:\\FPT Leaner\\PRN231\\Group_Project\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
             }
           }
         }
