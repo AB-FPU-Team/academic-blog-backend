@@ -27,13 +27,15 @@
     <meta name="keywords" content="ABlog" />
     <meta name="description" content="Academic_Blog" />
     <meta name="author" content="AB_FPTU" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" asp-append-version="true">
+    
     <!-- slider stylesheet -->
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" asp-append-version="true">
 
     <!-- font wesome stylesheet -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" asp-append-version="true">
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="~/css/bootstrap.css" asp-append-version="true" />
@@ -46,6 +48,9 @@
     <link href="~/css/responsive.css" rel="stylesheet" asp-append-version="true" />
     <!-- login style -->
     <link href="~/css/login.css" rel="stylesheet" asp-append-version="true" />
+
+    <!-- Bootstrap 4 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" asp-append-version="true">
     <!-- tinyMCE -->
     <script src="https://cdn.tiny.cloud/1/cadghzci30irfcdl8tw7vzcgs3gcf1cn8grmpycvq8qpflrr/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
@@ -54,8 +59,6 @@
             statusbar: false
         });
     </script>
-    <!-- Bootstrap 4 Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="sub_page" style="margin-top: 75px;">
@@ -173,5 +176,6 @@
     <script type="text/javascript" src="~/js//bootstrap.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("ViewBlogDetailScripts", required: false)
 </body>
 </html>
