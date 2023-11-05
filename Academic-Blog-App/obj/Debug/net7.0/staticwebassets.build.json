@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "K568u3KiguBfgIaJs9RjkxBacJChJB8me8IzlLulrGE=",
+  "Hash": "CCdfsU3AekfxXwqOsbXuvNvTqMyZrNdPLgpbReKGfRo=",
   "Source": "Academic-Blog-App",
   "BasePath": "_content/Academic-Blog-App",
   "Mode": "Default",
@@ -318,6 +318,23 @@
       "OriginalItemSpec": "wwwroot\\images\\challoterImage.webp"
     },
     {
+      "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\chinaLanguage.png",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/chinaLanguage.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\chinaLanguage.png"
+    },
+    {
       "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\client.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
@@ -350,6 +367,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\contact-img.jpg"
+    },
+    {
+      "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\css&html.png",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/css&html.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\css&html.png"
     },
     {
       "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\doctorStrangeImage.png",
@@ -726,6 +760,23 @@
       "OriginalItemSpec": "wwwroot\\images\\prev-white.png"
     },
     {
+      "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\pronouce.webp",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/pronouce.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\pronouce.webp"
+    },
+    {
       "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\pronounciation.jpg",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
@@ -862,6 +913,23 @@
       "OriginalItemSpec": "wwwroot\\images\\s-4.png"
     },
     {
+      "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\sap.png",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/sap.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\sap.png"
+    },
+    {
       "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\search-icon.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
@@ -894,6 +962,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\sophiaImage.jpg"
+    },
+    {
+      "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\springBoot.png",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/springBoot.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\springBoot.png"
     },
     {
       "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\tonyStarkImage.jpg",

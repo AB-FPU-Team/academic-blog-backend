@@ -65,12 +65,20 @@
       "PackagePath": "staticwebassets\\images\\challoterImage.webp"
     },
     {
+      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\chinaLanguage.png",
+      "PackagePath": "staticwebassets\\images\\chinaLanguage.png"
+    },
+    {
       "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\client.jpg",
       "PackagePath": "staticwebassets\\images\\client.jpg"
     },
     {
       "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\contact-img.jpg",
       "PackagePath": "staticwebassets\\images\\contact-img.jpg"
+    },
+    {
+      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\css&html.png",
+      "PackagePath": "staticwebassets\\images\\css&html.png"
     },
     {
       "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\doctorStrangeImage.png",
@@ -161,6 +169,10 @@
       "PackagePath": "staticwebassets\\images\\prev.png"
     },
     {
+      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\pronouce.webp",
+      "PackagePath": "staticwebassets\\images\\pronouce.webp"
+    },
+    {
       "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\pronounciation.jpg",
       "PackagePath": "staticwebassets\\images\\pronounciation.jpg"
     },
@@ -193,12 +205,20 @@
       "PackagePath": "staticwebassets\\images\\s-4.png"
     },
     {
+      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\sap.png",
+      "PackagePath": "staticwebassets\\images\\sap.png"
+    },
+    {
       "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\search-icon.png",
       "PackagePath": "staticwebassets\\images\\search-icon.png"
     },
     {
       "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\sophiaImage.jpg",
       "PackagePath": "staticwebassets\\images\\sophiaImage.jpg"
+    },
+    {
+      "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\springBoot.png",
+      "PackagePath": "staticwebassets\\images\\springBoot.png"
     },
     {
       "Id": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\tonyStarkImage.jpg",
