@@ -125,95 +125,136 @@
                 </div>
             </div>
             <div class="d-flex flex-column">
-            @foreach (var comment in Model.Comments) {
-                @if (comment.ReplyToId == null) {
-                    var feedBack = 0;
-                    @foreach (var feed in Model.Comments) {
-                        @if (feed.ReplyToId == comment.Id) {
-                            feedBack += 1;
+                @foreach (var comment in Model.Comments) {
+                    @if (comment.ReplyToId == null) {
+                        var feedBack = 0;
+                        @foreach (var feed in Model.Comments) {
+                            @if (feed.ReplyToId == comment.Id) {
+                                feedBack += 1;
+                            }
                         }
-                    }
-                    @foreach (var acc in Model.Accounts) {
-                        @if (comment.CommentorId == acc.Id) {
-                            <div id="commentBlog" style="display: none;">
-                                <form method="get" id="formInputNewComment" class="m-0">
-                                    <div class="form-group row pt-sm-4 pb-sm-1 mb-0 align-items-center">
-                                        <div class="col-sm-1 p-0 text-center border-right border-dark" style="width: 50px; height: 50px;">
-                                            <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px;" />
+                        @foreach (var acc in Model.Accounts) {
+                            @if (comment.CommentorId == acc.Id) {
+                                <div id="commentBlog" style="display: none;">
+                                    <form method="get" id="formInputNewComment" class="m-0">
+                                        <div class="form-group row pt-sm-4 pb-sm-1 mb-0 align-items-center">
+                                            <div class="col-sm-1 p-0 text-center border-right border-dark" style="width: 50px; height: 50px;">
+                                                <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px;" />
+                                            </div>
+                                            <div class="col-sm-11">
+                                                <input class="form-control form-control-lg border border-dark" type="text" id="inputComment" name="inputComment" required maxlength="200" pattern=".*[^ ].*" placeholder="Enter Comment" style="background-color: gainsboro;" />
+                                            </div>
                                         </div>
-                                        <div class="col-sm-11">
-                                            <input class="form-control form-control-lg border border-dark" type="text" id="inputComment" name="inputComment" required maxlength="200" pattern=".*[^ ].*" placeholder="Enter Comment" style="background-color: gainsboro;" />
+                                        <div class="row justify-content-end px-3">
+                                            <button type="submit" class="btn btn-success px-5" data-blog-id="@comment.Id" style="font-size: 17px;">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- <div class="new-comment-container" id="newComment" style="">
+                                </div> -->
+                                <div class="form-group row py-sm-4 mb-0 align-items-center">
+                                    <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro;">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-1 my-2 border-right border-dark">
+                                                <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px;" />
+                                            </div>
+                                            <div class="col-sm">
+                                                <h4 class="m-0" style="font-weight: 600;">@acc.Name</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col border-top border-dark mt-1">
+                                            <p style="color: black; opacity: 80%; padding: 0.5rem 0 0 2rem;">@comment.Content</p>
                                         </div>
                                     </div>
-                                    <div class="row justify-content-end px-3">
-                                        <button type="submit" class="btn btn-success px-5" data-blog-id="@comment.Id" style="font-size: 17px;">Submit</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- <div class="new-comment-container" id="newComment" style="">
-                            </div> -->
-                            <div class="form-group row py-sm-4 mb-0 align-items-center">
-                                <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro;">
-                                    <div class="row align-items-center">
-                                        <div class="col-sm-1 my-2 border-right border-dark">
-                                            <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px;" />
+                                    <div class="w-100"></div>
+                                    <div class="col-lg-10 mx-auto" style="color: black; opacity: 80%;">
+                                        <div class="row align-items-center pt-2">
+                                            @if (!string.IsNullOrEmpty(Login)) {
+                                                <div class="col-2 text-center border-right border-secondary">
+                                                    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#reportModal">Report</button>
+                                                    @*<button type="button" id="report-@comment.Id" onclick="openReport('@comment.Id')">Report</button>*@
+                                                </div>
+                                            }
+                                            <div id="formReply-@comment.Id" class="col-2 text-center border-right border-secondary">
+                                                <form method="get" class="m-0">
+                                                    <button class="btn btn-outline-success" id="feedback-@comment.Id" data-comment-id="@comment.Id" data-spadding-int="210" type="submit">@feedBack FeedBack</button>
+                                                </form>
+                                            </div>
+                                            @if (!string.IsNullOrEmpty(Login)) {
+                                                <div class="col-2 text-center border-right border-secondary">
+                                                    <button class="btn btn-outline-secondary" type="button" id="reply-@comment.Id" onclick="openReply('@comment.Id')">Reply</button>
+                                                </div>
+                                            }
                                         </div>
-                                        <div class="col-sm">
-                                            <h4 class="m-0" style="font-weight: 600;">@acc.Name</h4>
-                                        </div>
-                                    </div>
-                                    <div class="col border-top border-dark mt-1">
-                                        <p style="color: black; opacity: 80%; padding: 0.5rem 0 0 2rem;">@comment.Content</p>
                                     </div>
                                 </div>
-                                <div class="w-100"></div>
-                                <div class="col-lg-10 mx-auto" style="color: black; opacity: 80%;">
-                                    <div class="row align-items-center pt-2">
-                                    @if (!string.IsNullOrEmpty(Login)) {
-                                        <div class="col-2 text-center border-right border-secondary">
-                                            <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#reportModal">Report</button>
-                                        </div>
-                                    }
-                                    <div id="formReply-@comment.Id" class="col-2 text-center border-right border-secondary">
-                                        <form method="get" class="m-0">
-                                            <button class="btn btn-outline-success" id="feedback-@comment.Id" data-comment-id="@comment.Id" data-spadding-int="210" type="submit">@feedBack FeedBack</button>
-                                        </form>
-                                    </div>
-                                    @if (!string.IsNullOrEmpty(Login)) {
-                                        <div class="col-2 text-center border-right border-secondary">
-                                            <button class="btn btn-outline-secondary" type="button" id="reply-@comment.Id" onclick="openReply('@comment.Id')">Reply</button>
-                                        </div>
-                                    }
-                                    </div>
+                                <!-- <div class="comment-container" id="@comment.Id" style="">
+                                </div> -->
+                                <div class="reply-container" id="replyContainer-@comment.Id" style="height: auto; width: 590px; margin-left: 255px; position: relative; display: none;">
+                                    <input type="text" id="inputReplyComment-@comment.Id" name="inputReplyComment" required maxlength="200" pattern=".*[^ ].*" placeholder="Enter Reply" style="height: 55px; width: 440px; border-radius: 10px; background-color: gainsboro; border: 1px solid; " />
+                                    <form method="get">
+                                        <button type="submit" class="submit-reply-btn" data-reply-comment-id="@comment.Id" data-spadding-int="255" style="color: green; font-size: 17px;">
+                                            Submit
+                                        </button>
+                                    </form>
                                 </div>
-                            </div>
-                            <!-- <div class="comment-container" id="@comment.Id" style="">
-                            </div> -->
-                            <div class="reply-container" id="replyContainer-@comment.Id" style="height: auto; width: 590px; margin-left: 255px; position: relative; display: none;">
-                                <input type="text" id="inputReplyComment-@comment.Id" name="inputReplyComment" required maxlength="200" pattern=".*[^ ].*" placeholder="Enter Reply" style="height: 55px; width: 440px; border-radius: 10px; background-color: gainsboro; border: 1px solid; " />
-                                <form method="get">
-                                    <button type="submit" class="submit-reply-btn" data-reply-comment-id="@comment.Id" data-spadding-int="255" style="color: green; font-size: 17px;">
-                                        Submit
-                                    </button>
-                                </form>
-                            </div>
+                            }
                         }
                     }
                 }
-            }
             </div>
         </div>
     </section>
 
+    @*<section class="report-model">
+    <div id="modal" class="modal">
+    <div class="model-content">
+    <form method="post" id="reportModel">
+    <h3 style="color: white; text-align: center">
+    Report This Comment ?
+    </h3>
+    <span class="text-center" style="justify-content: center">
+    <select class="report-model-reason" name="reasonSelected" style="width: 180px; font-size: 24px; height: 40px; text-align: center; margin-left: 85px; color: yellow;">
+    <option value="Toxic" selected">
+    Toxic
+    </option>
+    <option value="AbusiveLanguage">
+    Abusive Language
+    </option>
+    <option value="Irrelevant">
+    Irrelevant
+    </option>
+    <option value="Unrespect">
+    Unrespect
+    </option>
+    </select>
+    </span>
+    <div class="report-model-popup-btn">
+    <span>
+    <button type="button" class="close" style="font-size: 27px; color: red; margin-right: 50px; margin-top: 17px;">
+    Close
+    </button>
+    </span>
+    <span>
+    <input type="hidden" class="report-model-comment-id" id="reportModelCommentId" name="reportModelCommentId" value="" />
+    <button type="submit" class="report-model-finish" style="font-size: 24px; color: red; margin-left: 50px; margin-top: 15px; text-shadow: 1px 1px 0 rgba(255, 255, 255, 1); font-weight: bold;">
+    Report
+    </button>
+    </span>
+    </div>
+    </form>
+    </div>
+    </div>
+    </section>*@
     <div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <form method="post" id="formReportModal">
                     <div class="modal-header">
-                            <h5 class="modal-title" id="h5ModalLabel">Report This Comment ?</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                        <h5 class="modal-title" id="h5ModalLabel">Report This Comment ?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="modal-body">
                         <span class="text-center" style="justify-content: center">
@@ -245,36 +286,36 @@
 </div>
 
 @section ViewBlogDetailScripts {
-<script type="text/javascript">
-    function openReport(commentId) {
-        console.log("Report run in with id report: " + commentId);
-        var commentIdInput = document.querySelector(".report-model-comment-id");
-        commentIdInput.value = commentId;
-        console.log("Comment Id Tranfer: " + commentIdInput.value);
-    }
-
-    function openReply(commentId) {
-        if ($('#replyContainer-' + commentId).is(':visible')) {
-
-            $('#replyContainer-' + commentId).hide();
-            return;
-        } else {
-            $('#replyContainer-' + commentId).show();
-            return;
+    <script type="text/javascript">
+        function openReport(commentId) {
+            console.log("Report run in with id report: " + commentId);
+            var commentIdInput = document.querySelector(".report-model-comment-id");
+            commentIdInput.value = commentId;
+            console.log("Comment Id Tranfer: " + commentIdInput.value);
         }
-    }
 
-    function openComment() {
-        if ($('#commentBlog').is(':visible')) {
+        function openReply(commentId) {
+            if ($('#replyContainer-' + commentId).is(':visible')) {
 
-            $('#commentBlog').hide();
-            return;
-        } else {
-            $('#commentBlog').show();
-            return;
+                $('#replyContainer-' + commentId).hide();
+                return;
+            } else {
+                $('#replyContainer-' + commentId).show();
+                return;
+            }
         }
-    }
-</script>
+
+        function openComment() {
+            if ($('#commentBlog').is(':visible')) {
+
+                $('#commentBlog').hide();
+                return;
+            } else {
+                $('#commentBlog').show();
+                return;
+            }
+        }
+    </script>
 }
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
