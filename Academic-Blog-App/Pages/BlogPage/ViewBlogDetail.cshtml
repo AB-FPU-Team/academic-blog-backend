@@ -45,17 +45,6 @@
         margin: 0;
     }
 
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        top: 35%;
-        bottom: 50%;
-        left: 34%;
-        width: 400px;
-        height: 200px;
-    }
-
     .model-content {
         background-color: blue;
         padding: 20px;
@@ -171,7 +160,7 @@
                                         <div class="row align-items-center pt-2">
                                             @if (!string.IsNullOrEmpty(Login)) {
                                                 <div class="col-2 text-center border-right border-secondary">
-                                                    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#reportModal">Report</button>
+                                                    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#reportModal" onclick="openReport('@comment.Id')">Report</button>
                                                     @*<button type="button" id="report-@comment.Id" onclick="openReport('@comment.Id')">Report</button>*@
                                                 </div>
                                             }
@@ -190,14 +179,29 @@
                                 </div>
                                 <!-- <div class="comment-container" id="@comment.Id" style="">
                                 </div> -->
-                                <div class="reply-container" id="replyContainer-@comment.Id" style="height: auto; width: 590px; margin-left: 255px; position: relative; display: none;">
+                                <div id="replyContainer-@comment.Id" style="display: none; padding-left: 38px" class="col-lg-10 mx-auto pr-0">
+                                    <form method="get" class="m-0">
+                                        <div class="form-group row pb-sm-1 mb-0 align-items-center">
+                                            <div class="col-sm-1 p-0 text-center border-right border-dark" style="width: 50px; height: 50px;">
+                                                <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px;" />
+                                            </div>
+                                            <div class="col-sm-11 pr-0">
+                                                <input class="form-control form-control-lg border border-dark" type="text" id="inputReplyComment-@comment.Id" name="inputReplyComment" required maxlength="200" pattern=".*[^ ].*" placeholder="Enter Comment" style="background-color: gainsboro;" />
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-end">
+                                            <button type="submit" class="btn btn-success px-5" data-reply-comment-id="@comment.Id" data-spadding-int="255" style="font-size: 17px;">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                @*<div class="reply-container" id="replyContainer-@comment.Id" style="height: auto; width: 590px; margin-left: 255px; position: relative; display: none;">
                                     <input type="text" id="inputReplyComment-@comment.Id" name="inputReplyComment" required maxlength="200" pattern=".*[^ ].*" placeholder="Enter Reply" style="height: 55px; width: 440px; border-radius: 10px; background-color: gainsboro; border: 1px solid; " />
                                     <form method="get">
                                         <button type="submit" class="submit-reply-btn" data-reply-comment-id="@comment.Id" data-spadding-int="255" style="color: green; font-size: 17px;">
                                             Submit
                                         </button>
                                     </form>
-                                </div>
+                                </div>*@
                             }
                         }
                     }
@@ -291,7 +295,16 @@
             console.log("Report run in with id report: " + commentId);
             var commentIdInput = document.querySelector(".report-model-comment-id");
             commentIdInput.value = commentId;
+
+            // $('#modal').show();
             console.log("Comment Id Tranfer: " + commentIdInput.value);
+            // function closeReportModel() {
+            //     $('#modal').hide();
+            // }
+
+            // $('.modal .close').click(function () {
+            //     closeReportModel();
+            // });
         }
 
         function openReply(commentId) {
