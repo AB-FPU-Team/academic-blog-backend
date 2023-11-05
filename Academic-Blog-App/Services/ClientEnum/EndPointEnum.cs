@@ -6,6 +6,7 @@
         Authentication,
         Blogs,
         Comments,
-        TrackingViewBlogs
+        TrackingViewBlogs,
+        Categories
     }
 }

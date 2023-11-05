@@ -14,6 +14,7 @@ namespace Academic_Blog.Services.Interfaces
         Task<BlogResponse> ReadBlog(Guid id);
         Task<bool> DeleteSoftBlog(Guid id);
         Task<List<Blog>> GetBlogOfCurrentUser(string? status);
+        Task<List<Blog>> GetBlogByAccountMappingField(Guid id);
         Task<bool> IncreaseView(Guid id);
     }
 }

@@ -7,8 +7,10 @@ using Academic_Blog.Repository.Interfaces;
 using Academic_Blog.Services.Interfaces;
 using Academic_Blog.Utils;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml.ConditionalFormatting.Contracts;
 using System.Reflection.Metadata;
+using System.Text.RegularExpressions;
 
 namespace Academic_Blog.Services.Implements
 {
@@ -67,7 +69,8 @@ namespace Academic_Blog.Services.Implements
             blog.View = 0;
             blog.Id = Guid.NewGuid();
             blog.Description = request.Description;
-            blog.ShortDescription = blog.Description.Substring(0,200) + "...";
+            var blogString = Regex.Replace(blog.Description, "<.*?>", String.Empty);
+            blog.ShortDescription = blogString.Substring(0,200) + "...";
             await _unitOfWork.GetRepository<Blog>().InsertAsync(blog);
             bool isSuccessful = await _unitOfWork.CommitAsync() > 0;
             BlogResponse response = null;
@@ -141,6 +144,19 @@ namespace Academic_Blog.Services.Implements
             return isSuccessful;
         }
 
+        public async Task<List<Blog>> GetBlogByAccountMappingField(Guid id)
+        {
+            var fieldId = (await _unitOfWork.GetRepository<AccountFieldMapping>().SingleOrDefaultAsync(predicate : x => x.Id == id)).FieldId;
+            var categoryList = (await _unitOfWork.GetRepository<Category>().GetListAsync(predicate: x => x.FieldId == fieldId)).ToList();
+            List<Blog> blogList = new List<Blog>();
+            foreach(var category in categoryList)
+            {
+                var blogs = (await _unitOfWork.GetRepository<Blog>().GetListAsync(predicate: x => x.CategoryId == category.Id && x.Status.Equals(BlogStatus.PENDING.GetDescriptionFromEnum<BlogStatus>()),include : x => x.Include(x => x.Author))).ToList();
+                blogList.AddRange(blogs);
+            }
+            return blogList;    
+        }
+
         public async Task<List<Blog>> GetBlogOfCurrentUser(string? status)
         {
             var guid = GetUserIdFromJwt();
@@ -159,7 +175,7 @@ namespace Academic_Blog.Services.Implements
 
         public async Task<List<Blog>> GetBlogs()
         {
-            ICollection<Blog> blogs = await _unitOfWork.GetRepository<Blog>().GetListAsync(predicate : x => x.Id == x.Id);
+            ICollection<Blog> blogs = await _unitOfWork.GetRepository<Blog>().GetListAsync(predicate : x => x.Id == x.Id,include : x => x.Include(x => x.Author));
             List<Blog> result = blogs.ToList();
             return result;
         }

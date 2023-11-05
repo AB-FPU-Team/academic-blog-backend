@@ -1,0 +1,54 @@
+﻿@page
+@model Academic_Blog_App.Pages.AdminPage.CommentDetailModel
+@{
+}
+<dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Comments.Id)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Comments.Id)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Comments.CreateTime)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Comments.CreateTime)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Comments.Content)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Comments.Content)
+    </dd>
+    @if (Model.Comments.ReplyToId != null)
+    {
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Comments.ReplyToId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Comments.ReplyToId)
+        </dd>
+    }
+
+   @*  <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Comments.Blog)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Comments.Blog.Thumbnal_Url)
+    </dd> *@
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Comments.Commentor)
+    </dt>
+    <dd class="col-sm-10">
+        <a asp-page="./AccountDetail" asp-route-id="@Model.Comments.CommentorId">Account Details</a>
+    </dd>
+    <dd class="col-sm-10">
+        <a asp-page="./ReportIndex">Back to Report List</a>
+    </dd>
+</dl>
+</div>
+<div>
+    @*     <a asp-page="./ReportIndex">Back to List</a> *@
+</div>
+
