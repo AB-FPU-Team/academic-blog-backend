@@ -1,0 +1,122 @@
+﻿@page
+@model Academic_Blog_App.Pages.BlogPage.EditBlogDetailModel
+@{
+}
+
+<style>
+    label {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .notification-popup {
+        width: 270px;
+        height: 110px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #eee;
+        border: 1px solid #ccc;
+        padding: 10px;
+        display: none;
+        z-index: 9999;
+    }
+
+    .notification-icon {
+        color: green;
+        margin-right: 5px;
+        height: 90px;
+        width: 90px;
+        border-radius: 100%;
+        background: white;
+        text-align: center;
+        font-size: 40px;
+    }
+
+        .notification-icon i {
+            margin-top: 25px;
+        }
+
+    .notification-popup.show {
+        display: flex;
+    }
+
+        .notification-popup.show.clicked {
+            display: none;
+        }
+
+    .notification-message {
+        margin-left: 7px;
+        margin-top: 35px;
+    }
+
+</style>
+
+<div class="body_bg layout_padding" style="padding: 40px;">
+    <section class="service_section">
+        <form class="container" method="post" enctype="multipart/form-data">
+            <div class="box">
+                <div class="d-flex flex-column w-100 form-group">
+                    <label style="font-size:38px !important">Title</label>
+                    <textarea class="mw-100" pattern=".*[^ ].*" required
+                              placeholder="Tiêu đề" asp-for="CreateNewBlogRequest.Title"></textarea>
+                </div>
+                <div class="d-flex flex-column w-100 form-group">
+                    <label @*asp-for="Category"*@ class="control-label">Categories</label>
+                    <select id="staffDropdown" class="form-control cusSelect" name="statusSelect" asp-for="CreateNewBlogRequest.CategoryId" required>
+                        <option value="">Select a category</option>
+                        @foreach (var category in Model.Categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="d-flex flex-column w-100 form-group">
+                    <label for="thumbnail">Thumbnails</label>
+                    <input type="file" id="thumbnail" accept="image/png, image/jpeg" name="image" asp-for="CreateNewBlogRequest.Thumbnal_Url" />
+                </div>
+                <div class="d-flex flex-column w-100 form-group">
+                    <label>Description</label>
+                   <textarea id="mytextarea" pattern=".*[^ ].*"  asp-for="CreateNewBlogRequest.Description"  placeholder="text something in here"></textarea>
+                </div>
+                <div class="d-flex flex-column w-100 align-items-end">
+                    <button class="btn btn-primary" type="submit" asp-page-handler="Create" font-weight="bold">Save changes</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <div id="notification-popup" class="text-center notification-popup">
+        <div id="notification-icon" class="notification-icon">
+            <i class="fa fa-check"></i>
+        </div>
+        <div id="notification-message" class="notification-message"></div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var notificationMessage = '@ViewData["NotificationMessage"]';
+
+        if (notificationMessage && notificationMessage !== '') {
+            $('#notification-message').text(notificationMessage);
+
+            $('#notification-popup').addClass('show');
+            console.log('end');
+            $('body').addClass('locked');
+            console.log('end');
+
+            setTimeout(function () {
+                console.log('ends');
+                $('#notification-popup').removeClass('show');
+                $('body').removeClass('locked');
+            }, 3000);
+
+            $('#notification-popup').click(function () {
+                $(this).removeClass('show');
+                $(this).addClass('clicked');
+                $('body').removeClass('locked');
+            });
+        }
+    });
+</script>
