@@ -7,6 +7,7 @@ using Academic_Blog.PayLoad.Request.TrackingViewBlog;
 using Academic_Blog.PayLoad.Response;
 using Academic_Blog.PayLoad.Request.Comment;
 using System.Xml.Linq;
+using NuGet.Protocol.Plugins;
 
 namespace Academic_Blog_App.Pages.AjaxPage
 {
@@ -18,8 +19,61 @@ namespace Academic_Blog_App.Pages.AjaxPage
         {
             _apiHelper = apiHelper;
         }
-        
-          public async Task<IActionResult> OnGetCreateNewComment(string commentData)
+
+        public async Task<IActionResult> OnGetEditComment(string commentId, string content)
+        {
+            //Update
+            var commentResult = await _apiHelper.FetchODataAsync<List<Comment>>(EndPointEnum.Comments, $"?$filter=id eq {Guid.Parse(commentId)}");
+            var currentUser = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, "/currentUser", MethodEnum.GET, null);
+            var acc = SessionHelper.GetObjectFromJson<LoginResponse>(HttpContext.Session, "Account");
+            if (commentResult.IsSuccess && currentUser.IsSuccess)
+            {
+                var response = new
+                {
+                    Account = currentUser.Data,
+                    Comment = commentResult.Data[0],
+                    Login = acc != null && !acc.AccountStatus.Equals("BANNED") ? true : false,
+                };
+                return new JsonResult(response);
+            }
+            else
+            {
+                Error("Server Error");
+            }
+            return new JsonResult(null);
+        }
+        public async Task<IActionResult> OnGetEditOption(string commentId)
+        {
+            var commentResult = await _apiHelper.FetchODataAsync<List<Comment>>(EndPointEnum.Comments, $"?$filter=id eq {Guid.Parse(commentId)}");
+            var currentUser = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, "/currentUser", MethodEnum.GET, null);
+            var acc = SessionHelper.GetObjectFromJson<LoginResponse>(HttpContext.Session, "Account");
+            if (commentResult.IsSuccess && currentUser.IsSuccess)
+            {
+                var response = new
+                {
+                    Account = currentUser.Data,
+                    Comment = commentResult.Data[0],
+                    Login = acc != null && !acc.AccountStatus.Equals("BANNED") ? true : false,
+                };
+                return new JsonResult(response);
+            }
+            else
+            {
+                Error("Server Error");
+            }
+            return new JsonResult(null);
+        }
+
+        public async Task<IActionResult> OnGetDeleteOption(string commentId)
+        {
+            var deleteCommentResult = await _apiHelper.FetchApiAsync<String>(EndPointEnum.Comments, $"?id={Guid.Parse(commentId)}", MethodEnum.DELETE, null);
+            if (deleteCommentResult.IsSuccess)
+            {
+                return new JsonResult(new { success = true });
+            }
+            return new JsonResult(new { success = false });
+        }
+        public async Task<IActionResult> OnGetCreateNewComment(string commentData)
         {
             var currentBlog = SessionHelper.GetObjectFromJson<Blog>(HttpContext.Session, "CurrentBlog");
             CreateCommentRequest newComment = new CreateCommentRequest
@@ -33,17 +87,21 @@ namespace Academic_Blog_App.Pages.AjaxPage
 
                 if (result.IsSuccess)
                 {
-                    var currentAccountResult = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, "currentUser", MethodEnum.GET, null);
+                    var currentAccountResult = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, "/currentUser", MethodEnum.GET, null);
 
                     var acc = SessionHelper.GetObjectFromJson<LoginResponse>(HttpContext.Session, "Account");
                     Boolean Login = false;
                     if (acc != null)
                     {
-                        Login = true;
+                        if (!acc.AccountStatus.Equals("BANNED"))
+                        {
+                            Login = true;
+                        }
                     }
+         
                     var response = new
                     {
-                        Account = currentAccountResult,
+                        Account = currentAccountResult.Data,
                         Comment = result.Data,
                         Login = Login,
                     };
@@ -72,19 +130,22 @@ namespace Academic_Blog_App.Pages.AjaxPage
 
                 if (result.IsSuccess)
                 {
-                    var currentAccountResult = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, "currentUser", MethodEnum.GET, null);
-
-                    int distance = CountDistance(int.Parse(spaddingInt));
+                    var currentAccountResult = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, "/currentUser", MethodEnum.GET, null);
+                    int distance = int.Parse(spaddingInt) + 58;
 
                     var acc = SessionHelper.GetObjectFromJson<LoginResponse>(HttpContext.Session, "Account");
                     Boolean Login = false;
                     if (acc != null)
                     {
-                        Login = true;
+                        if (!acc.AccountStatus.Equals("BANNED"))
+                        {
+                            Login = true;
+                        }
                     }
+
                     var response = new
                     {
-                        Account = currentAccountResult,
+                        Account = currentAccountResult.Data,
                         Comment = result.Data,
                         Distance = distance,
                         Login = Login,
@@ -99,16 +160,16 @@ namespace Academic_Blog_App.Pages.AjaxPage
             return new JsonResult(null);
         }
 
-        public async Task<IActionResult> OnGetReport(string reportCommentId)
+        public async Task<IActionResult> OnGetReport(string reportCommentId, string selectedReason)
         {
+
             return new JsonResult(new { success = true });
         }
 
 
         public async Task<IActionResult> OnGetReply(string commentId, string distanceInt)
         {
-            int Distances = CountDistance(int.Parse(distanceInt));
-            int DistancesForReplyForm = CountDistanceForReplyForm(int.Parse(distanceInt));
+            int Distances = int.Parse(distanceInt) + 58;
 
             List<Comment> Replys = new List<Comment>();
             List<String> FeedBacks = new List<String>();
@@ -132,68 +193,26 @@ namespace Academic_Blog_App.Pages.AjaxPage
             {
                 Error(replyResult.ErrorMessage + "\n" + allCommentResult.ErrorMessage);
             }
+            var currentAccountResult = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, "/currentUser", MethodEnum.GET, null);
             var acc = SessionHelper.GetObjectFromJson<LoginResponse>(HttpContext.Session, "Account");
             Boolean Login = false;
-            if (acc == null)
+            if (acc != null)
             {
-                Login = true;
+                if (!acc.AccountStatus.Equals("BANNED"))
+                {
+                    Login = true;
+                }
             }
             var result = new
             {
                 AccountReplys = AccountReplys.Data,
-                Replys = Replys,
+                Replys = Replys.OrderByDescending(reply => reply.CreateTime).ToList(),
                 Distance = Distances,
-                DistanceForReply = DistancesForReplyForm,
                 FeedBacks = FeedBacks,
                 Login = Login,
+                CurrentAccount = currentAccountResult.Data
             };
             return new JsonResult(result);
-        }
-
-        private static int CountDistance(int distanceInt)
-        {
-            switch (distanceInt)
-            {
-                case >= 335:
-                    distanceInt += 5;
-                    break;
-                case >= 325:
-                    distanceInt += 10;
-                    break;
-                case >= 295:
-                    distanceInt += 30;
-                    break;
-                case >= 255:
-                    distanceInt += 40;
-                    break;
-                case >= 210:
-                    distanceInt += 45;
-                    break;
-            }
-            return distanceInt;
-        }
-
-        private static int CountDistanceForReplyForm(int distanceInt)
-        {
-            switch (distanceInt)
-            {
-                case >= 380:
-                    distanceInt += 5;
-                    break;
-                case >= 370:
-                    distanceInt += 10;
-                    break;
-                case >= 340:
-                    distanceInt += 30;
-                    break;
-                case >= 300:
-                    distanceInt += 40;
-                    break;
-                case >= 210:
-                    distanceInt += 90;
-                    break;
-            }
-            return distanceInt;
         }
 
         public IActionResult OnGetBlogId()

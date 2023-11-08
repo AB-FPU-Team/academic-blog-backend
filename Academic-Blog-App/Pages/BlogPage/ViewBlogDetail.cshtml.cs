@@ -31,12 +31,16 @@ namespace Academic_Blog_App.Pages.BlogPage {
             var acc = SessionHelper.GetObjectFromJson<LoginResponse>(HttpContext.Session, "Account");
 
             if (acc != null) {
-                ViewData["Login"] = "True";
+                if (!acc.AccountStatus.Equals("BANNED"))
+                {
+                    ViewData["Login"] = "True";
+                }
             }
 
             await FetchAll(blogId, authorId);
             return Page();
         }
+
 
         private async Task FetchAll(string? blogId, string? authorId) {
             var blogResult = await _apiHelper.FetchApiAsync<Blog>(EndPointEnum.Blogs, $"/{Guid.Parse(blogId!)}", MethodEnum.GET, null);
@@ -44,7 +48,7 @@ namespace Academic_Blog_App.Pages.BlogPage {
             var accountResult = await _apiHelper.FetchApiAsync<List<Account>>(EndPointEnum.Accounts, "", MethodEnum.GET, null);
             if (blogResult.IsSuccess && commentResult.IsSuccess && accountResult.IsSuccess) {
                 Blog = blogResult.Data;
-                Comments = commentResult.Data;
+                Comments = commentResult.Data.OrderByDescending(comment => comment.CreateTime).ToList();
                 Accounts = accountResult.Data;
                 SessionHelper.SetObjectAsJson(HttpContext.Session, "CurrentBlog", Blog);
             }

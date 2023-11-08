@@ -8,7 +8,7 @@ namespace Academic_Blog_App.Services.Helper.Odata
         {
             return "?$filter= " + field + "eq" + " '" + value + "'";
         }
-
+       
         public string NotEqual(string field, string value)
         {
             return "?$filter= " + field + "ne" + " '" + value + "'";

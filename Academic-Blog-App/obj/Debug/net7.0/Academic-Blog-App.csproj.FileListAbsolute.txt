@@ -1732,6 +1732,7 @@ D:\Truong\academic-blog-backend\Academic-Blog-App\obj\Debug\net7.0\refint\Academ
 D:\Truong\academic-blog-backend\Academic-Blog-App\obj\Debug\net7.0\Academic-Blog-App.pdb
 D:\Truong\academic-blog-backend\Academic-Blog-App\obj\Debug\net7.0\Academic-Blog-App.genruntimeconfig.cache
 D:\Truong\academic-blog-backend\Academic-Blog-App\obj\Debug\net7.0\ref\Academic-Blog-App.dll
+D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog-App\bin\Debug\net7.0\libman.json
 E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog-App\bin\Debug\net7.0\Academic-Blog.deps.json
 E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog-App\bin\Debug\net7.0\Academic-Blog.runtimeconfig.json
 E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog-App\bin\Debug\net7.0\Academic-Blog.exe
@@ -2311,4 +2312,3 @@ E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog-App\obj\Debu
 E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog-App\obj\Debug\net7.0\Academic-Blog-App.pdb
 E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog-App\obj\Debug\net7.0\Academic-Blog-App.genruntimeconfig.cache
 E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog-App\obj\Debug\net7.0\ref\Academic-Blog-App.dll
-D:\FPT Leaner\PRN231\Group_Project\academic-blog-backend\Academic-Blog-App\bin\Debug\net7.0\libman.json

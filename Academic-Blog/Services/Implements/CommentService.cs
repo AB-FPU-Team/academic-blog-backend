@@ -30,17 +30,27 @@ namespace Academic_Blog.Services.Implements
                 throw new BadHttpRequestException("blog is not active", StatusCodes.Status400BadRequest);
             }
             comment.ReplyToId = request.ReplyToId;
-            comment.CommentorId = new Guid();
+            comment.CommentorId = account.Id;
             comment.CreateTime = DateTime.Now;
             comment.BlogId = request.BlogId;
             comment.Id = Guid.NewGuid();
             comment.Content = request.Content;
-            await _unitOfWork.GetRepository<Comment>().InsertAsync(comment);
-            bool isSuccessful = await _unitOfWork.CommitAsync() > 0;
             CommentResponse response = null;
-            if (isSuccessful) {
-                response =  _mapper.Map<CommentResponse>(comment);
+            try
+            {
+                await _unitOfWork.GetRepository<Comment>().InsertAsync(comment);
+                bool isSuccessful = await _unitOfWork.CommitAsync() > 0;
+
+                if (isSuccessful)
+                {
+                    response = _mapper.Map<CommentResponse>(comment);
+                }
             }
+            catch(Exception e)
+            {
+                string a = e.Message;
+            }
+   
             return response;
         }
 

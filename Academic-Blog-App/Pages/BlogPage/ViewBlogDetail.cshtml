@@ -1,7 +1,10 @@
 ﻿@page
 @model Academic_Blog_App.Pages.BlogPage.ViewBlogDetailModel
+@using Academic_Blog_App.Services.Helper;
+@using Academic_Blog.PayLoad.Response;
 @{
     var Login = ViewData["Login"]?.ToString();
+    var CurrentAcc = SessionHelper.GetObjectFromJson<LoginResponse>(ViewContext.HttpContext.Session, "Account");
 }
 
 <style>
@@ -65,8 +68,10 @@
     <section class="service_section">
         <div class="container">
             <div class="row" style="margin: 40px 0;">
-                @foreach (var acc in Model.Accounts) {
-                    if (acc.Id == Model.Blog.AuthorId) {
+                @foreach (var acc in Model.Accounts)
+                {
+                    if (acc.Id == Model.Blog.AuthorId)
+                    {
                         <div class="col-md-2">
                             <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="" style="width: 150px; height: 150px ;" />
                         </div>
@@ -82,8 +87,6 @@
             <div class="box w-100">
                 <div class="p-3">
                     <h2 class="font-weight-bold mx-auto my-2" style="font-size: 38px;">@Model.Blog.Title</h2>
-                    <span class="d-block" style="color: red;">@Model.Blog.CreatedTime</span>
-                    <span class="d-block" style="color: red;">@Model.Blog.UpdatedTime</span>
                     <p style="margin: 12px 0; font-size: 20px; padding: 10px 0;">
                         @Model.Blog.Description
                     </p>
@@ -104,104 +107,155 @@
                     </div>
                 </div>
                 <div class="blog-interact">
-                    @if (!string.IsNullOrEmpty(Login)) {
+                    @if (!string.IsNullOrEmpty(Login))
+                    {
                         <i class="fa fa-commenting-o btn-outline-info cursor-pointer" onclick="openComment()"> Comment </i>
                     }
-                    else {
+                    else
+                    {
                         <i class="fa fa-commenting-o"> Comment </i>
 
                     }
                 </div>
             </div>
             <div class="d-flex flex-column">
-                @foreach (var comment in Model.Comments) {
-                    @if (comment.ReplyToId == null) {
+                @foreach (var comment in Model.Comments)
+                {
+                    @if (comment.ReplyToId == null)
+                    {
                         var feedBack = 0;
-                        @foreach (var feed in Model.Comments) {
-                            @if (feed.ReplyToId == comment.Id) {
+                        @foreach (var feed in Model.Comments)
+                        {
+                            @if (feed.ReplyToId == comment.Id)
+                            {
                                 feedBack += 1;
                             }
                         }
-                        @foreach (var acc in Model.Accounts) {
-                            @if (comment.CommentorId == acc.Id) {
+                        @foreach (var acc in Model.Accounts)
+                        {
+                            @if (comment.CommentorId == acc.Id)
+                            {
                                 <div id="commentBlog" style="display: none;">
                                     <form method="get" id="formInputNewComment" class="m-0">
-                                        <div class="form-group row pt-sm-4 pb-sm-1 mb-0 align-items-center">
+                                        <div class="form-group row pt-sm-4 pb-sm-1 mb-0 align-items-center" style="width: 1070px; height: 100px">
                                             <div class="col-sm-1 p-0 text-center border-right border-dark" style="width: 50px; height: 50px;">
-                                                <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px;" />
+                                                @foreach (var ac in Model.Accounts)
+                                                {
+                                                    if (ac.Id == Model.Blog.AuthorId)
+                                                    {
+                                                        <img class="rounded-circle shadow" src="/@ac.Avatar" alt="Avatar" style="width: 50px; height: 50px;" />
+                                                    }
+                                                }
                                             </div>
                                             <div class="col-sm-11">
-                                                <input class="form-control form-control-lg border border-dark" type="text" id="inputComment" name="inputComment" required maxlength="200" pattern=".*[^ ].*" placeholder="Enter Comment" style="background-color: gainsboro;" />
+                                                <input class="form-control form-control-lg border border-dark" type="text" id="inputComment" name="inputComment" required maxlength="200" pattern=".*[^ ].*" placeholder="Enter Comment" style="background-color: gainsboro; margin-left: 5px; height: 68px" />
                                             </div>
                                         </div>
                                         <div class="row justify-content-end px-3">
-                                            <button type="submit" class="btn btn-success px-5" data-blog-id="@comment.Id" style="font-size: 17px;">Submit</button>
+                                            <button type="submit" class="btn btn-success px-5" data-blog-id="@comment.Id" style="font-size: 17px; margin-right: 92px; margin-bottom: 10px;">Submit</button>
                                         </div>
                                     </form>
                                 </div>
-                                <!-- <div class="new-comment-container" id="newComment" style="">
-                                </div> -->
-                                <div class="form-group row py-sm-4 mb-0 align-items-center">
-                                    <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro;">
+                                <div class="new-comment-container" id="newComment" style="">
+                                </div>
+                                <div class="value-comment-container" id="value-comment-@comment.Id" style="margin-left: 0px;" @(comment.CommentorId == CurrentAcc.Id ? $"onmousedown=openOthersOption('{comment.Id}',0)" : "")>
+                                    <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro; margin-top: 20px;">
                                         <div class="row align-items-center">
                                             <div class="col-sm-1 my-2 border-right border-dark">
                                                 <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px;" />
                                             </div>
                                             <div class="col-sm">
                                                 <h4 class="m-0" style="font-weight: 600;">@acc.Name</h4>
+                                                @{
+                                                    string dayComment = "", postFixTime = "";
+                                                    var currentDate = DateTime.Now;
+                                                    int differentTime = (int)(currentDate - comment.CreateTime).TotalDays;
+                                                    if (differentTime < 1)
+                                                    {
+                                                        differentTime = (int)(currentDate - comment.CreateTime).Hours;
+                                                        if (differentTime < 1)
+                                                        {
+                                                            differentTime = (int)(currentDate - comment.CreateTime).TotalMinutes;
+                                                            if (differentTime < 1)
+                                                            {
+                                                                differentTime = (int)(currentDate - comment.CreateTime).TotalSeconds;
+                                                                postFixTime = "Seconds ago";
+                                                            }
+                                                            else
+                                                            {
+                                                                postFixTime = "Minutes ago";
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            postFixTime = "Hours ago";
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        postFixTime = "Days ago";
+                                                    }
+                                                    dayComment = differentTime.ToString() + " " + postFixTime;
+                                                }
+                                                <div style="font-weight: bold; color: red; font-size: 14px;">@dayComment</div>
                                             </div>
                                         </div>
                                         <div class="col border-top border-dark mt-1">
                                             <p style="color: black; opacity: 80%; padding: 0.5rem 0 0 2rem;">@comment.Content</p>
                                         </div>
                                     </div>
-                                    <div class="w-100"></div>
-                                    <div class="col-lg-10 mx-auto" style="color: black; opacity: 80%;">
-                                        <div class="row align-items-center pt-2">
-                                            @if (!string.IsNullOrEmpty(Login)) {
-                                                <div class="col-2 text-center border-right border-secondary">
-                                                    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#reportModal" onclick="openReport('@comment.Id')">Report</button>
-                                                    @*<button type="button" id="report-@comment.Id" onclick="openReport('@comment.Id')">Report</button>*@
+                                    <div class="form-group row py-sm-4 mb-0 align-items-center">
+                                        <div class="w-100"></div>
+                                        <div class="col-lg-10 mx-auto" style="color: black; opacity: 80%;">
+                                            <div class="row align-items-center pt-2">
+                                                @if (!string.IsNullOrEmpty(Login))
+                                                {
+                                                    @if (CurrentAcc.Id != comment.CommentorId)
+                                                    {
+                                                        <div class="col-2 text-center border-right border-secondary">
+                                                            <button type="button" id="report-@comment.Id" class="btn btn-outline-warning" data-toggle="modal" data-target="#reportModal" onclick="openReport('@comment.Id')">Report</button>
+                                                        </div>
+                                                    }
+                                                }
+                                                <div id="formReply-@comment.Id" class="col-2 text-center border-right border-secondary">
+                                                    <form method="get" class="m-0">
+                                                        <button class="btn btn-outline-success feedback-btn" id="feedback-@comment.Id" data-comment-id="@comment.Id" data-spadding-int="0" data-feed-back="@feedBack" type="submit">@feedBack FeedBack</button>
+                                                    </form>
                                                 </div>
-                                            }
-                                            <div id="formReply-@comment.Id" class="col-2 text-center border-right border-secondary">
-                                                <form method="get" class="m-0">
-                                                    <button class="btn btn-outline-success" id="feedback-@comment.Id" data-comment-id="@comment.Id" data-spadding-int="210" type="submit">@feedBack FeedBack</button>
-                                                </form>
+                                                @if (!string.IsNullOrEmpty(Login))
+                                                {
+                                                    <div class="col-2 text-center border-right border-secondary">
+                                                        <button class="btn btn-outline-secondary" type="button" id="reply-@comment.Id" onclick="openReply('@comment.Id')">Reply</button>
+                                                    </div>
+                                                }
                                             </div>
-                                            @if (!string.IsNullOrEmpty(Login)) {
-                                                <div class="col-2 text-center border-right border-secondary">
-                                                    <button class="btn btn-outline-secondary" type="button" id="reply-@comment.Id" onclick="openReply('@comment.Id')">Reply</button>
-                                                </div>
-                                            }
                                         </div>
                                     </div>
-                                </div>
-                                <!-- <div class="comment-container" id="@comment.Id" style="">
-                                </div> -->
-                                <div id="replyContainer-@comment.Id" style="display: none; padding-left: 38px" class="col-lg-10 mx-auto pr-0">
-                                    <form method="get" class="m-0">
-                                        <div class="form-group row pb-sm-1 mb-0 align-items-center">
-                                            <div class="col-sm-1 p-0 text-center border-right border-dark" style="width: 50px; height: 50px;">
-                                                <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px;" />
+                                    <div id="replyContainer-@comment.Id" style="display: none; padding-left: 38px" class="col-lg-10 mx-auto pr-0">
+                                        <form method="get" class="m-0">
+                                            <div class="form-group row pb-sm-1 mb-0 align-items-center">
+                                                <div class="col-sm-1 p-0 text-center border-right border-dark" style="width: 50px; height: 50px;">
+                                                    @foreach (var currentAcc in Model.Accounts)
+                                                    {
+                                                        if (currentAcc.Id == Model.Blog.AuthorId)
+                                                        {
+                                                            <img class="rounded-circle shadow" src="/@currentAcc.Avatar" alt="Avatar" style="width: 50px; height: 50px;" />
+                                                        }
+                                                    }
+
+                                                </div>
+                                                <div class="col-sm-11 pr-0">
+                                                    <input class="form-control form-control-lg border border-dark" type="text" id="inputReplyComment-@comment.Id" name="inputReplyComment" required maxlength="200" pattern=".*[^ ].*" placeholder="Enter Comment" style="background-color: gainsboro;" />
+                                                </div>
                                             </div>
-                                            <div class="col-sm-11 pr-0">
-                                                <input class="form-control form-control-lg border border-dark" type="text" id="inputReplyComment-@comment.Id" name="inputReplyComment" required maxlength="200" pattern=".*[^ ].*" placeholder="Enter Comment" style="background-color: gainsboro;" />
+                                            <div class="row justify-content-end">
+                                                <button type="submit" class="btn btn-success px-5 submit-reply-btn" data-reply-comment-id="@comment.Id" data-spadding-int="0" style="font-size: 17px;">Submit</button>
                                             </div>
-                                        </div>
-                                        <div class="row justify-content-end">
-                                            <button type="submit" class="btn btn-success px-5" data-reply-comment-id="@comment.Id" data-spadding-int="255" style="font-size: 17px;">Submit</button>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
-                                @*<div class="reply-container" id="replyContainer-@comment.Id" style="height: auto; width: 590px; margin-left: 255px; position: relative; display: none;">
-                                    <input type="text" id="inputReplyComment-@comment.Id" name="inputReplyComment" required maxlength="200" pattern=".*[^ ].*" placeholder="Enter Reply" style="height: 55px; width: 440px; border-radius: 10px; background-color: gainsboro; border: 1px solid; " />
-                                    <form method="get">
-                                        <button type="submit" class="submit-reply-btn" data-reply-comment-id="@comment.Id" data-spadding-int="255" style="color: green; font-size: 17px;">
-                                            Submit
-                                        </button>
-                                    </form>
-                                </div>*@
+                                <div class="comment-container" id="@comment.Id" style="">
+                                </div>
                             }
                         }
                     }
@@ -209,50 +263,9 @@
             </div>
         </div>
     </section>
-
-    @*<section class="report-model">
-    <div id="modal" class="modal">
-    <div class="model-content">
-    <form method="post" id="reportModel">
-    <h3 style="color: white; text-align: center">
-    Report This Comment ?
-    </h3>
-    <span class="text-center" style="justify-content: center">
-    <select class="report-model-reason" name="reasonSelected" style="width: 180px; font-size: 24px; height: 40px; text-align: center; margin-left: 85px; color: yellow;">
-    <option value="Toxic" selected">
-    Toxic
-    </option>
-    <option value="AbusiveLanguage">
-    Abusive Language
-    </option>
-    <option value="Irrelevant">
-    Irrelevant
-    </option>
-    <option value="Unrespect">
-    Unrespect
-    </option>
-    </select>
-    </span>
-    <div class="report-model-popup-btn">
-    <span>
-    <button type="button" class="close" style="font-size: 27px; color: red; margin-right: 50px; margin-top: 17px;">
-    Close
-    </button>
-    </span>
-    <span>
-    <input type="hidden" class="report-model-comment-id" id="reportModelCommentId" name="reportModelCommentId" value="" />
-    <button type="submit" class="report-model-finish" style="font-size: 24px; color: red; margin-left: 50px; margin-top: 15px; text-shadow: 1px 1px 0 rgba(255, 255, 255, 1); font-weight: bold;">
-    Report
-    </button>
-    </span>
-    </div>
-    </form>
-    </div>
-    </div>
-    </section>*@
     <div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content" style="margin-top: 270px;">
                 <form method="post" id="formReportModal">
                     <div class="modal-header">
                         <h5 class="modal-title" id="h5ModalLabel">Report This Comment ?</h5>
@@ -275,6 +288,9 @@
                                 <option value="Unrespect">
                                     Unrespect
                                 </option>
+                                <option value="Spam">
+                                    Spam
+                                </option>
                             </select>
                         </span>
                     </div>
@@ -287,10 +303,66 @@
             </div>
         </div>
     </div>
+    <div class="modal fade otherOptionsModal" id="OtherOptionsModal" tabindex="-1" role="dialog" aria-labelledby="otherOptionsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="margin-top: 270px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button type="submit" class="btn btn-primary" data-comment-id="" data-space="" id="editOptions">Edit</button>
+                    <button type="submit" class="btn btn-primary" data-comment-id="" data-space="" id="deleteOptions">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 
 @section ViewBlogDetailScripts {
     <script type="text/javascript">
+        function openOthersOption(triggerId, space) {
+            var editCommentForm = $("#editCommentForm");
+            if (editCommentForm.length > 0) {
+                return;
+            }
+            var timeout;
+            var startTime = new Date();
+            console.log("triggerId:" + triggerId);
+
+            $('#OtherOptionsModal').modal({
+                show: false
+            });
+
+            timeout = setTimeout(function () {
+                $('#editOptions').data('comment-id', triggerId);
+                $('#editOptions').data('space', space);
+
+                $('#deleteOptions').data('comment-id', triggerId);
+                $('#deleteOptions').data('space', space);
+                showPopupForm();
+            }, 800);
+
+            $('#value-comment-' + triggerId).on('mouseup', function () {
+                var currentTime = new Date();
+                var timeDifference = Math.floor((currentTime - startTime) / 1000);
+                if (timeDifference < 1) {
+                    clearTimeout(timeout);
+                    return;
+                }
+            });
+
+            function showPopupForm() {
+                $('#OtherOptionsModal').modal('show');
+            }
+
+            function hidePopupForm() {
+                $('#OtherOptionsModal').modal('hide');
+            }
+        }
+
         function openReport(commentId) {
             console.log("Report run in with id report: " + commentId);
             var commentIdInput = document.querySelector(".report-model-comment-id");
@@ -336,4 +408,4 @@
 <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.10/signalr.min.js"></script>
-<script src="~/js/site.js?v=1.3"></script>
+<script src="~/js/site.js?v=2.2"></script>
