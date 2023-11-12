@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "godmMiGiiWgB/30QfxpqvYC83aZ4PK21LnmtVWy3Vas=",
+  "Hash": "9/dLt/nnqTrvvy4cHdsQ9mBcPooRW2B2MJ8CsEJDyzY=",
   "Source": "Academic-Blog-App",
   "BasePath": "_content/Academic-Blog-App",
   "Mode": "Default",
@@ -471,6 +471,40 @@
       "OriginalItemSpec": "wwwroot\\images\\93d4af28-ad81-427f-be2c-a38026227e8a.png"
     },
     {
+      "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\94d39304-6615-4e13-9cee-eaf5d6dccc08.png",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/94d39304-6615-4e13-9cee-eaf5d6dccc08.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\94d39304-6615-4e13-9cee-eaf5d6dccc08.png"
+    },
+    {
+      "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\981b47b1-8ff3-4282-95d0-d09c69be9fcb.png",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/981b47b1-8ff3-4282-95d0-d09c69be9fcb.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\981b47b1-8ff3-4282-95d0-d09c69be9fcb.png"
+    },
+    {
       "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\9f44e273-53d4-4664-a51f-ff96aa4bf302.png",
       "SourceId": "Academic-Blog-App",
       "SourceType": "Discovered",
@@ -520,6 +554,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\alexImage.png"
+    },
+    {
+      "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\b5b0d4c6-21b0-4d42-b4a5-b7e39ce67f73.png",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/b5b0d4c6-21b0-4d42-b4a5-b7e39ce67f73.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b5b0d4c6-21b0-4d42-b4a5-b7e39ce67f73.png"
     },
     {
       "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\benjaminImage.jpg",
@@ -809,6 +860,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\envelope-o.png"
+    },
+    {
+      "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\ff95b3ee-8ec5-4438-a1fc-524f0b64711d.png",
+      "SourceId": "Academic-Blog-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\",
+      "BasePath": "_content/Academic-Blog-App",
+      "RelativePath": "images/ff95b3ee-8ec5-4438-a1fc-524f0b64711d.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ff95b3ee-8ec5-4438-a1fc-524f0b64711d.png"
     },
     {
       "Identity": "E:\\GitHub\\Teams GitHub Projects\\academic-blog-backend\\Academic-Blog-App\\wwwroot\\images\\github.png",

@@ -233,10 +233,15 @@ $(function () {
                                 <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro; margin-top: 20px;">
                          <div class="row align-items-center">
                             <div class="col-sm-1 my-2 border-right border-dark">
-                                   <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px;" />
+                              <a href="/UserPage/StudentProfile?userId=${account.id}">
+                                                    <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a>
                              </div>
                                 <div class="col-sm">
-                                      <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                 <a href="/UserPage/StudentProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                                    <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                   </a>
+                                     
                                       <div style="font-weight: bold; color: red; font-size: 14px;"> ${dayComment} </div>
                                   </div>
                                 </div>
@@ -369,10 +374,14 @@ $(function () {
                     <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro; margin-top: 20px;">
                          <div class="row align-items-center">
                             <div class="col-sm-1 my-2 border-right border-dark">
-                                   <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px;" />
+                              <a href="/UserPage/StudentProfile?userId=${account.id}">
+                                      <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a>
                              </div>
                                 <div class="col-sm">
-                                      <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                 <a href="/UserPage/StudentProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                            <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                   </a>
                                       <div style="font-weight: bold; color: red; font-size: 14px;">${dayComment}</div>
                                   </div>
                                 </div>
@@ -462,10 +471,14 @@ $(function () {
                                 <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro; margin-top: 20px;">
                          <div class="row align-items-center">
                             <div class="col-sm-1 my-2 border-right border-dark">
-                                   <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px;" />
+                             <a href="/UserPage/StudentProfile?userId=${account.id}">
+                                      <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a>
                              </div>
                                 <div class="col-sm">
-                                      <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                 <a href="/UserPage/StudentProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                            <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                   </a>
                                       <div style="font-weight: bold; color: red; font-size: 14px;"> ${dayComment} </div>
                                   </div>
                                 </div>
@@ -569,20 +582,25 @@ $(function () {
                                     nextCommentId = reply.id;
                             console.log("Next CommentId: " + nextCommentId);
                             var dayComment = getTimeDifference(new Date(reply.createTime));
-                            var head = `<div class="value-comment-container" id="value-comment-${reply.id}" style="margin-left: ${distance}px;"></div>`;
-                            if (reply.commentorId == currentAcc.id) {
-                                head = `<div class="value-comment-container" id="value-comment-${reply.id}" style="margin-left: ${distance}px;" onmousedown="openOthersOption('${reply.id}', ${distance})"></div>`;
+                            var head = `<div class="value-comment-container" id="value-comment-${reply.id}" style="margin-left: ${distance}px;">`;
+                            if (currentAcc != null) {
+                                if (reply.commentorId == currentAcc.id) {
+                                    head = `<div class="value-comment-container" id="value-comment-${reply.id}" style="margin-left: ${distance}px;" onmousedown="openOthersOption('${reply.id}', ${distance})">`;
+                                }
                             }
                             var commentorHtml =
-                                ` ${head} 
-                                <div class="value-comment-container" id="value-comment-${reply.id}" style="margin-left: ${distance}px;" @(${reply.commentorId} == ${currentAcc.id} ? $"onmousedown=openOthersOption('${reply.id}',${distance})" : "")>   
+                                ` ${head}  
                                 <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro; margin-top: 20px;">
                          <div class="row align-items-center">
                             <div class="col-sm-1 my-2 border-right border-dark">
-                                   <img class="rounded-circle shadow" src="/${acc.avatar}" alt="Avatar" style="width: 50px; height: 50px;" />
+                             <a href="/UserPage/StudentProfile?userId=${acc.id}">
+                                      <img class="rounded-circle shadow" src="/${acc.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a>
                              </div>
                                 <div class="col-sm">
-                                      <h4 class="m-0" style="font-weight: 600;">${acc.name}</h4>
+                                 <a href="/UserPage/StudentProfile?userId=${acc.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                            <h4 class="m-0" style="font-weight: 600;">${acc.name}</h4>
+                                   </a>
                                       <div style="font-weight: bold; color: red; font-size: 14px;">${dayComment}</div>
                                   </div>
                                 </div>
@@ -615,8 +633,9 @@ $(function () {
                             commentorHtml += `                            
                          </div>
                               </div>
-                                </div>
-                                <div id="replyContainer-${reply.id}" style="display: none; padding-left: 38px" class="col-lg-10 mx-auto pr-0">
+                                </div>`
+                            if (currentAcc != null) {
+                                commentorHtml += ` <div id="replyContainer-${reply.id}" style="display: none; padding-left: 38px" class="col-lg-10 mx-auto pr-0">
                                     <form method="get" class="m-0">
                                         <div class="form-group row pb-sm-1 mb-0 align-items-center">
                                             <div class="col-sm-1 p-0 text-center border-right border-dark" style="width: 50px; height: 50px;">
@@ -630,7 +649,9 @@ $(function () {
                                             <button type="submit" class="btn btn-success px-5 submit-reply-btn" data-reply-comment-id="${reply.id}" data-spadding-int="${distance}" style="font-size: 17px;">Submit</button>
                                         </div>
                                     </form>
-                                </div>   
+                                </div>`
+                            }
+                            commentorHtml += ` 
                                </div>
                                 <div class="comment-container" id="${reply.id}" style="">
                                 </div>`;

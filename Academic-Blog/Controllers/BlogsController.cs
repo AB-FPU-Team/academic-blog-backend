@@ -24,41 +24,41 @@ namespace Academic_Blog.Controllers
         private readonly ILogger<BlogsController> _logger;
         private readonly IBlogService _blogService;
 
-        public BlogsController(IBlogService blogService,ILogger<BlogsController> logger)
+        public BlogsController(IBlogService blogService, ILogger<BlogsController> logger)
         {
             _blogService = blogService;
             _logger = logger;
         }
 
         // GET: api/Blogs
-        [EnableQuery(PageSize =10)]       
+        [EnableQuery(PageSize = 10)]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Blog>>> GetBlogs()
         {
-           var blogs = await _blogService.GetBlogs();
-           if(blogs == null || blogs.Count == 0)
-           {
+            var blogs = await _blogService.GetBlogs();
+            if (blogs == null || blogs.Count == 0)
+            {
                 return NotFound("Not found any blogs");
-           }
-           return Ok(blogs);
+            }
+            return Ok(blogs);
         }
 
         // GET: api/Blogs/5
-           [EnableQuery]
-           [HttpGet("{id}")]
-           public async Task<IActionResult> GetBlog(Guid id)
-           {
-              var response = await _blogService.ReadBlog(id);
-              if(response == null)
-              {
+        [EnableQuery]
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetBlog(Guid id)
+        {
+            var response = await _blogService.ReadBlog(id);
+            if (response == null)
+            {
                 return NotFound();
-              }
+            }
             return Ok(response);
-           }
-         [EnableQuery(PageSize = 10)]
-         [HttpGet("currentUser")]
+        }
+        [EnableQuery(PageSize = 10)]
+        [HttpGet("currentUser")]
         [CustomAuthorize(Enums.RoleEnum.Student)]
-        public async Task<IActionResult> GetBlogsOfCurrentUser(string ? status)
+        public async Task<IActionResult> GetBlogsOfCurrentUser(string? status)
         {
             var blogs = await _blogService.GetBlogOfCurrentUser(status);
             return Ok(blogs);
@@ -67,22 +67,23 @@ namespace Academic_Blog.Controllers
         // PUT: api/Blogs/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [EnableQuery]
-           [HttpPut("student/{id}/edit")]
-           [CustomAuthorize(Enums.RoleEnum.Student)]
-           public async Task<IActionResult> UpdateBlogByStudent([FromRoute] Guid id,[FromBody] UpdateBlogRequest updateBlogRequest)
-           {
+        [HttpPut("student/{id}/edit")]
+        [CustomAuthorize(Enums.RoleEnum.Student)]
+        public async Task<IActionResult> UpdateBlogByStudent([FromRoute] Guid id, [FromBody] UpdateBlogRequest updateBlogRequest)
+        {
             bool isSuccess = await _blogService.EditBlogByStudent(id, updateBlogRequest);
-             if (!isSuccess) {
+            if (!isSuccess)
+            {
                 return BadRequest("Update failed");
-              }
+            }
             return Ok("Update successfully");
-           }
+        }
         [EnableQuery]
         [HttpPut("{id}/censor")]
         [CustomAuthorize(Enums.RoleEnum.Lecturer)]
         public async Task<IActionResult> Censor([FromRoute] Guid id, [FromBody] CensorBlogRequest censorBlog)
         {
-            bool isSuccess = await _blogService.CensorBlog(id,censorBlog);
+            bool isSuccess = await _blogService.CensorBlog(id, censorBlog);
             if (!isSuccess)
             {
                 return BadRequest("Update failed");
@@ -91,13 +92,13 @@ namespace Academic_Blog.Controllers
         }
         // POST: api/Blogs
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-           [EnableQuery]
-           [HttpPost]
-           [CustomAuthorize(Enums.RoleEnum.Student)]      
-           public async Task<IActionResult> Create(CreateNewBlogRequest blog)
-           {
+        [EnableQuery]
+        [HttpPost]
+        [CustomAuthorize(Enums.RoleEnum.Student)]
+        public async Task<IActionResult> Create(CreateNewBlogRequest blog)
+        {
             var blogResponse = await _blogService.CreateNewBlogs(blog);
-             if(blogResponse == null)
+            if (blogResponse == null)
             {
                 return Unauthorized(new ErrorResponse
                 {
@@ -106,21 +107,21 @@ namespace Academic_Blog.Controllers
                     TimeStamp = DateTime.Now,
                 });
             }
-             return CreatedAtAction("GetBlogs", new { id = blogResponse.Id }, blogResponse);
-           }
-           [EnableQuery]
-           [HttpPut("{id}/delete")]
-           [CustomAuthorize(Enums.RoleEnum.Lecturer,Enums.RoleEnum.Student)]
-           public async Task<IActionResult> Delete(Guid id)
-           {
+            return CreatedAtAction("GetBlogs", new { id = blogResponse.Id }, blogResponse);
+        }
+        [EnableQuery]
+        [HttpPut("{id}/delete")]
+        [CustomAuthorize(Enums.RoleEnum.Lecturer, Enums.RoleEnum.Student)]
+        public async Task<IActionResult> Delete(Guid id)
+        {
             var isSuccessful = await _blogService.DeleteSoftBlog(id);
             if (!isSuccessful)
             {
                 return BadRequest("Request Fail");
             }
             return Ok("Successfully");
-           }
-         [HttpGet("mappingField/{id}")]
+        }
+        [HttpGet("mappingField/{id}")]
         public async Task<IActionResult> GetBlogFromFieldMapping([FromRoute] Guid id)
         {
             var blogList = await _blogService.GetBlogByAccountMappingField(id);

@@ -73,12 +73,16 @@
                     if (acc.Id == Model.Blog.AuthorId)
                     {
                         <div class="col-md-2">
-                            <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="" style="width: 150px; height: 150px ;" />
+                            <a asp-page="/UserPage/StudentProfile" asp-route-userId="@acc.Id">
+                                <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="" style="width: 150px; height: 150px; cursor: pointer;" />
+                            </a>
                         </div>
                         <div class="col-md-10" style="display: block; margin: auto 0; padding-right: 20px;">
-                            <h5 style="margin: 0; font-weight: 700; font-size: 24px; ">
-                                @acc.Name
-                            </h5>
+                            <a asp-page="/UserPage/StudentProfile" asp-route-userId="@acc.Id" style="text-decoration: none; color: black; cursor: pointer;">
+                                <h5 style="margin: 0; font-weight: 700; font-size: 24px;">
+                                    @acc.Name
+                                </h5>
+                            </a>
                             <div style="color: black; opacity: 50%">UD:  @Model.Blog.UpdatedTime</div>
                         </div>
                     }
@@ -158,14 +162,20 @@
                                 </div>
                                 <div class="new-comment-container" id="newComment" style="">
                                 </div>
-                                <div class="value-comment-container" id="value-comment-@comment.Id" style="margin-left: 0px;" @(comment.CommentorId == CurrentAcc.Id ? $"onmousedown=openOthersOption('{comment.Id}',0)" : "")>
+                                <div class="value-comment-container" id="value-comment-@comment.Id" style="margin-left: 0px;" @(comment.CommentorId == CurrentAcc?.Id ? $"onmousedown=openOthersOption('{comment.Id}',0)" : "")>
                                     <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro; margin-top: 20px;">
                                         <div class="row align-items-center">
                                             <div class="col-sm-1 my-2 border-right border-dark">
-                                                <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px;" />
+                                                <a asp-page="/UserPage/StudentProfile" asp-route-userId="@acc.Id">
+                                                    <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                                </a>
+                                                
                                             </div>
                                             <div class="col-sm">
-                                                <h4 class="m-0" style="font-weight: 600;">@acc.Name</h4>
+                                                <a asp-page="/UserPage/StudentProfile" asp-route-userId="@acc.Id" style="text-decoration: none; color: black; cursor: pointer;">
+                                                    <h4 class="m-0" style="font-weight: 600;">@acc.Name</h4>
+                                                </a>
+                      
                                                 @{
                                                     string dayComment = "", postFixTime = "";
                                                     var currentDate = DateTime.Now;
@@ -408,4 +418,4 @@
 <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.10/signalr.min.js"></script>
-<script src="~/js/site.js?v=2.2"></script>
+<script src="~/js/site.js?v=2.3"></script>

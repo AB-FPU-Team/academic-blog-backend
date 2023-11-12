@@ -1,16 +1,10 @@
 using Academic_Blog.Domain.Models;
 using Academic_Blog.PayLoad.Request.Blog;
 using Academic_Blog.PayLoad.Response.Blog;
-using Academic_Blog.Repository.Interfaces;
 using Academic_Blog_App.Services.ClientEnum;
 using Academic_Blog_App.Services.Helper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Nancy;
-using System.Net.Http.Headers;
-using System.Security.Policy;
-using System.Text;
-using System.Text.Json;
 
 namespace Academic_Blog_App.Pages.BlogPage
 {
@@ -68,8 +62,8 @@ namespace Academic_Blog_App.Pages.BlogPage
             CreateNewBlogRequest.Description = description;
             CreateNewBlogRequest.CategoryId = Guid.Parse(Request.Form["statusSelect"]);
             var x = CreateNewBlogRequest;
-            var response = await _apiHelper.FetchApiAsync<BlogResponse>(EndPointEnum.Blogs, "", MethodEnum.POST,CreateNewBlogRequest);
-            if(response.IsSuccess)
+            var response = await _apiHelper.FetchApiAsync<BlogResponse>(EndPointEnum.Blogs, "", MethodEnum.POST, CreateNewBlogRequest);
+            if (response.IsSuccess)
             {
                 var result = response.Data;
                 if (result != null)

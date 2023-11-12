@@ -1,6 +1,9 @@
 ﻿@page
 @model Academic_Blog_App.Pages.UserPage.Student.StudentProfileModel
+@using Academic_Blog_App.Services.Helper;
+@using Academic_Blog.PayLoad.Response;
 @{
+    var CurrentAcc = SessionHelper.GetObjectFromJson<LoginResponse>(ViewContext.HttpContext.Session, "Account");
 }
 
 <style>
@@ -96,13 +99,13 @@
         <div class="card-body p-3">
             <div class="d-flex text-black">
                 <div class="flex-shrink-0 mr-3">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                    <img src="~/@Model.Account.Avatar"
                          alt="Generic placeholder image" class="img-fluid"
                          style="width: 180px; border-radius: 10px;">
                 </div>
                 <div class="align-self-center ml-2 mr-auto">
-                    <h3 class="mb-1">Danny McLoan</h3>
-                    <p class="mb-2 pb-1" style="color: #2b2a2a;">Senior Journalist</p>
+                    <h3 class="mb-1">@Model.Account.Name</h3>
+                    <p class="mb-2 pb-1" style="color: #2b2a2a;">@Model.Account.UserName</p>
                 </div>
             </div>
         </div>
@@ -115,38 +118,92 @@
                         <div class="flex-column align-self-center">
                             <h5 class="m-0 font-weight-bold text-uppercase">AWARD</h5>
                         </div>
+                        @{
+                            Func<int, string> GetProgressBarStyle = (percentProgress) =>
+                            {
+
+                                if (percentProgress <= 20)
+                                {
+                                    return "bg-info";
+                                }
+                                else if (percentProgress > 20 && percentProgress <= 50)
+                                {
+                                    return "bg-success";
+                                }
+                                else if (percentProgress > 50 && percentProgress <= 75)
+                                {
+                                    return "bg-warning";
+                                }
+                                else
+                                {
+                                    return "bg-danger";
+                                }
+                            };
+                        }
                         <section class="service_section d-flex flex-column p-2 border border-dark my-2">
                             <div class="py-1">
                                 <blockquote class="blockquote mb-0" style="font-size: unset !important">
                                     <p class="mb-0">Blog View Champion</p>
-                                    <footer class="blockquote-footer">Become a man has most viewed.</footer>
+                                    <footer class="blockquote-footer">Total viewed earned.</footer>
                                 </blockquote>
                                 <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 20%;" aria-valuenow="2" aria-valuemin="0" aria-valuemax="10">20%</div>
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="10">50%</div>
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10">100%</div>
+                                    @{
+                                        var percentProgress = (int)Math.Round((double)Model.totalViewed / 100 * 100);
+                                        if(percentProgress > 100)
+                                        {
+                                            percentProgress = 100;
+                                        }
+                                        var style = GetProgressBarStyle(percentProgress);
+                                    }
+                                    <div class="progress-bar @style" role="progressbar" style="width: @percentProgress%;"
+                                         aria-valuenow="@percentProgress" aria-valuemin="0" aria-valuemax="10">
+                                        @($"{percentProgress}%")
+                                    </div>
                                 </div>
                                 <div class="d-inline mw-100">
                                     <span>0</span>
-                                    <span style="float: right;">10</span>
+                                    <span style="float: right;">100</span>
                                 </div>
                             </div>
                             <div class="align-self-center">
-                                <span class="badge badge-pill badge-secondary">Basic</span>
-                                <span class="badge badge-pill badge-secondary">Advance</span>
-                                <span class="badge badge-pill badge-secondary">Master</span>
+                                @if (Model.totalViewed < 25)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Basic</span>
+                                }
+                                @if (Model.totalViewed < 50)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Advance</span>
+                                }
+                                @if (Model.totalViewed < 75)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Master</span>
+                                }
+                                @if (Model.totalViewed < 100)
+                                {
+                                    <span class="badge badge-pill badge-secondary">God</span>
+                                }
+
                             </div>
                         </section>
                         <section class="service_section d-flex flex-column p-2 border border-dark my-2">
                             <div class="py-1">
                                 <blockquote class="blockquote mb-0" style="font-size: unset !important">
                                     <p class="mb-0">Blogging Machine</p>
-                                    <footer class="blockquote-footer">Your blog is so good, can you post more?</footer>
+                                    <footer class="blockquote-footer">Total blog posted</footer>
                                 </blockquote>
                                 <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 20%;" aria-valuenow="2" aria-valuemin="0" aria-valuemax="10">20%</div>
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="10">50%</div>
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10">100%</div>
+                                    @{
+                                        percentProgress = (int)Math.Round((double)Model.totalBlog / 10 * 100);
+                                        if (percentProgress > 100)
+                                        {
+                                            percentProgress = 100;
+                                        }
+                                        style = GetProgressBarStyle(percentProgress);
+                                    }
+                                    <div class="progress-bar @style" role="progressbar" style="width: @percentProgress%;"
+                                         aria-valuenow="@percentProgress" aria-valuemin="0" aria-valuemax="10">
+                                        @($"{percentProgress}%")
+                                    </div>
                                 </div>
                                 <div class="d-inline mw-100">
                                     <span>0</span>
@@ -154,9 +211,22 @@
                                 </div>
                             </div>
                             <div class="align-self-center">
-                                <span class="badge badge-pill badge-secondary">Basic</span>
-                                <span class="badge badge-pill badge-secondary">Advance</span>
-                                <span class="badge badge-pill badge-secondary">Master</span>
+                                @if (Model.totalBlog < 3)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Basic</span>
+                                }
+                                @if (Model.totalBlog < 5)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Advance</span>
+                                }
+                                @if (Model.totalBlog < 7)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Master</span>
+                                }
+                                @if (Model.totalBlog < 10)
+                                {
+                                    <span class="badge badge-pill badge-secondary">God</span>
+                                }
                             </div>
                         </section>
                         <section class="service_section d-flex flex-column p-2 border border-dark my-2">
@@ -165,43 +235,85 @@
                                     <p class="mb-0">Most Viewed Blog</p>
                                     <footer class="blockquote-footer">Post that have <cite title="Source Title">most</cite> viewed.</footer>
                                 </blockquote>                                <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 20%;" aria-valuenow="2" aria-valuemin="0" aria-valuemax="10">20%</div>
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="10">50%</div>
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10">100%</div>
+                                    @{
+                                        percentProgress = (int)Math.Round((double)Model.mostViewedBlog / 100 * 100);
+                                        if (percentProgress > 100)
+                                        {
+                                            percentProgress = 100;
+                                        }
+                                        style = GetProgressBarStyle(percentProgress);
+                                    }
+                                    <div class="progress-bar @style" role="progressbar" style="width: @percentProgress%;"
+                                         aria-valuenow="@percentProgress" aria-valuemin="0" aria-valuemax="10">
+                                        @($"{percentProgress}%")
+                                    </div>
                                 </div>
                                 <div class="d-inline mw-100">
                                     <span>0</span>
-                                    <span style="float: right;">10</span>
+                                    <span style="float: right;">100</span>
                                 </div>
                             </div>
                             <div class="align-self-center">
-                                <span class="badge badge-pill badge-secondary">Basic</span>
-                                <span class="badge badge-pill badge-secondary">Advance</span>
-                                <span class="badge badge-pill badge-secondary">Master</span>
+                                @if (Model.mostViewedBlog < 25)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Basic</span>
+                                }
+                                @if (Model.mostViewedBlog < 50)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Advance</span>
+                                }
+                                @if (Model.mostViewedBlog < 75)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Master</span>
+                                }
+                                @if (Model.mostViewedBlog < 100)
+                                {
+                                    <span class="badge badge-pill badge-secondary">God</span>
+                                }
                             </div>
                         </section>
                         <section class="service_section d-flex flex-column p-2 border border-dark my-2">
                             <div class="py-1">
                                 <blockquote class="blockquote mb-0" style="font-size: unset !important">
                                     <p class="mb-0">Comment Machine</p>
-                                    <footer class="blockquote-footer"><cite title="Source Title">Comment</cite> some blogs.</footer>
+                                    <footer class="blockquote-footer"><cite title="Source Title">Total Comment</cite> in some blogs.</footer>
                                 </blockquote>
                                 <div class="progress">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="6" aria-valuemin="0" aria-valuemax="24">25%</div>
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="12" aria-valuemin="0" aria-valuemax="24">50%</div>
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="18" aria-valuemin="0" aria-valuemax="24">75%</div>
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="24" aria-valuemin="0" aria-valuemax="24">100%</div>
+                                    @{
+                                        percentProgress = (int)Math.Round((double)Model.totalComment / 100 * 100);
+                                        if (percentProgress > 100)
+                                        {
+                                            percentProgress = 100;
+                                        }
+                                        style = GetProgressBarStyle(percentProgress);
+                                    }
+                                    <div class="progress-bar @style" role="progressbar" style="width: @percentProgress%;"
+                                         aria-valuenow="@percentProgress" aria-valuemin="0" aria-valuemax="10">
+                                        @($"{percentProgress}%")
+                                    </div>
                                 </div>
                                 <div class="d-inline mw-100">
                                     <span>0</span>
-                                    <span style="float: right;">24</span>
+                                    <span style="float: right;">100</span>
                                 </div>
                             </div>
                             <div class="align-self-center">
-                                <span class="badge badge-pill badge-secondary">Basic</span>
-                                <span class="badge badge-pill badge-secondary">Advance</span>
-                                <span class="badge badge-pill badge-secondary">Master</span>
-                                <span class="badge badge-pill badge-secondary">God</span>
+                                @if (Model.mostViewedBlog < 25)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Basic</span>
+                                }
+                                @if (Model.mostViewedBlog < 50)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Advance</span>
+                                }
+                                @if (Model.mostViewedBlog < 75)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Master</span>
+                                }
+                                @if (Model.mostViewedBlog < 100)
+                                {
+                                    <span class="badge badge-pill badge-secondary">God</span>
+                                }
                             </div>
                         </section>
                         <section class="service_section d-flex flex-column p-2 border border-dark my-2">
@@ -211,21 +323,41 @@
                                     <footer class="blockquote-footer">Achieve all <cite title="Source Title">award.</cite></footer>
                                 </blockquote>
                                 <div class="progress">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="4">25%</div>
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="2" aria-valuemin="0" aria-valuemax="4">50%</div>
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="3" aria-valuemin="0" aria-valuemax="4">75%</div>
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="4">100%</div>
+                                    @{
+                                        percentProgress = (int)Math.Round((double)Model.awardEarned / 13 * 100);
+                                        if (percentProgress > 100)
+                                        {
+                                            percentProgress = 100;
+                                        }
+                                        style = GetProgressBarStyle(percentProgress);
+                                    }
+                                    <div class="progress-bar @style" role="progressbar" style="width: @percentProgress%;"
+                                         aria-valuenow="@percentProgress" aria-valuemin="0" aria-valuemax="10">
+                                        @($"{percentProgress}%")
+                                    </div>
                                 </div>
                                 <div class="d-inline mw-100">
                                     <span>0</span>
-                                    <span style="float: right;">4</span>
+                                    <span style="float: right;">13</span>
                                 </div>
                             </div>
                             <div class="align-self-center">
-                                <span class="badge badge-pill badge-secondary">Basic</span>
-                                <span class="badge badge-pill badge-secondary">Advance</span>
-                                <span class="badge badge-pill badge-secondary">Master</span>
-                                <span class="badge badge-pill badge-secondary">God</span>
+                                @if (Model.awardEarned < 4)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Basic</span>
+                                }
+                                @if (Model.awardEarned < 7)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Advance</span>
+                                }
+                                @if (Model.awardEarned < 10)
+                                {
+                                    <span class="badge badge-pill badge-secondary">Master</span>
+                                }
+                                @if (Model.awardEarned < 13)
+                                {
+                                    <span class="badge badge-pill badge-secondary">God</span>
+                                }
                             </div>
                         </section>
                     </div>
@@ -243,9 +375,22 @@
                                     <h5 class="text-gradient">Blog View Champion</h5>
                                 </div>
                                 <div class="col-md-5 align-self-center">
-                                    <span class="badge badge-success m-2 w-100" style="font-size: 18px !important">Basic</span>
-                                    <span class="badge badge-primary m-2 w-100" style="font-size: 18px !important">Advance</span>
-                                    <span class="badge animate-charcter-legendary m-2 w-100" style="font-size: 18px !important">Master</span>
+                                    @if (Model.totalViewed >= 25)
+                                    {
+                                        <span class="badge badge-success m-2 w-100" style="font-size: 18px !important">Basic</span>
+                                    }
+                                    @if (Model.totalViewed >= 50)
+                                    {
+                                        <span class="badge badge-primary m-2 w-100" style="font-size: 18px !important">Advance</span>
+                                    }
+                                    @if (Model.totalViewed >= 75)
+                                    {
+                                        <span class="badge animate-charcter-legendary m-2 w-100" style="font-size: 18px !important">Master</span>
+                                    }
+                                    @if (Model.totalViewed >= 100)
+                                    {
+                                        <span class="badge animate-charcter-magenta m-2 w-100" style="font-size: 18px !important">God</span>
+                                    }
                                 </div>
                             </div>
                             <div class="row mb-2" style="background-color: #DDDDDD;">
@@ -253,9 +398,22 @@
                                     <h5 class="text-gradient">Blogging Machine</h5>
                                 </div>
                                 <div class="col-md-5 align-self-center">
-                                    <span class="badge badge-success m-2 w-100" style="font-size: 18px !important">Basic</span>
-                                    <span class="badge badge-primary m-2 w-100" style="font-size: 18px !important">Advance</span>
-                                    <span class="badge animate-charcter-legendary m-2 w-100" style="font-size: 18px !important">Master</span>
+                                    @if (Model.totalBlog >= 3)
+                                    {
+                                        <span class="badge badge-success m-2 w-100" style="font-size: 18px !important">Basic</span>
+                                    }
+                                    @if (Model.totalBlog >= 5)
+                                    {
+                                        <span class="badge badge-primary m-2 w-100" style="font-size: 18px !important">Advance</span>
+                                    }
+                                    @if (Model.totalBlog >= 7)
+                                    {
+                                        <span class="badge animate-charcter-legendary m-2 w-100" style="font-size: 18px !important">Master</span>
+                                    }
+                                    @if (Model.totalBlog >= 10)
+                                    {
+                                        <span class="badge animate-charcter-magenta m-2 w-100" style="font-size: 18px !important">God</span>
+                                    }
                                 </div>
                             </div>
                             <div class="row mb-2" style="background-color: #DDDDDD;">
@@ -263,9 +421,23 @@
                                     <h5 class="text-gradient">Most Viewed Blog</h5>
                                 </div>
                                 <div class="col-md-5 align-self-center">
-                                    <span class="badge badge-success m-2 w-100" style="font-size: 18px !important">Basic</span>
-                                    <span class="badge badge-primary m-2 w-100" style="font-size: 18px !important">Advance</span>
-                                    <span class="badge animate-charcter-legendary m-2 w-100" style="font-size: 18px !important">Master</span>
+                                    @if (Model.mostViewedBlog >= 25)
+                                    {
+                                        <span class="badge badge-success m-2 w-100" style="font-size: 18px !important">Basic</span>
+                                    }
+                                    @if (Model.mostViewedBlog >= 50)
+                                    {
+                                        <span class="badge badge-primary m-2 w-100" style="font-size: 18px !important">Advance</span>
+                                    }
+                                    @if (Model.mostViewedBlog >= 75)
+                                    {
+                                        <span class="badge animate-charcter-legendary m-2 w-100" style="font-size: 18px !important">Master</span>
+                                    }
+                                    @if (Model.mostViewedBlog >= 100)
+                                    {
+                                        <span class="badge animate-charcter-magenta m-2 w-100" style="font-size: 18px !important">God</span>
+                                    }
+
                                 </div>
                             </div>
                             <div class="row mb-2" style="background-color: #DDDDDD;">
@@ -273,10 +445,22 @@
                                     <h5 class="text-gradient">Comment Machine</h5>
                                 </div>
                                 <div class="col-md-5 align-self-center">
-                                    <span class="badge badge-success m-2 w-100" style="font-size: 18px !important">Basic</span>
-                                    <span class="badge badge-primary m-2 w-100" style="font-size: 18px !important">Advance</span>
-                                    <span class="badge animate-charcter-legendary m-2 w-100" style="font-size: 18px !important">Master</span>
-                                    <span class="badge animate-charcter-magenta m-2 w-100" style="font-size: 18px !important">God</span>
+                                    @if (Model.totalComment >= 25)
+                                    {
+                                        <span class="badge badge-success m-2 w-100" style="font-size: 18px !important">Basic</span>
+                                    }
+                                    @if (Model.totalComment >= 50)
+                                    {
+                                        <span class="badge badge-primary m-2 w-100" style="font-size: 18px !important">Advance</span>
+                                    }
+                                    @if (Model.totalComment >= 75)
+                                    {
+                                        <span class="badge animate-charcter-legendary m-2 w-100" style="font-size: 18px !important">Master</span>
+                                    }
+                                    @if (Model.totalComment >= 100)
+                                    {
+                                        <span class="badge animate-charcter-magenta m-2 w-100" style="font-size: 18px !important">God</span>
+                                    }
                                 </div>
                             </div>
                             <div class="row mb-2 gradient-medal" style="background-color: #DDDDDD;">
@@ -284,10 +468,22 @@
                                     <h5 class="text-gradient">Award Earned</h5>
                                 </div>
                                 <div class="col-md-5 align-self-center">
-                                    <span class="badge badge-success m-2 w-100" style="font-size: 18px !important">Basic</span>
-                                    <span class="badge badge-primary m-2 w-100" style="font-size: 18px !important">Advance</span>
-                                    <span class="badge animate-charcter-legendary m-2 w-100" style="font-size: 18px !important">Master</span>
-                                    <span class="badge animate-charcter-magenta m-2 w-100" style="font-size: 18px !important">God</span>
+                                    @if (Model.awardEarned >= 4)
+                                    {
+                                        <span class="badge badge-success m-2 w-100" style="font-size: 18px !important">Basic</span>
+                                    }
+                                    @if (Model.awardEarned >= 7)
+                                    {
+                                        <span class="badge badge-primary m-2 w-100" style="font-size: 18px !important">Advance</span>
+                                    }
+                                    @if (Model.awardEarned >= 10)
+                                    {
+                                        <span class="badge animate-charcter-legendary m-2 w-100" style="font-size: 18px !important">Master</span>
+                                    }
+                                    @if (Model.awardEarned >= 13)
+                                    {
+                                        <span class="badge animate-charcter-magenta m-2 w-100" style="font-size: 18px !important">God</span>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -298,37 +494,56 @@
 
         <main class="col-md-8 pr-0 pl-2 py-3">
             <div class="card shadow bg-white rounded">
-                <!-- Bắt đầu add data từ đây, div class "card-body" này bao quát tất cả data bên trong -->
-                <div class="card-body p-3">
-                    <div class="row mx-1 border border-dark">
-                        <div class="col-md-3 py-3">
-                            <img class="img-thumbnail image-blog d-block mx-auto" src="~/images/react.png" alt="Responsive Image" />
-                        </div>
-                        <div class="col-md-8 py-3 align-self-center">
-                            <div class="textCrop">
-                                <a class="nav-link" href="/BlogPage/ViewBlogDetail" style="color: #e9a21a; padding: 0; border: 0">
-                                    <h4>
-                                        Day la tieu de, do you want to do something better in your life?
-                                    </h4>
-                                </a>
-                                <p>
-                                    Day la mo ta ngan gon. Maybe you will want to go somewhere else to clear your mind... It's ok, I get it. You can go or not. But, you need think about what is true in your life, not true about this world. How about me? I need both, I want to know what is true about myself and what is true about this world. Not all true of yourself is true with this world. Yeahh, not at all.
-                                </p>
+                @foreach (var blog in Model.Blogs)
+                {
+                    <div class="card-body p-3">
+                        <div class="row mx-1 border border-dark">
+                            <div class="col-md-3 py-3">
+                                <img class="img-thumbnail image-blog d-block mx-auto" src="~/@blog.Thumbnal_Url" alt="Responsive Image" />
                             </div>
-                        </div>
-                        <div class="col-md-1 px-0 py-3 d-flex flex-column">
+                            <div class="col-md-8 py-3 align-self-center">
+
+                                <div class="textCrop">
+                                    <a class="nav-link" asp-page="/BlogPage/ViewBlogDetail" asp-route-blogId="@blog.Id" asp-route-authorId="@blog.AuthorId" style="color: #e9a21a; padding: 0; border: 0">
+                                        <h4>
+                                            @blog.Title
+                                        </h4>
+                                    </a>
+                                    <p>
+                                        @blog.ShortDescription
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-1 px-0 py-3 d-flex flex-column">
                                 <div class="py-1 mx-auto">
-                                    <span class="badge badge-secondary">pending</span>
+                                    <span class="badge badge-secondary">@blog.Status</span>
                                 </div>
                                 <div class="py-1 m-auto">
-                                    <a class="btn btn-light" href="/BlogPage/EditBlogDetail">
-                                        <i class="fa fa-edit" style="font-size: 36px"></i>
-                                    </a>
+                                    @if (blog.Status.Equals("APPROVED"))
+                                    {
+                                        <i class="fas fa-chevron-circle-down" style="font-size: 36px; color: green;"></i>
+                                    }
+                                    @if (blog.Status.Equals("REJECTED"))
+                                    {
+                                        <i class="fas fa-exclamation-circle" style="font-size: 36px; color: red;"></i>
+                                    }
+                                    @if (blog.Status.Equals("DELETED"))
+                                    {
+                                        <i class="fas fa-exclamation-circle" style="font-size: 36px; color: red;"></i>
+                                    }
+                                    @if (blog.Status.Equals("PENDING") && CurrentAcc != null)
+                                    {
+                                        <a class="btn btn-light" asp-page="/BlogPage/EditBlogDetail" asp-route-blogId="@blog.Id">
+                                            <i class="fa fa-edit" style="font-size: 36px"></i>
+                                        </a>
+
+                                    }
                                 </div>
-                            
+
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
             </div>
         </main>
 
