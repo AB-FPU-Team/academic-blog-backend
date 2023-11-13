@@ -100,6 +100,7 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICommentSerivce, CommentService>();
 builder.Services.AddScoped<ICategoryService,CategoryService>();
 builder.Services.AddScoped<ITrackingViewService, TrackingViewBlogService>();
+builder.Services.AddScoped<IReportService, ReportService>();
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -12,6 +12,7 @@ namespace Academic_Blog.Services.Implements
 {
     public class CommentService : BaseService<CommentService>, ICommentSerivce
     {
+        private HashSet<Comment> _comments = new HashSet<Comment>();
         public CommentService(IUnitOfWork<AcademicBlogContext> unitOfWork, ILogger<CommentService> logger, IMapper mapper, IHttpContextAccessor httpContextAccessor) : base(unitOfWork, logger, mapper, httpContextAccessor)
         {
         }
@@ -56,27 +57,55 @@ namespace Academic_Blog.Services.Implements
 
         public async Task<bool> DeleteComments(Guid id)
         {
+            var comments =  await GetComments(id);
             var userId = GetUserIdFromJwt();
-            var comment = await _unitOfWork.GetRepository<Comment>().SingleOrDefaultAsync(predicate : x => x.Id == id);
-            if(comment.CommentorId !=  userId)
+            var comment = await _unitOfWork.GetRepository<Comment>().SingleOrDefaultAsync(predicate: x => x.Id == id);
+            if (comment.CommentorId != userId)
             {
-                throw new BadHttpRequestException("This Comment is not belongs of you",StatusCodes.Status400BadRequest);
+                throw new BadHttpRequestException("This Comment is not belongs of you", StatusCodes.Status400BadRequest);
             }
             if (comment == null)
             {
                 return false;
             }
-            var commentsRelated = await _unitOfWork.GetRepository<Comment>().GetListAsync(predicate : x => x.ReplyToId == id);
-            _unitOfWork.GetRepository<Comment>().DeleteAsync(comment);
-            _unitOfWork.GetRepository<Comment>().DeleteRangeAsync(commentsRelated);
+            _unitOfWork.GetRepository<Comment>().DeleteRangeAsync(comments);
             var isSuccess = await _unitOfWork.CommitAsync() > 0;
-            return isSuccess;   
+            return true;   
         }
-
+        private async Task<List<Comment>> GetComments(Guid id)
+        {
+            var comment = await _unitOfWork.GetRepository<Comment>().SingleOrDefaultAsync(predicate: x => x.Id == id);
+            var commentsRelated = await _unitOfWork.GetRepository<Comment>().GetListAsync(predicate: x => x.ReplyToId == id);
+            _comments.Add(comment);
+            foreach(Comment commentR in commentsRelated) {
+                _comments.Add(commentR);
+                 await GetComments(commentR.Id);
+            }
+            return _comments.ToList();
+        }
         public async Task<List<Comment>> GetComments()
         {
             List<Comment> comments = (await _unitOfWork.GetRepository<Comment>().GetListAsync(predicate : x => x.Id == x.Id)).ToList();
             return comments;
+        }
+
+        public async Task<bool> UpdateComment(Guid id, UpdateCommentRequest request)
+        {
+            var comment = await _unitOfWork.GetRepository<Comment>().SingleOrDefaultAsync(predicate: x => x.Id == id);
+            if(comment == null)
+            {
+                throw new BadHttpRequestException("id is not found", StatusCodes.Status400BadRequest);
+            }
+            var userId = GetUserIdFromJwt();
+            if (comment.CommentorId != userId)
+            {
+                throw new BadHttpRequestException("This Comment is not belongs of you", StatusCodes.Status400BadRequest);
+            }
+            comment.Content = request.Content;
+            comment.CreateTime = DateTime.Now;
+            _unitOfWork.GetRepository<Comment>().UpdateAsync(comment);
+            var isSucess = await _unitOfWork.CommitAsync() > 0;
+            return isSucess;
         }
     }
 }

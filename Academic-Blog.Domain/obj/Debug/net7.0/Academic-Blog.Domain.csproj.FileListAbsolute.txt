@@ -68,3 +68,17 @@ E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\D
 E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.pdb
 E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.genruntimeconfig.cache
 E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\ref\Academic-Blog.Domain.dll
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.deps.json
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.runtimeconfig.json
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.dll
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.pdb
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.csproj.AssemblyReference.cache
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.AssemblyInfoInputs.cache
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.AssemblyInfo.cs
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.csproj.CoreCompileInputs.cache
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.dll
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\refint\Academic-Blog.Domain.dll
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.pdb
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.genruntimeconfig.cache
+D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\ref\Academic-Blog.Domain.dll

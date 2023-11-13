@@ -1,4 +1,5 @@
-﻿using Academic_Blog.Domain.Models;
+﻿using Academic_Blog.Domain.Migrations;
+using Academic_Blog.Domain.Models;
 using Academic_Blog.PayLoad.Request.Comment;
 using Academic_Blog.PayLoad.Response.Comment;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -10,5 +11,6 @@ namespace Academic_Blog.Services.Interfaces
       Task<CommentResponse> CreateComment(CreateCommentRequest request);
       Task<List<Comment>> GetComments();
        Task<bool> DeleteComments(Guid id);
+        Task<bool> UpdateComment(Guid id ,UpdateCommentRequest request);
     }
 }

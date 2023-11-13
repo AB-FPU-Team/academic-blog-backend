@@ -11,6 +11,10 @@ using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Academic_Blog.Services.Interfaces;
 using Microsoft.AspNetCore.OData.Query;
 using Academic_Blog.Validatiors;
+using Academic_Blog.PayLoad.Request.Report;
+using Academic_Blog.PayLoad.Response;
+using System.Net;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Academic_Blog.Controllers
 {
@@ -35,6 +39,22 @@ namespace Academic_Blog.Controllers
         {
            var result = await _reportService.GetReports();
            return Ok(result);
+        }
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> PostReport(AddReportRequest report)
+        {
+           var isSuccess = await _reportService.CreateReport(report);
+           if(!isSuccess) 
+            {
+                return BadRequest(new ErrorResponse
+                {
+                    Error = "created is fail",
+                    StatusCode = StatusCodes.Status400BadRequest,
+                    TimeStamp = DateTime.Now
+                });
+            }
+           return Ok(new {Message = "successfully"});
         }
         /*
         // GET: api/Reports/5
@@ -88,18 +108,7 @@ namespace Academic_Blog.Controllers
 
         // POST: api/Reports
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Report>> PostReport(Report report)
-        {
-          if (_context.Reports == null)
-          {
-              return Problem("Entity set 'AcademicBlogContext.Reports'  is null.");
-          }
-            _context.Reports.Add(report);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetReport", new { id = report.Id }, report);
-        }
+     
 
         // DELETE: api/Reports/5
         [HttpDelete("{id}")]
