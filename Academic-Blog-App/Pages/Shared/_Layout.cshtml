@@ -108,7 +108,7 @@
                                         }
                                         else {
                                             <div class="dropdown-menu bg-dark rounded-0 border-0 m-0">
-                                                <a asp-page="/UserPage/LectureProfile" class="dropdown-item text-light">Profile</a>
+                                                <a asp-page="/UserPage/LectureProfile" asp-route-id="@loginAccount.Id" class="dropdown-item text-light">Profile</a>
                                                 <a asp-page="/LecturePage/ReviewPost" class="dropdown-item text-light">Review Post</a>
                                                 <a asp-page="/HomePage/Logout" class="dropdown-item text-light">Logout</a>
                                             </div>

@@ -100,3 +100,20 @@ D:\PRN231_1311\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\r
 D:\PRN231_1311\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.pdb
 D:\PRN231_1311\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.genruntimeconfig.cache
 D:\PRN231_1311\academic-blog-backend\Academic-Blog.Repository\obj\Debug\net7.0\ref\Academic-Blog.Repository.dll
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.deps.json
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.runtimeconfig.json
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.dll
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Repository.pdb
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Domain.dll
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\bin\Debug\net7.0\Academic-Blog.Domain.pdb
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.csproj.AssemblyReference.cache
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.AssemblyInfoInputs.cache
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.AssemblyInfo.cs
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.csproj.CoreCompileInputs.cache
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.csproj.CopyComplete
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.dll
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\obj\Debug\net7.0\refint\Academic-Blog.Repository.dll
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.pdb
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\obj\Debug\net7.0\Academic-Blog.Repository.genruntimeconfig.cache
+D:\Project PRN231\academic-blog-backend3\Academic-Blog.Repository\obj\Debug\net7.0\ref\Academic-Blog.Repository.dll

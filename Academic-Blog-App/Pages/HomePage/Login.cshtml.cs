@@ -26,9 +26,10 @@ namespace Academic_Blog_App.Pages.HomePage
         }
 
         [BindProperty]
-        public string UserName { get; set;}
+        public string UserName { get; set; }
         [BindProperty]
-        public string Password { get; set;}
+        public string Password { get; set; }
+
 
         [BindProperty]
         public List<Account> ListAccounts { get; set; } = default!;
@@ -58,7 +59,7 @@ namespace Academic_Blog_App.Pages.HomePage
             try {
                 if(!isAdmin) {
                     var jsonContent = JsonSerializer.Serialize(new LoginRequest {
-                        Username = UserName, Password = Password
+                         Username = UserName, Password = Password
                     });
                     
                     HttpResponseMessage response = await _httpClient.PostAsync(accountUrl, 
@@ -71,7 +72,7 @@ namespace Academic_Blog_App.Pages.HomePage
                         };
                         var account = JsonSerializer.Deserialize<LoginResponse>(content, options);
                         if(account == null) {
-                            ViewData["ErrorLoginMessage"] = "Incorrect user name or password";
+                            ViewData["ErrorLoginMessage"] = "Incorrect Email or password";
                             return Page();
                         }
                         if (account.Role.Equals("Admin"))

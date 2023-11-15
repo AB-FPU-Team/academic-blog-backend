@@ -61,13 +61,13 @@ namespace Academic_Blog.Services.Implements
             Expression<Func<Account, bool>> accountFilter = p =>
                  p.UserName.Equals(loginRequest.Username) &&
                  p.Password.Equals(loginRequest.Password);
-            Account account = await _unitOfWork.GetRepository<Account>().SingleOrDefaultAsync(predicate: accountFilter,include : p => p.Include(x => x.Role));
-            if(account == null)
+            Account account = await _unitOfWork.GetRepository<Account>().SingleOrDefaultAsync(predicate: accountFilter, include: p => p.Include(x => x.Role));
+            if (account == null)
             {
                 return null;
             }
             string Role = account.Role.Name;
-            Tuple<string, Guid> guidClaim = new Tuple<string,Guid>("userId",account.Id);
+            Tuple<string, Guid> guidClaim = new Tuple<string, Guid>("userId", account.Id);
             var token = JwtUtil.GenerateJwtToken(account, guidClaim);
             LoginResponse loginResponse = new LoginResponse
             {
@@ -78,8 +78,9 @@ namespace Academic_Blog.Services.Implements
                 Role = Role,
                 AccountStatus = account.Status,
             };
-           return loginResponse;
+            return loginResponse;
         }
+
 
         public async Task<bool> UnBanAnAccount()
         {

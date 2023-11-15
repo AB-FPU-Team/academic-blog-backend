@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj": {}
+    "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog\\Academic-Blog.csproj": {}
   },
   "projects": {
-    "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+    "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
+        "projectUniqueName": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
         "projectName": "Academic-Blog.Domain",
-        "projectPath": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
-        "packagesPath": "C:\\Users\\Thuong\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Domain\\obj\\",
+        "projectPath": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj",
+        "packagesPath": "C:\\Users\\giahu\\.nuget\\packages\\",
+        "outputPath": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Thuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\giahu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -93,24 +93,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.310\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
+    "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
+        "projectUniqueName": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
         "projectName": "Academic-Blog.Repository",
-        "projectPath": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
-        "packagesPath": "C:\\Users\\Thuong\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Repository\\obj\\",
+        "projectPath": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
+        "packagesPath": "C:\\Users\\giahu\\.nuget\\packages\\",
+        "outputPath": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Thuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\giahu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -125,8 +125,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
-                "projectPath": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
+              "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+                "projectPath": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
               }
             }
           }
@@ -174,24 +174,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.310\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj": {
+    "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog\\Academic-Blog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
+        "projectUniqueName": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog\\Academic-Blog.csproj",
         "projectName": "Academic-Blog",
-        "projectPath": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog\\Academic-Blog.csproj",
-        "packagesPath": "C:\\Users\\Thuong\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog\\obj\\",
+        "projectPath": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog\\Academic-Blog.csproj",
+        "packagesPath": "C:\\Users\\giahu\\.nuget\\packages\\",
+        "outputPath": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Thuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\giahu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -200,18 +200,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.310\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
-                "projectPath": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
+              "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+                "projectPath": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
               },
-              "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
-                "projectPath": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj"
+              "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj": {
+                "projectPath": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj"
               }
             }
           }
@@ -294,7 +293,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.310\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

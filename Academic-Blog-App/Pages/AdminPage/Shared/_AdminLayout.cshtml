@@ -107,22 +107,65 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTasks"
                    aria-expanded="true" aria-controls="collapseTasks">
                     <i class="fas fa-list fa-list-alt"></i>
-                    <span>Report Magagement</span>
+                    <span> <a style="color:white" asp-page="/AdminPage/ReportIndex">Report List</a></span>
                 </a>
-                <div id="collapseTasks" class="collapse" aria-labelledby="headingTasks" data-parent="#accordionSidebar">
+                @* <div id="collapseTasks" class="collapse" aria-labelledby="headingTasks" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Report</h6>
                         <a class="collapse-item" asp-page="/AdminPage/ReportIndex">Report List</a>
 
                     </div>
-                </div>
+                </div> *@
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider" />
-
-            <!-- Nav Item - Products Collapse Menu -->
             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTasks"
+                   aria-expanded="true" aria-controls="collapseTasks">
+                    <i class="fas fa-list fa-list-alt"></i>
+                    <span> <a style="color:white" asp-page="/AdminPage/AccountList">Account List</a></span>
+                </a>
+                @* <div id="collapseTasks" class="collapse" aria-labelledby="headingTasks" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Report</h6>
+                   
+
+                    </div>
+                </div> *@
+            </li>
+            <hr class="sidebar-divider" />
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTasks"
+                   aria-expanded="true" aria-controls="collapseTasks">
+                    <i class="fas fa-list fa-list-alt"></i>
+                    <span> <a style="color:white" asp-page="/AdminPage/CommentList">Comment List</a></span>
+                </a>
+                @* <div id="collapseTasks" class="collapse" aria-labelledby="headingTasks" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Report</h6>
+
+
+                </div>
+                </div> *@
+            </li>
+            <hr class="sidebar-divider" />
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTasks"
+                   aria-expanded="true" aria-controls="collapseTasks">
+                    <i class="fas fa-list fa-list-alt"></i>
+                    <span> <a style="color:white" asp-page="/AdminPage/BlogList">Blog List</a></span>
+                </a>
+                @* <div id="collapseTasks" class="collapse" aria-labelledby="headingTasks" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Report</h6>
+
+
+                </div>
+                </div> *@
+            </li>
+            <!-- Nav Item - Products Collapse Menu -->
+            @* <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts"
                    aria-expanded="true" aria-controls="collapseProducts">
                     <i class="fa fa-cube"></i>
@@ -138,7 +181,7 @@
                         <a class="collapse-item" asp-page="/Shops/RemovedProduct">Removed Product</a>
                     </div>
                 </div>
-            </li>
+            </li> *@
 
 
 

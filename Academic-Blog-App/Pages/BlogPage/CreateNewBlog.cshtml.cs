@@ -5,6 +5,7 @@ using Academic_Blog_App.Services.ClientEnum;
 using Academic_Blog_App.Services.Helper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
 
 namespace Academic_Blog_App.Pages.BlogPage
 {
@@ -57,9 +58,15 @@ namespace Academic_Blog_App.Pages.BlogPage
                 imageUrl = "images/" + imageName;
 
             }
+            
             CreateNewBlogRequest.Thumbnal_Url = imageUrl;
             var description = CreateNewBlogRequest.Description;
             CreateNewBlogRequest.Description = description;
+            if (CreateNewBlogRequest.Description.Length < 100 )
+            {
+                return Page();
+
+            }
             CreateNewBlogRequest.CategoryId = Guid.Parse(Request.Form["statusSelect"]);
             var x = CreateNewBlogRequest;
             var response = await _apiHelper.FetchApiAsync<BlogResponse>(EndPointEnum.Blogs, "", MethodEnum.POST, CreateNewBlogRequest);

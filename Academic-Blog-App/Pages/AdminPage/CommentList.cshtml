@@ -1,0 +1,49 @@
+﻿@page
+@model Academic_Blog_App.Pages.AdminPage.CommentListModel
+@{
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Comments[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comments[0].Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comments[0].Commentor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comments[0].ReplyTo)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Comments)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+                <td>
+                    <a asp-page="./AccountDetail" asp-route-id="@item.CommentorId">@Html.DisplayFor(modelItem => item.CommentorId)</a>
+                </td>
+                <td>
+                    <a asp-page="./CommentDetail" asp-route-id="@item.ReplyToId">@Html.DisplayFor(modelItem => item.ReplyToId)</a>
+                </td>
+                <td>
+                    <a asp-page="./CommentDetail" asp-route-id="@item.Id">Comment Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

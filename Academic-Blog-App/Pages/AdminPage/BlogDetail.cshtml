@@ -1,0 +1,311 @@
+﻿@page
+@model Academic_Blog_App.Pages.AdminPage.BlogDetailModel
+@using Academic_Blog_App.Services.Helper;
+@using Academic_Blog.PayLoad.Response;
+@{
+    Layout = "";
+    var Login = ViewData["Login"]?.ToString();
+    var CurrentAcc = SessionHelper.GetObjectFromJson<LoginResponse>(ViewContext.HttpContext.Session, "Account");
+}
+
+<style>
+    .box {
+        border: 1px solid black;
+    }
+
+        .box h2 {
+            margin: 20px 0;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 38px;
+            font-weight: bold;
+            text-align: center !important;
+        }
+
+    .blog-interact {
+        height: 50px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: none;
+        border-right: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .blog-interact i {
+            margin-left: 12px;
+            font-size: 35px;
+        }
+
+    .cursor-pointer {
+        cursor: pointer;
+    }
+
+    button {
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .model-content {
+        background-color: blue;
+        padding: 20px;
+        border: 1px solid #888;
+    }
+
+    .report-model-finish {
+        opacity: 50%;
+        transition: opacity 0.1s ease-in-out;
+    }
+
+        .report-model-finish:hover {
+            opacity: 85%;
+        }
+</style>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="~/img/logo/logo.png" type="image/x-icon" />
+    <title>Admin Page</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="~/shop-vendor/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="~/css/shop-css/sb-seller-2.min.css" rel="stylesheet">
+</head>
+<div id="content-wrapper" class="d-flex flex-column" style="margin-bottom:0px">
+
+    <!-- Main Content -->
+    <div id="content" style="margin-bottom:0px">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow" style="margin-bottom:0px">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Topbar Title -->
+            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                <div class="input-group">
+                    <p class="m-auto">Admin Management</p>
+                </div>
+            </form>
+
+            <!-- Topbar Navbar -->
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    @if (CurrentAcc != null)
+                    {
+                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    @if (CurrentAcc.Role.Equals("Admin"))
+                                    {
+
+                                        <a href="#" class="nav-link dropdown-toggle text-decoration-none text-dark" data-toggle="dropdown">
+                                            Welcome, @CurrentAcc.Name
+                                        </a>
+                                        <div class="dropdown-menu bg-dark rounded-0 border-0 m-0">
+                                            <a asp-page="/HomePage/Logout" class="dropdown-item text-light">Logout</a>
+                                        </div>
+
+                                    }
+                                    else
+                                    {
+                                        <a href="#" class="nav-link dropdown-toggle text-decoration-none text-dark" data-toggle="dropdown">
+                                            Welcome, @CurrentAcc.Name
+                                        </a>
+                                        <div class="dropdown-menu bg-dark rounded-0 border-0 m-0">
+                                            <a asp-page="/HomePage/Logout" class="dropdown-item text-light">Logout</a>
+                                        </div>
+                                    }
+                                </li>
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a style="color:black" class="nav-link" href="/HomePage/Login">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+
+        </nav>
+        <!-- End of Topbar -->
+        <!-- Begin index content -->
+
+
+    </div>
+    <!-- End index content -->
+</div>
+
+<div class="body_bg layout_padding" style="padding: 40px;">
+    <section class="service_section">
+        <div class="container">
+            <div class="row" style="margin: 40px 0;">
+                @foreach (var acc in Model.Accounts)
+                {
+                    if (acc.Id == Model.Blog.AuthorId)
+                    {
+                        <div class="col-md-2">
+                            <a asp-page="/UserPage/StudentProfile" asp-route-userId="@acc.Id">
+                                <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="" style="width: 150px; height: 150px; cursor: pointer;" />
+                            </a>
+                        </div>
+                        <div class="col-md-10" style="display: block; margin: auto 0; padding-right: 20px;">
+                            <a asp-page="/UserPage/StudentProfile" asp-route-userId="@acc.Id" style="text-decoration: none; color: black; cursor: pointer;">
+                                <h5 style="margin: 0; font-weight: 700; font-size: 24px;">
+                                    @acc.Name
+                                </h5>
+                            </a>
+                            <div style="color: black; opacity: 50%">UD:  @Model.Blog.UpdatedTime</div>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="box w-100">
+                <div class="p-3">
+                    <h2 class="font-weight-bold mx-auto my-2" style="font-size: 38px;">@Model.Blog.Title</h2>
+                    <p style="margin: 12px 0; font-size: 20px; padding: 10px 0;">
+                        @Model.Blog.Description
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service_section">
+        <div class="container">
+            <div class="w-100">
+                <div class="d-flex justify-content-xl-between align-self-stretch">
+                    <div id="blogView" class="ml-1">
+                        <i class="fa fa-eye" style="font-size:30px;color:black">@Model.Blog.View</i>
+                    </div>
+                    <div class="mr-1" id="blogComment">
+                        @Model.Comments.Count Comments
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </section>
+</div>
+<dd class="col-sm-10">
+    <a asp-page="./BlogList">Back to Blog List</a>
+</dd>
+@section ViewBlogDetailScripts {
+    <script type="text/javascript">
+        function openOthersOption(triggerId, space) {
+            var editCommentForm = $("#editCommentForm");
+            if (editCommentForm.length > 0) {
+                return;
+            }
+            var timeout;
+            var startTime = new Date();
+            console.log("triggerId:" + triggerId);
+
+            $('#OtherOptionsModal').modal({
+                show: false
+            });
+
+            timeout = setTimeout(function () {
+                $('#editOptions').data('comment-id', triggerId);
+                $('#editOptions').data('space', space);
+
+                $('#deleteOptions').data('comment-id', triggerId);
+                $('#deleteOptions').data('space', space);
+                showPopupForm();
+            }, 800);
+
+            $('#value-comment-' + triggerId).on('mouseup', function () {
+                var currentTime = new Date();
+                var timeDifference = Math.floor((currentTime - startTime) / 1000);
+                if (timeDifference < 1) {
+                    clearTimeout(timeout);
+                    return;
+                }
+            });
+
+            function showPopupForm() {
+                $('#OtherOptionsModal').modal('show');
+            }
+
+            function hidePopupForm() {
+                $('#OtherOptionsModal').modal('hide');
+            }
+        }
+
+        function openReport(commentId) {
+            console.log("Report run in with id report: " + commentId);
+            var commentIdInput = document.querySelector(".report-model-comment-id");
+            commentIdInput.value = commentId;
+
+            // $('#modal').show();
+            console.log("Comment Id Tranfer: " + commentIdInput.value);
+            // function closeReportModel() {
+            //     $('#modal').hide();
+            // }
+
+            // $('.modal .close').click(function () {
+            //     closeReportModel();
+            // });
+        }
+
+        function openReply(commentId) {
+            if ($('#replyContainer-' + commentId).is(':visible')) {
+
+                $('#replyContainer-' + commentId).hide();
+                return;
+            } else {
+                $('#replyContainer-' + commentId).show();
+                return;
+            }
+        }
+
+        function openComment() {
+            if ($('#commentBlog').is(':visible')) {
+
+                $('#commentBlog').hide();
+                return;
+            } else {
+                $('#commentBlog').show();
+                return;
+            }
+        }
+    </script>
+}
+<script src="~/shop-vendor/vendor/jquery/jquery.min.js"></script>
+<script src="~/shop-vendor/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="~/shop-vendor/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="~/shop-vendor//js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="~/shop-vendor/vendor/chart.js/Chart.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="~/shop-vendor//js/demo/chart-area-demo.js"></script>
+<script src="~/shop-vendor//js/demo/chart-pie-demo.js"></script>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.10/signalr.min.js"></script>
+<script src="~/js/site.js?v=2.3"></script>

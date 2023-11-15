@@ -3234,23 +3234,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Thuong\\.nuget\\packages\\": {},
+    "C:\\Users\\giahu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
+      "projectUniqueName": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
       "projectName": "Academic-Blog.Repository",
-      "projectPath": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
-      "packagesPath": "C:\\Users\\Thuong\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Repository\\obj\\",
+      "projectPath": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Repository\\Academic-Blog.Repository.csproj",
+      "packagesPath": "C:\\Users\\giahu\\.nuget\\packages\\",
+      "outputPath": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Thuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\giahu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3265,8 +3265,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
-              "projectPath": "D:\\PRN231_1311\\academic-blog-backend\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
+            "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj": {
+              "projectPath": "D:\\Project PRN231\\academic-blog-backend3\\Academic-Blog.Domain\\Academic-Blog.Domain.csproj"
             }
           }
         }
@@ -3314,7 +3314,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.310\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

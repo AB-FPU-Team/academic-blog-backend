@@ -3,30 +3,43 @@
 @{
 }
 <dl class="row">
-<dt class="col-sm-2">
-    @Html.DisplayNameFor(model => model.Accounts.Id)
-</dt>
-<dd class="col-sm-10">
-    @Html.DisplayFor(model => model.Accounts.Id)
-</dd>
-<dt class="col-sm-2">
-    @Html.DisplayNameFor(model => model.Accounts.Gmail)
-</dt>
-<dd class="col-sm-10">
-    @Html.DisplayFor(model => model.Accounts.Gmail)
-</dd>
-<dt class="col-sm-2">
-    @Html.DisplayNameFor(model => model.Accounts.Name)
-</dt>
-<dd class="col-sm-10">
-    @Html.DisplayFor(model => model.Accounts.Name)
-</dd>
-<dt class="col-sm-2">
-    @Html.DisplayNameFor(model => model.Accounts.Status)
-</dt>
-<dd class="col-sm-10">
-    @Html.DisplayFor(model => model.Accounts.Status)
-</dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Accounts.Id)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Accounts.Id)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Accounts.Gmail)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Accounts.Gmail)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Accounts.Password)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Accounts.Password)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Accounts.Name)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Accounts.Name)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Accounts.NumberOfBlogs)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Accounts.NumberOfBlogs)
+    </dd>
+
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Accounts.Status)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Accounts.Status)
+    </dd>
     @if (Model.Accounts.Status == "ACTIVE")
     {
         <dt class="col-sm-2">
@@ -35,14 +48,15 @@
         <dd class="col-sm-10">
             <a asp-page="./Banned" asp-route-id="@Model.Accounts.Id">Banned</a>
         </dd>
-}
-
+    }
+    <dd class="col-sm-10">
+        <a asp-page="./AccountList">Back to Account List</a>
+    </dd>
     <dd class="col-sm-10">
         <a asp-page="./ReportIndex">Back to Report List</a>
     </dd>
 </dl>
 <div>
- 
 </div>
 
 
