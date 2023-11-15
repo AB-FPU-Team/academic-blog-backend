@@ -45,7 +45,7 @@ namespace Academic_Blog.Services.Implements
         public async Task<List<Account>> GetAccounts()
         {
 
-            ICollection<Account> accounts = await _unitOfWork.GetRepository<Account>().GetListAsync(predicate: x => x.Id == x.Id);
+            ICollection<Account> accounts = await _unitOfWork.GetRepository<Account>().GetListAsync(predicate: x => x.Id == x.Id, include: x => x.Include(x => x.Role));
             List<Account> result = accounts.ToList();
             return result;
         }

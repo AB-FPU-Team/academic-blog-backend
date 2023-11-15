@@ -4,21 +4,28 @@ $(function () {
     var reportCommentId;
     var selectedReason;
     var commentData;
-    var Reportform = $("#reportModel");
+    var Reportform = $("#formReportModal");
     var newCommentForm = $("#formInputNewComment");
 
-    $(document).on('submit', '[id^="editCommentForm"]', function (event) {
+    $(document).on('click', '[data-method="Edit"]', function (event) {
         event.preventDefault();
-        var clickedButton = event.submitter;
-        var editCommentId = $(clickedButton).data("edit-comment-id");
-        var space = $(clickedButton).data("spadding-int");
+        console.log("Runing Edit Form");
+        var editCommentId = $(this).data("edit-comment-id");
+        var space = $(this).data("spadding-int");
         var content = $("#edit-input-" + editCommentId).val();
-        var method = $(clickedButton).data("method");
-        if (method === "Edit") {
-            EditComment(editCommentId, content, space);
-        } else {
-           CancelComment(editCommentId, content, space);
-        }
+        var method = "Edit";
+        EditComment(editCommentId, content, space, method);
+        return false;
+    });
+
+    $(document).on('click', '[data-method="Cancel"]', function (event) {
+        event.preventDefault();
+        console.log("Running Cancel Form");
+        var editCommentId = $(this).data("edit-comment-id");
+        var space = $(this).data("spadding-int");
+        var content = $("#edit-input-" + editCommentId).val();
+        var method = "Cancel"
+        CancelComment(editCommentId, content, space, method);
         return false;
     });
 
@@ -135,16 +142,17 @@ $(function () {
         DeleteOption(commentId);
     })
 
-    function CancelComment(commentId, content, space) {
-        console.log("Edit Options Inside: " + commentId);
+    function CancelComment(commentId, content, space, method) {
+        console.log("Cancel Options Inside: " + commentId);
         $.ajax({
             url: '/AjaxPage/AjaxHandel?handler=EditComment',
             method: 'GET',
-            data: { commentId: commentId, content: content },
+            data: { commentId: commentId, content: content, method: method },
             success: function (result) {
                 var account = result.account;
                 var comment = result.comment;
                 var login = result.login;
+                var feedBack = result.feedBack;
                 console.log("Account: " + result.account);
                 console.log("Comment: " + result.comment);
 
@@ -154,10 +162,30 @@ $(function () {
                                 <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro; margin-top: 20px;">
                          <div class="row align-items-center">
                             <div class="col-sm-1 my-2 border-right border-dark">
-                                   <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px;" />
+                                 `;
+                if (account.role.name === "Student") {
+                    commentorHtml += `<a href="/UserPage/StudentProfile?userId=${account.id}">
+                                                    <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a> `;
+                } else {
+                    commentorHtml += `<a href="/UserPage/LectureProfile?userId=${account.id}">
+                                                    <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a> `;
+                }
+                commentorHtml += ` 
                              </div>
                                 <div class="col-sm">
-                                      <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                   `;
+                if (account.role.name === "Student") {
+                    commentorHtml += `  <a href="/UserPage/StudentProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                                    <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                   </a> `;
+                } else {
+                    commentorHtml += `  <a href="/UserPage/LectureProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                                    <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                   </a> `;
+                }
+                commentorHtml += ` 
                                       <div style="font-weight: bold; color: red; font-size: 14px;"> ${dayComment} </div>
                                   </div>
                                 </div>
@@ -169,15 +197,10 @@ $(function () {
                             <div class="w-100"></div>
                             <div class="col-lg-10 mx-auto" style="color: black; opacity: 80%;">
                             <div class="row align-items-center pt-2">`;
-                if (login === true) {
-                    commentorHtml += `  <div class="col-2 text-center border-right border-secondary">
-                                             <button type="button" id="report-${comment.id}" class="btn btn-outline-warning" data-toggle="modal" data-target="#reportModal" onclick="openReport('${comment.id}')">Report</button>                      
-                                         </div>`;
-                }
                 commentorHtml += `
                             <div id="formReply-${comment.id}" class="col-2 text-center border-right border-secondary">
                                     <form method="get" class="m-0">
-                                         <button  class="btn btn-outline-success feedback-btn" id="feedback-${comment.id}" data-comment-id="${comment.id}" data-spadding-int="${space}" data-feed-back="0" type="submit">0 FeedBack</button>
+                                         <button  class="btn btn-outline-success feedback-btn" id="feedback-${comment.id}" data-comment-id="${comment.id}" data-spadding-int="${space}" data-feed-back="0" type="submit">${feedBack} FeedBack</button>
                                     </form>
                               </div>`;
                 if (login === true) {
@@ -214,16 +237,17 @@ $(function () {
             }
         });
     }
-    function EditComment(commentId, content, space) {
+    function EditComment(commentId, content, space, method) {
         console.log("Edit Options Inside: " + commentId);
         $.ajax({
             url: '/AjaxPage/AjaxHandel?handler=EditComment',
             method: 'GET',
-            data: { commentId: commentId, content: content},
+            data: { commentId: commentId, content: content, method: method },
             success: function (result) {
                 var account = result.account;
                 var comment = result.comment;
                 var login = result.login;
+                var feedBack = result.feedBack;
                 console.log("Account: " + result.account);
                 console.log("Comment: " + result.comment);
 
@@ -232,16 +256,30 @@ $(function () {
                     ` <div class="value-comment-container" style="margin-left: ${space}px;"> 
                                 <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro; margin-top: 20px;">
                          <div class="row align-items-center">
-                            <div class="col-sm-1 my-2 border-right border-dark">
-                              <a href="/UserPage/StudentProfile?userId=${account.id}">
+                            <div class="col-sm-1 my-2 border-right border-dark">`;
+                if (account.role.name === "Student") {
+                    commentorHtml += `<a href="/UserPage/StudentProfile?userId=${account.id}">
                                                     <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
-                                </a>
+                                </a> `;
+                } else {
+                    commentorHtml += `<a href="/UserPage/LectureProfile?userId=${account.id}">
+                                                    <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a> `;
+                }
+                commentorHtml += ` 
                              </div>
                                 <div class="col-sm">
-                                 <a href="/UserPage/StudentProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                `;
+                if (account.role.name === "Student") {
+                    commentorHtml += `  <a href="/UserPage/StudentProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
                                                     <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
-                                   </a>
-                                     
+                                   </a> `;
+                } else {
+                    commentorHtml += `  <a href="/UserPage/LectureProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                                    <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                   </a> `;
+                }
+                commentorHtml += ` 
                                       <div style="font-weight: bold; color: red; font-size: 14px;"> ${dayComment} </div>
                                   </div>
                                 </div>
@@ -253,15 +291,11 @@ $(function () {
                             <div class="w-100"></div>
                             <div class="col-lg-10 mx-auto" style="color: black; opacity: 80%;">
                             <div class="row align-items-center pt-2">`;
-                if (login === true) {
-                    commentorHtml += `  <div class="col-2 text-center border-right border-secondary">
-                                             <button type="button" id="report-${comment.id}" class="btn btn-outline-warning" data-toggle="modal" data-target="#reportModal" onclick="openReport('${comment.id}')">Report</button>                      
-                                         </div>`;
-                }
+
                 commentorHtml += `
                             <div id="formReply-${comment.id}" class="col-2 text-center border-right border-secondary">
                                     <form method="get" class="m-0">
-                                         <button  class="btn btn-outline-success feedback-btn" id="feedback-${comment.id}" data-comment-id="${comment.id}" data-spadding-int="${space}" data-feed-back="0" type="submit">0 FeedBack</button>
+                                         <button  class="btn btn-outline-success feedback-btn" id="feedback-${comment.id}" data-comment-id="${comment.id}" data-spadding-int="${space}" data-feed-back="0" type="submit">${feedBack} FeedBack</button>
                                     </form>
                               </div>`;
                 if (login === true) {
@@ -339,16 +373,31 @@ $(function () {
 
     function DeleteOption(commentId) {
         console.log("Delete Options Inside: " + commentId);
+        var currentCommentTag = document.getElementById("blogComment").textContent;
+        var modifiedString = currentCommentTag.replace(new RegExp("Comments", "g"), "");
+        var trimModifiedString = modifiedString.trim();
+        var currentComment = parseInt(trimModifiedString);
         $.ajax({
             url: '/AjaxPage/AjaxHandel?handler=DeleteOption',
             method: 'GET',
             data: { commentId: commentId },
             success: function (result) {
-                if (result.success)
-                var commentorHtml =
-                    `
+
+                    var commentorHtml = `
                     `;
-                $("#value-comment-" + commentId).html(commentorHtml);
+                $('#OtherOptionsModal').modal('hide');
+                    setTimeout(function () {
+                        if (result.success) {
+                            currentComment -= 1;
+                            $("#blogComment").text(currentComment + " Comments");
+                            showCustomAlert("Deleted Success", true);
+
+                            $("#value-comment-" + commentId).html(commentorHtml);
+                        } else {
+                            showCustomAlert("Delete Failed Try Back Later", false);
+                        }
+                    }, 500);
+             
             },
             error: function (error) {
                 console.log(error);
@@ -357,12 +406,20 @@ $(function () {
     }
     function CreateNewComment(commentData) {
         console.log("Create New Comment Running Inside: " + commentData);
+        var currentCommentTag = document.getElementById("blogComment").textContent;
+        var modifiedString = currentCommentTag.replace(new RegExp("Comments", "g"), "");
+        var trimModifiedString = modifiedString.trim();
+        var currentComment = parseInt(trimModifiedString);
         $.ajax({
             url: '/AjaxPage/AjaxHandel?handler=CreateNewComment',
             method: 'GET',
             data: { commentData: commentData},
             success: function (result) {
-                $('#commentBlog').modal('hide');
+                currentComment += 1;
+                $("#blogComment").text(currentComment + " Comments");
+                document.getElementById('commentBlog').style.display = 'none';
+
+             //   $('#commentBlog').modal('hide');
                 var account = result.account;
                 var comment = result.comment;
                 var login = result.login;
@@ -374,14 +431,30 @@ $(function () {
                     <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro; margin-top: 20px;">
                          <div class="row align-items-center">
                             <div class="col-sm-1 my-2 border-right border-dark">
-                              <a href="/UserPage/StudentProfile?userId=${account.id}">
-                                      <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
-                                </a>
+                              `;
+                if (account.role.name === "Student") {
+                    commentorHtml += `<a href="/UserPage/StudentProfile?userId=${account.id}">
+                                                    <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a> `;
+                } else {
+                    commentorHtml += `<a href="/UserPage/LectureProfile?userId=${account.id}">
+                                                    <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a> `;
+                }
+                commentorHtml += ` 
                              </div>
                                 <div class="col-sm">
-                                 <a href="/UserPage/StudentProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
-                                            <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
-                                   </a>
+                                 `;
+                if (account.role.name === "Student") {
+                    commentorHtml += `  <a href="/UserPage/StudentProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                                    <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                   </a> `;
+                } else {
+                    commentorHtml += `  <a href="/UserPage/LectureProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                                    <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                   </a> `;
+                }
+                commentorHtml += ` 
                                       <div style="font-weight: bold; color: red; font-size: 14px;">${dayComment}</div>
                                   </div>
                                 </div>
@@ -471,14 +544,30 @@ $(function () {
                                 <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro; margin-top: 20px;">
                          <div class="row align-items-center">
                             <div class="col-sm-1 my-2 border-right border-dark">
-                             <a href="/UserPage/StudentProfile?userId=${account.id}">
-                                      <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
-                                </a>
+                             `;
+                if (account.role.name === "Student") {
+                    commentorHtml += `<a href="/UserPage/StudentProfile?userId=${account.id}">
+                                                    <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a> `;
+                } else {
+                    commentorHtml += `<a href="/UserPage/LectureProfile?userId=${account.id}">
+                                                    <img class="rounded-circle shadow" src="/${account.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a> `;
+                }
+                commentorHtml += ` 
                              </div>
                                 <div class="col-sm">
-                                 <a href="/UserPage/StudentProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
-                                            <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
-                                   </a>
+                               `;
+                if (account.role.name === "Student") {
+                    commentorHtml += `  <a href="/UserPage/StudentProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                                    <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                   </a> `;
+                } else {
+                    commentorHtml += `  <a href="/UserPage/LectureProfile?userId=${account.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                                    <h4 class="m-0" style="font-weight: 600;">${account.name}</h4>
+                                   </a> `;
+                }
+                commentorHtml += ` 
                                       <div style="font-weight: bold; color: red; font-size: 14px;"> ${dayComment} </div>
                                   </div>
                                 </div>
@@ -530,23 +619,39 @@ $(function () {
             }
         });
     }
+    function showCustomAlert(message, isSuccess) {
+        var modal = $('#customAlertModal');
+        var modalText = $('#customAlertText');
 
+        modalText.text(message);
+
+        if (isSuccess) {
+            modalText.removeClass('alert-danger').addClass('alert-success');
+        } else {
+            modalText.removeClass('alert-success').addClass('alert-danger');
+        }
+
+        modal.modal('show');
+    }
     function ReportComment(reportCommentId, selectedReason) {
         $.ajax({
             url: '/AjaxPage/AjaxHandel?handler=Report',
             method: 'GET',
-            data: { reportCommentId: reportCommentId, selectedReason: selectedReason},
+            data: { reportCommentId: reportCommentId, selectedReason: selectedReason },
             success: function (result) {
-                if (result.success) {
-                    alert("Report Success");
-                } else {
-                    alert("Report Failed Try Back Later");
-                }
+                     document.getElementById('closeReportModal').click(); 
+                    setTimeout(function () {
+                        if (result.success) {
+                            showCustomAlert("Comment Reported Success", true);
+                        } else {
+                            showCustomAlert("Reprted Failed Try Back Later", false);
+                        }
+                    }, 500);
             },
             error: (error) => {
                 console.log(error);
             }
-        })
+        });
     }
 
     function GetReplys(commentId, spaddingInt) {
@@ -593,14 +698,30 @@ $(function () {
                                 <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro; margin-top: 20px;">
                          <div class="row align-items-center">
                             <div class="col-sm-1 my-2 border-right border-dark">
-                             <a href="/UserPage/StudentProfile?userId=${acc.id}">
-                                      <img class="rounded-circle shadow" src="/${acc.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
-                                </a>
+                             `;
+                            if (acc.role.name === "Student") {
+                                commentorHtml += `<a href="/UserPage/StudentProfile?userId=${acc.id}">
+                                                    <img class="rounded-circle shadow" src="/${acc.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a> `;
+                            } else {
+                                commentorHtml += `<a href="/UserPage/LectureProfile?userId=${acc.id}">
+                                                    <img class="rounded-circle shadow" src="/${acc.avatar}" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                </a> `;
+                            }
+                            commentorHtml += ` 
                              </div>
                                 <div class="col-sm">
-                                 <a href="/UserPage/StudentProfile?userId=${acc.id}" style="text-decoration: none; color: black; cursor: pointer;">
-                                            <h4 class="m-0" style="font-weight: 600;">${acc.name}</h4>
-                                   </a>
+                                `;
+                            if (acc.role.name === "Student") {
+                                commentorHtml += `  <a href="/UserPage/StudentProfile?userId=${acc.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                                    <h4 class="m-0" style="font-weight: 600;">${acc.name}</h4>
+                                   </a> `;
+                            } else {
+                                commentorHtml += `  <a href="/UserPage/LectureProfile?userId=${acc.id}" style="text-decoration: none; color: black; cursor: pointer;">
+                                                    <h4 class="m-0" style="font-weight: 600;">${acc.name}</h4>
+                                   </a> `;
+                            }
+                            commentorHtml += `
                                       <div style="font-weight: bold; color: red; font-size: 14px;">${dayComment}</div>
                                   </div>
                                 </div>
@@ -701,15 +822,16 @@ $(function () {
             success: function (result) {
 
                 var blogId = result.blogId;
+                var authorId = result.authorId;
                 console.log("Get Blog id return: " + blogId);
-                TrackPost(blogId);
+                TrackPost(blogId, authorId);
             },
             error: function (error) {
                 console.log('Error occurred during GetBlogId request:', error);
             }
         })
     }
-    function TrackPost(blogId) {
+    function TrackPost(blogId, authorId) {
         console.log("Track Blog running inside : " + blogId);
         var currentViewTag = document.getElementById("blogView").textContent;
         var currentView = parseInt(currentViewTag);
@@ -722,7 +844,8 @@ $(function () {
                 type: 'GET',
                 data: {
                     blogId: blogId,
-                    fingerprint: fingerprint
+                    fingerprint: fingerprint,
+                    authorId: authorId
                 },
                 success: function (result) {
                     if (result.success) {

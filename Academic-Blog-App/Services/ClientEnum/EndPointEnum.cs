@@ -7,6 +7,7 @@
         Blogs,
         Comments,
         TrackingViewBlogs,
-        Categories
+        Categories,
+        Reports
     }
 }

@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Academic_Blog.Domain;
-using Academic_Blog.Domain.Models;
-using Microsoft.AspNetCore.OData.Routing.Controllers;
-using Microsoft.AspNetCore.OData.Query;
-using Academic_Blog.Services.Interfaces;
-using Academic_Blog.Validatiors;
+﻿using Academic_Blog.Domain.Models;
 using Academic_Blog.PayLoad.Request.Blog;
 using Academic_Blog.PayLoad.Response;
-using Microsoft.AspNetCore.Authorization;
+using Academic_Blog.Services.Interfaces;
+using Academic_Blog.Validatiors;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Routing.Controllers;
 
 namespace Academic_Blog.Controllers
 {
