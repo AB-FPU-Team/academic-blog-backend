@@ -24,12 +24,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXEFjY291bnREZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/AccountList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXEFjY291bnRMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/Banned.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXEJhbm5lZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/BlogDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXEJsb2dEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/BlogList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXEJsb2dMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/CommentDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXENvbW1lbnREZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/CommentList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlXENvbW1lbnRMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/GitHub/Teams GitHub Projects/academic-blog-backend/Academic-Blog-App/Pages/AdminPage/DashBoard.cshtml]
