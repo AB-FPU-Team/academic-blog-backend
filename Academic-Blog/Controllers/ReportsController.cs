@@ -1,20 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Academic_Blog.Domain;
-using Academic_Blog.Domain.Models;
-using Microsoft.AspNetCore.OData.Routing.Controllers;
-using Academic_Blog.Services.Interfaces;
-using Microsoft.AspNetCore.OData.Query;
-using Academic_Blog.Validatiors;
-using Academic_Blog.PayLoad.Request.Report;
+﻿using Academic_Blog.PayLoad.Request.Report;
 using Academic_Blog.PayLoad.Response;
-using System.Net;
+using Academic_Blog.Services.Interfaces;
+using Academic_Blog.Validatiors;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Routing.Controllers;
 
 namespace Academic_Blog.Controllers
 {
@@ -25,7 +16,7 @@ namespace Academic_Blog.Controllers
         private readonly ILogger<ReportsController> _logger;
         private readonly IReportService _reportService;
 
-        public ReportsController(ILogger<ReportsController> logger , IReportService reportService)
+        public ReportsController(ILogger<ReportsController> logger, IReportService reportService)
         {
             _logger = logger;
             _reportService = reportService;
@@ -37,15 +28,15 @@ namespace Academic_Blog.Controllers
         [CustomAuthorize(Enums.RoleEnum.Admin)]
         public async Task<IActionResult> GetReports()
         {
-           var result = await _reportService.GetReports();
-           return Ok(result);
+            var result = await _reportService.GetReports();
+            return Ok(result);
         }
         [HttpPost]
         [Authorize]
         public async Task<IActionResult> PostReport(AddReportRequest report)
         {
-           var isSuccess = await _reportService.CreateReport(report);
-           if(!isSuccess) 
+            var isSuccess = await _reportService.CreateReport(report);
+            if (!isSuccess)
             {
                 return BadRequest(new ErrorResponse
                 {
@@ -54,7 +45,7 @@ namespace Academic_Blog.Controllers
                     TimeStamp = DateTime.Now
                 });
             }
-           return Ok(new {Message = "successfully"});
+            return Ok(new { Message = "successfully" });
         }
         /*
         // GET: api/Reports/5

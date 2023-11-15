@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Academic_Blog.Domain;
-using Academic_Blog.Domain.Models;
-using Academic_Blog.Services.Interfaces;
-using Microsoft.AspNetCore.OData.Query;
-using System.Drawing.Printing;
-using Microsoft.AspNetCore.Authorization;
-using Academic_Blog.PayLoad.Request.Comment;
+﻿using Academic_Blog.PayLoad.Request.Comment;
 using Academic_Blog.PayLoad.Response;
+using Academic_Blog.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 
 namespace Academic_Blog.Controllers
 {
@@ -22,7 +13,7 @@ namespace Academic_Blog.Controllers
     {
         private readonly ILogger<CommentsController> _logger;
         private readonly ICommentSerivce _commentService;
-        public CommentsController(ICommentSerivce commentService,ILogger<CommentsController> logger)
+        public CommentsController(ICommentSerivce commentService, ILogger<CommentsController> logger)
         {
             _logger = logger;
             _commentService = commentService;
@@ -33,8 +24,8 @@ namespace Academic_Blog.Controllers
         [EnableQuery]
         public async Task<IActionResult> GetComments()
         {
-           var response = await _commentService.GetComments();
-           return Ok(response);
+            var response = await _commentService.GetComments();
+            return Ok(response);
         }
         [HttpPost]
         [Authorize]
@@ -51,24 +42,24 @@ namespace Academic_Blog.Controllers
                     TimeStamp = DateTime.Now,
                 });
             }
-            return Ok(response);    
+            return Ok(response);
         }
         [HttpDelete("{id}")]
         [Authorize]
         [EnableQuery]
         public async Task<IActionResult> DeleteComment([FromRoute] Guid id)
         {
-           var isSuccess = await _commentService.DeleteComments(id);
-           if(!isSuccess)
+            var isSuccess = await _commentService.DeleteComments(id);
+            if (!isSuccess)
             {
                 return BadRequest(new ErrorResponse()
                 {
-                    StatusCode= StatusCodes.Status400BadRequest,
+                    StatusCode = StatusCodes.Status400BadRequest,
                     Error = "Delete fail",
                     TimeStamp = DateTime.Now,
                 });
             }
-           return Ok("Success");
+            return Ok("Success");
         }
         [HttpPut("{id}")]
         public async Task<IActionResult> PutComment(Guid id, UpdateCommentRequest request)

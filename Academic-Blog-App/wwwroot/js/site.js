@@ -375,27 +375,40 @@ $(function () {
         console.log("Delete Options Inside: " + commentId);
         var currentCommentTag = document.getElementById("blogComment").textContent;
         var modifiedString = currentCommentTag.replace(new RegExp("Comments", "g"), "");
+
         var trimModifiedString = modifiedString.trim();
         var currentComment = parseInt(trimModifiedString);
+
         $.ajax({
             url: '/AjaxPage/AjaxHandel?handler=DeleteOption',
             method: 'GET',
             data: { commentId: commentId },
             success: function (result) {
 
+                var replyToId = result.replyToId;
+                var total = result.total;
+                console.log("Delele comment had reply to: " + replyToId);
+                console.log("Total commnet have the feedback: " + total);
                     var commentorHtml = `
                     `;
                 $('#OtherOptionsModal').modal('hide');
-                    setTimeout(function () {
-                        if (result.success) {
+                setTimeout(function () {
+                    if (replyToId != null) {
+                        var currentFeedBackTag = document.getElementById("feedback-" + replyToId).textContent;
+                        var [feedBackNumber, feedBackText] = currentFeedBackTag.split(" ");
+                        var currentFeedBack = parseInt(feedBackNumber);
+                        console.log("Current FeedBack: " + currentFeedBack);
+                        currentFeedBack -= 1;
+                        console.log("Current FeedBack after edit: " + currentFeedBack);
+                        console.log("Text: " + feedBackText);
+                     //   $("#feedback-" + replyToId).text(currentFeedBack + " " + feedBackText);
+                        document.getElementById("feedback-" + replyToId).textContent = currentFeedBack + " " + feedBackText;
+                    }
                             currentComment -= 1;
                             $("#blogComment").text(currentComment + " Comments");
                             showCustomAlert("Deleted Success", true);
 
                             $("#value-comment-" + commentId).html(commentorHtml);
-                        } else {
-                            showCustomAlert("Delete Failed Try Back Later", false);
-                        }
                     }, 500);
              
             },

@@ -86,12 +86,34 @@ namespace Academic_Blog_App.Pages.AjaxPage
 
         public async Task<IActionResult> OnGetDeleteOption(string commentId)
         {
+            string replyToId = null;
+            int total = 0;
+
+            var currentCommentResut = await _apiHelper.FetchODataAsync<List<Comment>>(EndPointEnum.Comments, $"?$filter=Id eq {Guid.Parse(commentId)}");
+            if (currentCommentResut.IsSuccess)
+            {
+                replyToId = currentCommentResut.Data[0].ReplyToId != null ? currentCommentResut.Data[0].ReplyToId.ToString() : null;
+                var totalFeedBack = await _apiHelper.FetchODataAsync<List<Comment>>(EndPointEnum.Comments, $"?$filter=ReplyToId eq {Guid.Parse(commentId)}");
+                if (totalFeedBack.IsSuccess)
+                {
+                    total = totalFeedBack.Data.Count();
+                }
+            }
+            else
+            {
+                Error("Server Error");
+            }
             var deleteCommentResult = await _apiHelper.FetchApiAsync<String>(EndPointEnum.Comments, $"/{Guid.Parse(commentId)}", MethodEnum.DELETE, null);
             if (deleteCommentResult.IsSuccess)
             {
-                return new JsonResult(new { success = true });
+                var response = new
+                {
+                    ReplyToId = replyToId,
+                    Total = total
+                };
+                return new JsonResult(response);
             }
-            return new JsonResult(new { success = false });
+            return new JsonResult(null);
         }
         public async Task<IActionResult> OnGetCreateNewComment(string commentData)
         {

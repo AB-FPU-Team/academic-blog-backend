@@ -43,11 +43,11 @@ namespace Academic_Blog_App.Pages.BlogPage {
 
 
         private async Task FetchAll(string? blogId, string? authorId) {
-            var blogResult = await _apiHelper.FetchApiAsync<Blog>(EndPointEnum.Blogs, $"/{Guid.Parse(blogId!)}", MethodEnum.GET, null);
+            var blogResult = await _apiHelper.FetchODataAsync<List<Blog>>(EndPointEnum.Blogs, $"?$filter=Id eq {Guid.Parse(blogId!)}");
             var commentResult = await _apiHelper.FetchODataAsync<List<Comment>>(EndPointEnum.Comments, $"?$filter=blogId eq {Guid.Parse(blogId!)}");
             var accountResult = await _apiHelper.FetchApiAsync<List<Account>>(EndPointEnum.Accounts, "", MethodEnum.GET, null);
             if (blogResult.IsSuccess && commentResult.IsSuccess && accountResult.IsSuccess) {
-                Blog = blogResult.Data;
+                Blog = blogResult.Data[0];
                 Comments = commentResult.Data.OrderByDescending(comment => comment.CreateTime).ToList();
                 Accounts = accountResult.Data;
                 SessionHelper.SetObjectAsJson(HttpContext.Session, "CurrentBlog", Blog);
