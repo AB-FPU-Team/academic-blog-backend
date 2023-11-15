@@ -37,7 +37,7 @@ namespace Academic_Blog.Services
         protected async Task<Account> GetUserFromJwt()
         {
             Guid id =  Guid.Parse(_httpContextAccessor?.HttpContext?.User?.FindFirstValue("userId"));
-            Account account = await _unitOfWork.GetRepository<Account>().SingleOrDefaultAsync(predicate : x => x.Id == id , include : x => x.Include(x => x.AccountFieldMapping));
+            Account account = await _unitOfWork.GetRepository<Account>().SingleOrDefaultAsync(predicate: x => x.Id == id, include: x => x.Include(x => x.AccountFieldMapping ).Include(x => x.Role)) ;
             return account;
         }
     }

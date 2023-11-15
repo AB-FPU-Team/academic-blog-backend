@@ -100,8 +100,8 @@
                                         @if (loginAccount.Role.Equals("Student")) {
 
                                             <div class="dropdown-menu bg-dark rounded-0 border-0 m-0">
-                                                <a asp-page="/UserPage/StudentProfile" class="dropdown-item text-light">Profile</a>
-                                                <a asp-page="/BlogPage/CreateNewBlog" class="dropdown-item text-light">Create Post</a>
+                                                <a asp-page="/UserPage/StudentProfile" asp-route-userId="@loginAccount.Id"  class="dropdown-item text-light">Profile</a>
+                                                <a asp-page="/BlogPage/CreateNewBlog" asp-route-userId="@loginAccount.Id" class="dropdown-item text-light">Create Post</a>
                                                 <a asp-page="/HomePage/Logout" class="dropdown-item text-light">Logout</a>
                                             </div>
 

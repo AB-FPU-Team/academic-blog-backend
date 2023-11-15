@@ -166,16 +166,33 @@
                                     <div class="col-lg-10 mx-auto border border-dark rounded" style="background-color: gainsboro; margin-top: 20px;">
                                         <div class="row align-items-center">
                                             <div class="col-sm-1 my-2 border-right border-dark">
-                                                <a asp-page="/UserPage/StudentProfile" asp-route-userId="@acc.Id">
-                                                    <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
-                                                </a>
-                                                
+                                                @if (acc.Role.Name.Equals("Student"))
+                                                {
+                                                    <a asp-page="/UserPage/StudentProfile" asp-route-userId="@acc.Id">
+                                                        <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                    <a asp-page="/UserPage/LectureProfile" asp-route-userId="@acc.Id">
+                                                        <img class="rounded-circle shadow" src="~/@acc.Avatar" alt="Avatar" style="width: 50px; height: 50px; cursor: pointer;" />
+                                                    </a>
+                                                }
                                             </div>
                                             <div class="col-sm">
-                                                <a asp-page="/UserPage/StudentProfile" asp-route-userId="@acc.Id" style="text-decoration: none; color: black; cursor: pointer;">
-                                                    <h4 class="m-0" style="font-weight: 600;">@acc.Name</h4>
-                                                </a>
-                      
+                                                @if (acc.Role.Name.Equals("Student"))
+                                                {
+                                                    <a asp-page="/UserPage/StudentProfile" asp-route-userId="@acc.Id" style="text-decoration: none; color: black; cursor: pointer;">
+                                                        <h4 class="m-0" style="font-weight: 600;">@acc.Name</h4>
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                    <a asp-page="/UserPage/LectureProfile" asp-route-userId="@acc.Id" style="text-decoration: none; color: black; cursor: pointer;">
+                                                        <h4 class="m-0" style="font-weight: 600;">@acc.Name</h4>
+                                                    </a>
+                                                }
+
                                                 @{
                                                     string dayComment = "", postFixTime = "";
                                                     var currentDate = DateTime.Now;
@@ -279,13 +296,13 @@
                 <form method="post" id="formReportModal">
                     <div class="modal-header">
                         <h5 class="modal-title" id="h5ModalLabel">Report This Comment ?</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" id="closeReportModal" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <span class="text-center" style="justify-content: center">
-                            <select class="report-model-reason text-danger" name="reasonSelected" style="width: 180px; font-size: 24px; height: 40px; text-align: center; margin-left: 85px;">
+                            <select class="report-model-reason text-danger" id="reasonSelected" name="reasonSelected" style="width: 180px; font-size: 24px; height: 40px; text-align: center; margin-left: 85px;">
                                 <option value="Toxic" selected">
                                     Toxic
                                 </option>
@@ -317,7 +334,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="margin-top: 270px;">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" id="" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -329,7 +346,17 @@
         </div>
     </div>
 </div>
-
+<div class="modal fade" id="customAlertModal" tabindex="-1" role="dialog" aria-labelledby="customAlertModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center" id="customAlertText">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section ViewBlogDetailScripts {
     <script type="text/javascript">
@@ -418,4 +445,4 @@
 <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.10/signalr.min.js"></script>
-<script src="~/js/site.js?v=2.3"></script>
+<script src="~/js/site.js?v=2.8"></script>

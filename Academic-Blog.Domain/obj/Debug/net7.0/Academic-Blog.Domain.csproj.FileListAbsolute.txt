@@ -54,20 +54,6 @@ D:\Truong\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\refint\Aca
 D:\Truong\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.pdb
 D:\Truong\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.genruntimeconfig.cache
 D:\Truong\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\ref\Academic-Blog.Domain.dll
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.deps.json
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.runtimeconfig.json
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.dll
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.pdb
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.csproj.AssemblyReference.cache
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.GeneratedMSBuildEditorConfig.editorconfig
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.AssemblyInfoInputs.cache
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.AssemblyInfo.cs
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.csproj.CoreCompileInputs.cache
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.dll
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\refint\Academic-Blog.Domain.dll
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.pdb
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.genruntimeconfig.cache
-E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\ref\Academic-Blog.Domain.dll
 D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.deps.json
 D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.runtimeconfig.json
 D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.dll
@@ -82,3 +68,17 @@ D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\refin
 D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.pdb
 D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.genruntimeconfig.cache
 D:\PRN231_1311\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\ref\Academic-Blog.Domain.dll
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.deps.json
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.runtimeconfig.json
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.dll
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\bin\Debug\net7.0\Academic-Blog.Domain.pdb
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.csproj.AssemblyReference.cache
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.AssemblyInfoInputs.cache
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.AssemblyInfo.cs
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.csproj.CoreCompileInputs.cache
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.dll
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\refint\Academic-Blog.Domain.dll
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.pdb
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\Academic-Blog.Domain.genruntimeconfig.cache
+E:\GitHub\Teams GitHub Projects\academic-blog-backend\Academic-Blog.Domain\obj\Debug\net7.0\ref\Academic-Blog.Domain.dll

@@ -65,11 +65,26 @@ namespace Academic_Blog_App.Pages.UserPage.Student
             var commentResult = await _apiHelper.FetchODataAsync<List<Comment>>(EndPointEnum.Comments, $"?$filter=CommentorId eq {Guid.Parse(userId)}");
             if (blogsResult.IsSuccess && commentResult.IsSuccess)
             {
-                mostViewedBlog = blogsResult.Data.OrderByDescending(b => b.View).First().View; //[Most Viewd Blog]
-                totalViewed = blogsResult.Data.Sum(b => b.View); //[Blog View Champion]
-                totalComment = commentResult.Data.Count(); //[Comment Machine]
-                totalBlog = blogsResult.Data.Count(); // [Blogging Machine]
-
+                if(blogsResult.Data.Count > 0)
+                {
+                    mostViewedBlog = blogsResult.Data.OrderByDescending(b => b.View).First().View; //[Most Viewd Blog]
+                    totalViewed = blogsResult.Data.Sum(b => b.View); //[Blog View Champion]
+                    totalBlog = blogsResult.Data.Count(); // [Blogging Machine]
+                }
+                else
+                {
+                    mostViewedBlog = 0;
+                }
+               if(commentResult.Data.Count > 0)
+                {
+                    totalComment = commentResult.Data.Count(); //[Comment Machine]
+                }
+                else
+                {
+                    totalComment = 0;
+                }
+              
+             
                 awardEarned += CaculateAwardEarned(mostViewedBlog);
                 awardEarned += CaculateAwardEarned(totalViewed);
                 awardEarned += CaculateAwardEarned(totalComment);

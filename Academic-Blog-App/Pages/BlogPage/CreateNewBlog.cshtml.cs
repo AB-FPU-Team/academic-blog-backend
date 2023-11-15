@@ -25,8 +25,12 @@ namespace Academic_Blog_App.Pages.BlogPage
         public List<Category> Categories { get; set; }
         [BindProperty]
         public CreateNewBlogRequest CreateNewBlogRequest { get; set; }
-        public async Task<IActionResult> OnGetAsync()
+        public async Task<IActionResult> OnGetAsync(string? userId)
         {
+            if (userId == null)
+            {
+                return RedirectToPage("/Index");
+            }
             await GetAll();
             return Page();
         }

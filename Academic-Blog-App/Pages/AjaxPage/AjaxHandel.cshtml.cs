@@ -8,6 +8,8 @@ using Academic_Blog.PayLoad.Response;
 using Academic_Blog.PayLoad.Request.Comment;
 using System.Xml.Linq;
 using NuGet.Protocol.Plugins;
+using Academic_Blog.PayLoad.Request.Report;
+using Microsoft.Extensions.Internal;
 
 namespace Academic_Blog_App.Pages.AjaxPage
 {
@@ -20,19 +22,36 @@ namespace Academic_Blog_App.Pages.AjaxPage
             _apiHelper = apiHelper;
         }
 
-        public async Task<IActionResult> OnGetEditComment(string commentId, string content)
+        public async Task<IActionResult> OnGetEditComment(string commentId, string content, string method)
         {
-            //Update
-            var commentResult = await _apiHelper.FetchODataAsync<List<Comment>>(EndPointEnum.Comments, $"?$filter=id eq {Guid.Parse(commentId)}");
+            if (method.Equals("Edit"))
+            {
+                UpdateCommentRequest updateCommentRequest = new UpdateCommentRequest
+                {
+                    Content = content
+                };
+                try
+                {
+                    var updateCommentResult = await _apiHelper.FetchApiAsync<OkObjectResult>(EndPointEnum.Comments, $"/{Guid.Parse(commentId)}", MethodEnum.PUT, updateCommentRequest);
+                }
+                catch (Exception ex)
+                {
+                    return new JsonResult(null);
+                }
+            }
             var currentUser = await _apiHelper.FetchApiAsync<Account>(EndPointEnum.Accounts, "/currentUser", MethodEnum.GET, null);
             var acc = SessionHelper.GetObjectFromJson<LoginResponse>(HttpContext.Session, "Account");
-            if (commentResult.IsSuccess && currentUser.IsSuccess)
+
+            if (currentUser.IsSuccess)
             {
+                var commentResult = await _apiHelper.FetchODataAsync<List<Comment>>(EndPointEnum.Comments, $"?$filter=id eq {Guid.Parse(commentId)}");
+                var replyResult = await _apiHelper.FetchODataAsync<List<Comment>>(EndPointEnum.Comments, $"?$filter=ReplyToId eq {Guid.Parse(commentId)}");
                 var response = new
                 {
                     Account = currentUser.Data,
                     Comment = commentResult.Data[0],
                     Login = acc != null && !acc.AccountStatus.Equals("BANNED") ? true : false,
+                    FeedBack = replyResult.Data.Count(),
                 };
                 return new JsonResult(response);
             }
@@ -49,6 +68,7 @@ namespace Academic_Blog_App.Pages.AjaxPage
             var acc = SessionHelper.GetObjectFromJson<LoginResponse>(HttpContext.Session, "Account");
             if (commentResult.IsSuccess && currentUser.IsSuccess)
             {
+
                 var response = new
                 {
                     Account = currentUser.Data,
@@ -66,7 +86,7 @@ namespace Academic_Blog_App.Pages.AjaxPage
 
         public async Task<IActionResult> OnGetDeleteOption(string commentId)
         {
-            var deleteCommentResult = await _apiHelper.FetchApiAsync<String>(EndPointEnum.Comments, $"?id={Guid.Parse(commentId)}", MethodEnum.DELETE, null);
+            var deleteCommentResult = await _apiHelper.FetchApiAsync<String>(EndPointEnum.Comments, $"/{Guid.Parse(commentId)}", MethodEnum.DELETE, null);
             if (deleteCommentResult.IsSuccess)
             {
                 return new JsonResult(new { success = true });
@@ -98,7 +118,7 @@ namespace Academic_Blog_App.Pages.AjaxPage
                             Login = true;
                         }
                     }
-         
+
                     var response = new
                     {
                         Account = currentAccountResult.Data,
@@ -153,16 +173,32 @@ namespace Academic_Blog_App.Pages.AjaxPage
                     return new JsonResult(response);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Error("Several Error Has Been Occur!");
-            }                 
+            }
             return new JsonResult(null);
         }
 
         public async Task<IActionResult> OnGetReport(string reportCommentId, string selectedReason)
         {
-
+            AddReportRequest newReport = new AddReportRequest
+            {
+                CommentId = Guid.Parse(reportCommentId),
+                Content = selectedReason
+            };
+            try
+            {
+                var result = await _apiHelper.FetchApiAsync<OkObjectResult>(EndPointEnum.Reports, "", MethodEnum.POST, newReport);
+                if (!result.IsSuccess)
+                {
+                    Error(result.ErrorMessage);
+                }
+            }
+            catch (Exception e)
+            {
+                return new JsonResult(new { success = false });
+            }
             return new JsonResult(new { success = true });
         }
 
@@ -218,10 +254,11 @@ namespace Academic_Blog_App.Pages.AjaxPage
         public IActionResult OnGetBlogId()
         {
             var currentBlog = SessionHelper.GetObjectFromJson<Blog>(HttpContext.Session, "CurrentBlog");
-            return new JsonResult(new { blogId = currentBlog.Id });
+            var authorId = currentBlog.AuthorId;
+            return new JsonResult(new { blogId = currentBlog.Id, authorId = authorId });
         }
 
-        public async Task<IActionResult> OnGetTrackBlog(string blogId, string fingerprint)
+        public async Task<IActionResult> OnGetTrackBlog(string blogId, string fingerprint, string authorId)
         {
             ResultHelper<List<TrackingViewBlog>> result = await FetchingBlogs();
             var account = SessionHelper.GetObjectFromJson<LoginResponse>(HttpContext.Session, "Account");
@@ -230,10 +267,13 @@ namespace Academic_Blog_App.Pages.AjaxPage
             {
                 if (account != null)
                 {
-                    if (!CheckBlogs(Guid.Parse(blogId), account.Id.ToString(), result))
+                    if (account.Id != Guid.Parse(authorId))
                     {
-                        await CreateNewTracking(Guid.Parse(blogId), account.Id.ToString());
-                        return new JsonResult(new { success = true });
+                        if (!CheckBlogs(Guid.Parse(blogId), account.Id.ToString(), result))
+                        {
+                            await CreateNewTracking(Guid.Parse(blogId), account.Id.ToString());
+                            return new JsonResult(new { success = true });
+                        }
                     }
 
                 }
