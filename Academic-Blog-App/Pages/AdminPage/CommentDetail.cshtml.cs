@@ -16,7 +16,7 @@ namespace Academic_Blog_App.Pages.AdminPage
     public class CommentDetailModel : PageModel
     {
         private readonly HttpClient _httpClient;
-        private string commentUrl;
+        private string commentUrl,blogUrl;
 
         public CommentDetailModel()
         {
@@ -24,10 +24,12 @@ namespace Academic_Blog_App.Pages.AdminPage
             var contentType = new MediaTypeWithQualityHeaderValue("application/json");
             _httpClient.DefaultRequestHeaders.Accept.Add(contentType);
             commentUrl = "http://localhost:5047/odata/Comments";
+            blogUrl = "http://localhost:5047/odata/Blogs";
         }
 
         [BindProperty]
         public Comment Comments { get; set; }
+        public Blog Blogs { get; set; }
         public async Task<IActionResult> OnGetAsync(string? Id)
         {
             if (Id == null)
@@ -42,7 +44,7 @@ namespace Academic_Blog_App.Pages.AdminPage
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             //_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             HttpResponseMessage response = await _httpClient.GetAsync(commentUrl + $"?$filter=id eq {Id}");
-
+          
 
             if (response.IsSuccessStatusCode)
             {
@@ -53,6 +55,22 @@ namespace Academic_Blog_App.Pages.AdminPage
                 };
                 var outer = Newtonsoft.Json.JsonConvert.DeserializeObject<OData<object[]>>(content);
                 Comments = Newtonsoft.Json.JsonConvert.DeserializeObject<Comment>(outer.value[0].ToString());
+                HttpResponseMessage response1 = await _httpClient.GetAsync(blogUrl + $"?$filter=id eq {Comments.BlogId}");
+
+                if (response1.IsSuccessStatusCode)
+                {
+                    string content1 = await response.Content.ReadAsStringAsync();
+                    var options1 = new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    };
+                    var outer1 = Newtonsoft.Json.JsonConvert.DeserializeObject<OData<object[]>>(content1);
+                    Blogs = Newtonsoft.Json.JsonConvert.DeserializeObject<Blog>(outer1.value[0].ToString());
+                }
+                else
+                {
+                    ViewData["Error"] = response.ToString();
+                }
             }
             else
             {

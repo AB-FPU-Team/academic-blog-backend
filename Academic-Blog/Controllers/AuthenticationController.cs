@@ -29,7 +29,7 @@ namespace Academic_Blog.Controllers
                 return Unauthorized(new ErrorResponse()
                 {
                     StatusCode = StatusCodes.Status401Unauthorized,
-                    Error = "Invalid User or Password",
+                    Error = "Invalid Username or Password",
                     TimeStamp = DateTime.Now,
                 });
             }

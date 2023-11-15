@@ -1,0 +1,55 @@
+﻿@page
+@model Academic_Blog_App.Pages.AdminPage.AccountListModel
+@{
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Accounts[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Accounts[0].UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Accounts[0].Gmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Accounts[0].Avatar)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Accounts)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gmail)
+                </td>
+                <td>
+                    @if (item.Avatar.StartsWith("images"))
+                    {
+                        <img class="w-100 h-100" src="~/@item.Avatar" alt="Image">
+                    }
+                    else
+                    {
+                        <img class="img-fluid w-100" src="@item.Avatar" alt="">
+                    }
+                </td>
+                <td>
+                    <a asp-page="./AccountDetail" asp-route-id="@item.Id">Account Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
